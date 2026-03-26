@@ -34,14 +34,6 @@ npm run build
 Outputs a static site to `out/` directory. 
 Upload `out/` to any CDN or static host.
 
-### Linting
-
-```bash
-npm run lint
-```
-
-Runs ESLint checks against TypeScript source.
-
 ## Project Structure
 
 ```
@@ -67,26 +59,7 @@ Runs ESLint checks against TypeScript source.
 └── README.md              # This file
 ```
 
-## Making Changes
 
-### Add a Project
-Edit `data/projects.ts`. Add to the `projects` array.
-
-### Add a Research Paper
-Edit `data/research.ts`. Add to the `research` array.
-
-### Change Site Info
-Edit `data/site.ts`. Fields like `name`, `email`, `social` update everywhere.
-
-### Modify Styling
-Edit `styles/globals.css`. CSS custom properties at `:root` control the theme.
-
-### Add a Portfolio Section
-1. Create component in `components/portfolio/`
-2. Import in `components/portfolio/PortfolioZone.tsx`
-3. Add nav link in `Navbar.tsx`
-
-For detailed guidance, see `Documents for Portfolio/Portfolio_Structure_Guide.docx`.
 
 ## Deployment
 
@@ -131,7 +104,4 @@ rm -rf node_modules
 npm install
 ```
 
-## Support
 
-For structure and maintenance guidance, see the included documentation:
-- `Documents for Portfolio/Portfolio_Structure_Guide.docx`
