@@ -45,7 +45,8 @@ export const research: ResearchPaper[] = [
       "Agentic AI in Compliance: Regulatory Implications of Autonomous Decision-Making in Pakistani Financial Services",
     description:
       "Policy analysis mapping the regulatory vacuum around agentic AI in SBP's framework. Maps the vacuum against the EU AI Act, Singapore's MAS FEAT principles, and the UK FCA's evolving AI discussion papers, producing a regulatory gap matrix with specific recommendations.",
-    status: "forthcoming",
+    status: "published",
+    url: "https://fawad-liaqat.github.io/Research-Articles/articles/agentic-ai-compliance/",
   },
   {
     id: "tokenized-remittances",
@@ -54,6 +55,7 @@ export const research: ResearchPaper[] = [
       "Tokenized Remittances: A Feasibility Framework for Blockchain-Based Diaspora Investment in Pakistan",
     description:
       "Can asset tokenization convert Pakistan's $30 billion remittance flow from consumption into productive investment? Designs the regulatory, technical, and economic framework for compliant tokenized investment products accessible from abroad.",
-    status: "forthcoming",
+    status: "published",
+    url: "https://fawad-liaqat.github.io/Research-Articles/articles/tokenized-remittances/  ",
   },
 ];

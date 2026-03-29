@@ -128,7 +128,9 @@ export const projects: Project[] = [
       "ACFE 2024 Report",
       "Financial Modeling",
     ],
-    status: "in-progress",
+    status: "completed",
+    demoUrl:
+      "https://fawad-liaqat.github.io/AI-Fraud-Detection-Cost-Benefit-Dashboard/",
   },
   {
     id: "stablecoin-remittance",
