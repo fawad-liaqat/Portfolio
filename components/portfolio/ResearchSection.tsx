@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import { research } from '@/data/research';
-import RevealOnScroll from '@/components/ui/RevealOnScroll';
-import GradientText from '@/components/ui/GradientText';
+import { research } from "@/data/research";
+import RevealOnScroll from "@/components/ui/RevealOnScroll";
+import GradientText from "@/components/ui/GradientText";
 
 export default function ResearchSection() {
   return (
     <section id="research">
       <RevealOnScroll>
-        <span className="section-label">03 — Research</span>
+        <span className="section-label">04 — Research</span>
         <h2 className="section-title">
           <GradientText>Research</GradientText>
         </h2>
@@ -22,7 +22,11 @@ export default function ResearchSection() {
               <div>
                 <h3 className="research-title">
                   {paper.url ? (
-                    <a href={paper.url} target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={paper.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {paper.title}
                     </a>
                   ) : (

@@ -4,6 +4,7 @@ import { projects } from "@/data/projects";
 import RevealOnScroll from "@/components/ui/RevealOnScroll";
 import GradientText from "@/components/ui/GradientText";
 import Pill from "@/components/ui/Pill";
+import SignalStrip from "./SignalStrip";
 
 function StatusDot({ status }: { status: string }) {
   const cls = status === "completed" ? "status-complete" : "status-progress";
@@ -94,7 +95,7 @@ export default function WorkSection() {
   return (
     <section id="work">
       <RevealOnScroll>
-        <span className="section-label">04 — Work</span>
+        <span className="section-label">03 — Work</span>
         <h2 className="section-title">
           <GradientText>Projects</GradientText>
         </h2>
@@ -103,6 +104,8 @@ export default function WorkSection() {
       {featured.map((p) => (
         <FeaturedCard key={p.id} project={p} />
       ))}
+
+      <SignalStrip />
 
       <div className="project-grid">
         {regular.map((p) => (

@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { useActiveSection } from '@/hooks/useActiveSection';
+import { useState, useEffect } from "react";
+import { useActiveSection } from "@/hooks/useActiveSection";
 
 interface Props {
   visible: boolean;
@@ -9,11 +9,11 @@ interface Props {
 }
 
 const NAV_ITEMS = [
-  { id: 'hero', label: 'Home' },
-  { id: 'about', label: 'About' },
-  { id: 'research', label: 'Research' },
-  { id: 'work', label: 'Work' },
-  { id: 'connect', label: 'Connect' },
+  { id: "hero", label: "Home" },
+  { id: "about", label: "About" },
+  { id: "work", label: "Work" },
+  { id: "research", label: "Research" },
+  { id: "connect", label: "Connect" },
 ] as const;
 
 export default function Navbar({ visible, onBackToLanding }: Props) {
@@ -22,16 +22,18 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
 
   useEffect(() => {
     if (mobileOpen) {
-      document.body.style.overflow = 'hidden';
+      document.body.style.overflow = "hidden";
     } else {
-      document.body.style.overflow = '';
+      document.body.style.overflow = "";
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [mobileOpen]);
 
   function scrollTo(id: string) {
     const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
     setMobileOpen(false);
   }
 
@@ -44,7 +46,7 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
 
   return (
     <>
-      <nav className={`navbar ${visible ? 'visible' : ''}`} id="navbar">
+      <nav className={`navbar ${visible ? "visible" : ""}`} id="navbar">
         <a
           href="#"
           className="nav-logo"
@@ -59,8 +61,11 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
               <a
                 href={`#${item.id}`}
                 data-section={item.id}
-                className={activeSection === item.id ? 'active' : ''}
-                onClick={(e) => { e.preventDefault(); scrollTo(item.id); }}
+                className={activeSection === item.id ? "active" : ""}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollTo(item.id);
+                }}
               >
                 {item.label}
               </a>
@@ -76,7 +81,7 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
         </button>
       </nav>
 
-      <div className={`mobile-nav ${mobileOpen ? 'open' : ''}`}>
+      <div className={`mobile-nav ${mobileOpen ? "open" : ""}`}>
         <button
           className="mobile-close"
           aria-label="Close"
@@ -87,7 +92,11 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
         <a
           href="#"
           className="mobile-link"
-          onClick={(e) => { e.preventDefault(); setMobileOpen(false); if (onBackToLanding) onBackToLanding(); }}
+          onClick={(e) => {
+            e.preventDefault();
+            setMobileOpen(false);
+            if (onBackToLanding) onBackToLanding();
+          }}
         >
           &#8592; Landing
         </a>
@@ -96,7 +105,10 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
             key={item.id}
             href={`#${item.id}`}
             className="mobile-link"
-            onClick={(e) => { e.preventDefault(); scrollTo(item.id); }}
+            onClick={(e) => {
+              e.preventDefault();
+              scrollTo(item.id);
+            }}
           >
             {item.label}
           </a>

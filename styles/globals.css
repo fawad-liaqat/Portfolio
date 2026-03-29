@@ -530,41 +530,41 @@ section:first-of-type {
 }
 .signal-card {
   background: var(--bg-card);
-  padding: 2rem 1.5rem;
+  padding: 1.5rem 1.25rem;
   text-align: center;
   transition: background 0.3s;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  min-height: 220px;
+  justify-content: flex-start;
+  min-height: 180px;
 }
 .signal-card:hover {
   background: var(--bg-card-hover);
 }
 .signal-value {
   font-family: var(--font-mono);
-  font-size: clamp(1rem, 2vw, 1.4rem);
+  font-size: clamp(0.9rem, 1.4vw, 1.1rem);
   font-weight: 600;
   color: var(--accent-purple);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
   white-space: normal;
   overflow-wrap: anywhere;
   word-break: break-word;
 }
 .signal-label {
   font-family: var(--font-mono);
-  font-size: 0.7rem;
+  font-size: 0.65rem;
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: var(--text-secondary);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
 }
 .signal-context {
   font-size: 0.75rem;
   color: var(--text-muted);
   white-space: normal;
   overflow-wrap: anywhere;
-  line-height: 1.4;
+  line-height: 1.6;
 }
 
 /* WORK SECTION */

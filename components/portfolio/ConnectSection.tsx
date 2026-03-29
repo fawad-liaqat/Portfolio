@@ -20,7 +20,14 @@ export default function ConnectSection() {
       </RevealOnScroll>
       <RevealOnScroll>
         <div className="connect-grid">
-          <a href={`mailto:${siteConfig.email}`} className="connect-card">
+          <a
+            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
+              siteConfig.email,
+            )}`}
+            className="connect-card"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <span className="connect-icon">&#9993;</span>
             <h3 className="connect-card-title">Email</h3>
             <p className="connect-card-detail">{siteConfig.email}</p>
