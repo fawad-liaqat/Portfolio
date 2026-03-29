@@ -10,35 +10,37 @@ export interface Signal {
 
 export const signals: Signal[] = [
   {
-    id: 'accuracy',
-    value: '96.7%',
-    isNumeric: true,
-    target: 96.7,
-    suffix: '%',
-    label: 'Authentication accuracy',
-    context: 'Voice biometric precision against SBP KYC Tier 2 threshold',
-  },
-  {
-    id: 'compliance',
-    value: 'FAPI 1.0 \u00B7 NADRA 2025 \u00B7 SBP BPRD 01',
+    id: "accuracy",
+    value: "<1% FAR · <5% FRR",
     isNumeric: false,
-    label: 'Regulatory compliance',
-    context: 'Full stack regulatory alignment across three frameworks',
+    label: "Authentication targets",
+    context:
+      "Targets for speaker verification on AMR-NB narrowband audio against SBP KYC thresholds",
   },
   {
-    id: 'network',
-    value: 'G.729 \u00B7 8kHz \u00B7 2G',
+    id: "compliance",
+    value: "SBP BPRD 2025 · Banking on Equality · NFIS 2028",
     isNumeric: false,
-    label: 'Network constraint',
-    context: 'Built for narrowband infrastructure, not broadband assumption',
+    label: "Regulatory alignment",
+    context:
+      "Built against SBP Circular No. 1 of 2025, gender inclusion policy, and national financial inclusion strategy",
   },
   {
-    id: 'beneficiaries',
-    value: '3.7M beneficiaries',
+    id: "network",
+    value: "AMR-NB · 8 kbps · 2G",
+    isNumeric: false,
+    label: "Network constraint",
+    context:
+      "Engineered for 2G narrowband compression where 48% of Pakistan mobile users operate",
+  },
+  {
+    id: "beneficiaries",
+    value: "9M BISP · 58M reached",
     isNumeric: true,
-    target: 3.7,
-    suffix: 'M beneficiaries',
-    label: 'Market context',
-    context: 'BISP population served \u2014 the scale of the problem being solved',
+    target: 9,
+    suffix: "M direct",
+    label: "Market scale",
+    context:
+      "9 million registered BISP beneficiaries, 58 million citizens reached by program; the population excluded by smartphone assumptions",
   },
 ];

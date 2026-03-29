@@ -35,7 +35,8 @@ export const research: ResearchPaper[] = [
       "CBDC Design for Low-Literacy Populations: What the eNaira and Sand Dollar Got Wrong",
     description:
       "Design analysis of CBDC user experience failures and lessons for Pakistan's Digital Rupee. Conducts a design audit of both CBDCs and maps failures against Pakistan's demographic reality — 62% adult literacy, severe urban-rural gaps, predominantly 2G/3G rural connectivity.",
-    status: "forthcoming",
+    status: "published",
+    url: "https://fawad-liaqat.github.io/Research-Articles/articles/cbdc-low-literacy/",
   },
   {
     id: "agentic-ai-compliance",
