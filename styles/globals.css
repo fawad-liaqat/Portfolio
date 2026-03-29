@@ -26,13 +26,17 @@
   --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-html { scroll-behavior: smooth; }
+html, body {
+  width: 100%;
+  min-height: 100%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
 body {
   font-family: var(--font-body);
   background: var(--bg-primary);
   color: var(--text-primary);
   line-height: 1.6;
-  overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -300,7 +304,7 @@ body {
 }
 
 /* SECTIONS */
-section { padding: 6rem 2rem; max-width: 1200px; margin: 0 auto; }
+section { padding: 6rem 2rem; max-width: 1200px; width: min(100%, 1200px); margin: 0 auto; }
 section:first-of-type { padding-top: 8rem; }
 
 .section-label {
@@ -401,12 +405,17 @@ section:first-of-type { padding-top: 8rem; }
   border: 1px solid var(--border-color);
   padding: 0;
   max-width: 1200px;
+  width: min(100%, 1200px);
 }
 .signal-card {
   background: var(--bg-card);
   padding: 2rem 1.5rem;
   text-align: center;
   transition: background 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 220px;
 }
 .signal-card:hover { background: var(--bg-card-hover); }
 .signal-value {
@@ -415,7 +424,9 @@ section:first-of-type { padding-top: 8rem; }
   font-weight: 600;
   color: var(--accent-purple);
   margin-bottom: 0.5rem;
-  white-space: nowrap;
+  white-space: normal;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 .signal-label {
   font-family: var(--font-mono);
@@ -428,6 +439,9 @@ section:first-of-type { padding-top: 8rem; }
 .signal-context {
   font-size: 0.75rem;
   color: var(--text-muted);
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
   line-height: 1.4;
 }
 
