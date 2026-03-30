@@ -56,6 +56,6 @@ export const research: ResearchPaper[] = [
     description:
       "Can asset tokenization convert Pakistan's $30 billion remittance flow from consumption into productive investment? Designs the regulatory, technical, and economic framework for compliant tokenized investment products accessible from abroad.",
     status: "published",
-    url: "https://fawad-liaqat.github.io/Research-Articles/articles/tokenized-remittances/  ",
+    url: "https://fawad-liaqat.github.io/Research-Articles/articles/tokenized-remittances/",
   },
 ];

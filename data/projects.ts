@@ -147,6 +147,8 @@ export const projects: Project[] = [
       "On-chain Analysis",
       "SBP FX Manual",
     ],
-    status: "in-progress",
+    status: "completed",
+    demoUrl:
+      "https://fawad-liaqat.github.io/Stablecoin-Remittance-Cost-Comparison/",
   },
 ];
