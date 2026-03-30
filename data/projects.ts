@@ -18,8 +18,7 @@ export const projects: Project[] = [
     id: "awaaz-onboard",
     category: "Biometric Infrastructure",
     title: "AwaazOnboard",
-    subtitle:
-      "Voice Biometric Authentication Infrastructure for Pakistan's Unbanked Populations",
+    subtitle: "Voice Biometric Infrastructure for Last-Mile Authentication",
     description: [
       "AwaazOnboard is the authentication bridge Pakistan's financial system never built. While the State Bank mandated biometric verification for every account by October 2025, it assumed a smartphone in every hand and 4G in every village. The reality: 48% of Pakistan's mobile users still press 2G feature phones to their ears, and 9 million BISP beneficiaries—mostly women in rural districts—face a simple choice every quarter: prove their identity or lose their lifeline. We chose a different assumption. AwaazOnboard verifies identity through voice alone, running AI hardened against 8 kbps AMR-NB compression; with the technical ceiling of rural telephony, delivering bank-grade accuracy on infrastructure that predates the smartphone. No apps. No data. No exclusion.",
       "The technical challenge is not building a voice biometric system. It is building one that works under constraints the literature ignores. The AMR-NB codec strips frequencies above 3.4 kHz, which eliminates over 50% of the spectral features that most voice biometric systems depend on. We redesigned the enrollment architecture around partner-embedded voice capture in controlled acoustic environments; a pivot that preserved liveness detection while respecting the codec's bandwidth reality.",
