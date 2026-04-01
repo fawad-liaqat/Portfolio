@@ -17,8 +17,8 @@ export default function HeroSection() {
           </h2>
           <p className="hero-sub">
             FinTech senior at FAST Islamabad. Working inside the SBP ecosystem.
-            Building on Pakistan&apos;s open banking stack. Designing voice
-            biometrics for populations the formal banking system hasn&apos;t
+            Building on Pakistan&apos;s open banking stack. Designing financial
+            solutions for populations the formal banking system hasn&apos;t
             reached.
           </p>
           <div className="hero-ctas">
