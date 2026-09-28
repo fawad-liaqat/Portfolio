@@ -5,16 +5,16 @@ A modular Next.js 15 portfolio website with static export deployment.
 ## Quick Start
 
 ### Prerequisites
-- Node.js 18+ (LTS recommended)
+- Node.js 18.18+ (20 or 22 LTS recommended)
 - npm or yarn
 
 ### Installation
 
 ```bash
-npm install
+npm ci
 ```
 
-This installs dependencies. Run it once after cloning.
+Installs the exact dependency versions pinned in `package-lock.json`. Run it once after cloning.
 
 ### Development
 
@@ -52,7 +52,10 @@ Upload `out/` to any CDN or static host.
 │   └── site.ts            # Site config
 ├── hooks/                 # Custom React hooks
 ├── styles/                # CSS with custom properties
-├── public/                # Static assets
+├── public/                # Static assets (copied into out/ at build)
+│   ├── _headers           # Security headers for Netlify
+│   ├── robots.txt         # Crawler rules
+│   └── images/            # Avatar and other images
 ├── next.config.ts         # Next.js configuration
 ├── tsconfig.json          # TypeScript config
 ├── package.json           # Dependencies
@@ -69,7 +72,7 @@ Upload `out/` to any CDN or static host.
 3. Publish directory: `out`
 4. Deploy
 
-Netlify auto-reads `.netlify` configuration and `_headers` for security.
+Netlify reads `_headers` from the publish directory. It lives in `public/` and is copied into `out/` at build time.
 
 ### Vercel
 1. Import GitHub repo
@@ -83,7 +86,7 @@ Upload the `out/` directory after running `npm run build`.
 
 - **No external JavaScript**: Zero third-party JS. Only Google Fonts CSS.
 - **No tracking**: No analytics, pixels, or telemetry.
-- **Security headers**: CSP, HSTS, X-Frame-Options, etc. in `next.config.ts`.
+- **Security headers**: CSP, HSTS, X-Frame-Options, etc. in `public/_headers` (applied by Netlify; other hosts need their own header config).
 - **Static export**: No server required.
 
 ## Troubleshooting
@@ -99,9 +102,9 @@ npm run dev -- -p 3001
 
 ### TypeScript errors
 Ensure `node_modules` is up to date:
-```bash
-rm -rf node_modules
-npm install
+```powershell
+Remove-Item -Recurse -Force node_modules
+npm ci
 ```
 
 
