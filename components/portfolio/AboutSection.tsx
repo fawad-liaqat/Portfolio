@@ -6,22 +6,29 @@ export default function AboutSection() {
   return (
     <section id="about" className="section">
       <div className="container">
-        <h2 className="section-title">About</h2>
-        <div className="about-grid">
-          <div className="prose">
+        <header className="section-head" data-reveal>
+          <p className="eyebrow">Approach</p>
+          <h2 className="section-title">About</h2>
+        </header>
+        <ul className="pillar-grid">
+          {about.pillars.map((pillar, i) => (
+            <li key={pillar.title} className="card pillar" data-reveal>
+              <span className="pillar-num" aria-hidden="true">
+                {String(i + 1).padStart(2, '0')}
+              </span>
+              <h3 className="pillar-title">{pillar.title}</h3>
+              <p className="pillar-desc">{pillar.desc}</p>
+            </li>
+          ))}
+        </ul>
+        <details className="disclosure about-more">
+          <summary>Read more</summary>
+          <div className="disclosure-body prose">
             <p>{about.intro}</p>
             <p>{about.market}</p>
             <p>{about.standard}</p>
           </div>
-          <ul className="pillar-list">
-            {about.pillars.map((pillar) => (
-              <li key={pillar.title} className="pillar">
-                <h3 className="pillar-title">{pillar.title}</h3>
-                <p className="pillar-desc">{pillar.desc}</p>
-              </li>
-            ))}
-          </ul>
-        </div>
+        </details>
       </div>
     </section>
   );

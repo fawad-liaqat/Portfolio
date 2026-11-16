@@ -8,7 +8,10 @@ export default function SignalStrip() {
           {signals.map((s) => (
             <div key={s.id} className="signal">
               <dt className="signal-label">{s.label}</dt>
-              <dd className="signal-value">{s.value}</dd>
+              {/* The final value is in the HTML. Enhancements.tsx counts up to it. */}
+              <dd className="signal-value" data-countup>
+                {s.value}
+              </dd>
               <dd className="signal-context">{s.context}</dd>
             </div>
           ))}

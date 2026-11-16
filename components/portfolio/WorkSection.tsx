@@ -6,20 +6,35 @@ const STATUS_LABELS: Record<Project["status"], string> = {
   forthcoming: "Forthcoming",
 };
 
+/**
+ * Split a summary into the text shown on the card and the rest, which goes
+ * behind "Details". The card shows the first sentence, or the first two when
+ * the first one is very short.
+ */
+function splitSummary(summary: string): [string, string] {
+  const sentences = summary.match(/[^.!?]+[.!?]+(\s+|$)/g)?.map((x) => x.trim()) ?? [summary];
+  const take = sentences.length > 1 && sentences[0].length < 60 ? 2 : 1;
+  return [sentences.slice(0, take).join(" "), sentences.slice(take).join(" ")];
+}
+
 function ProjectCard({ project }: { project: Project }) {
   const { keyFigure } = project;
+  const [lead, rest] = splitSummary(project.summary);
   return (
     <article
       id={`project-${project.id}`}
-      className={project.featured ? "project-card project-card-featured" : "project-card"}
+      className={project.featured ? "card project-card is-featured" : "card project-card"}
       data-theme={project.category}
+      data-reveal
     >
-      <p className="project-meta">
+      <p className="card-meta">
         <span className="tag">{project.category}</span>
-        <span className="project-status">{STATUS_LABELS[project.status]}</span>
+        <span className={`status status-${project.status}`}>
+          {STATUS_LABELS[project.status]}
+        </span>
       </p>
-      <h3 className="project-title">{project.title}</h3>
-      <p className="project-summary">{project.summary}</p>
+      <h3 className="card-title">{project.title}</h3>
+      <p className="card-lead">{lead}</p>
       {keyFigure && (
         <p className="key-figure">
           <span className="key-figure-value">{keyFigure.value}</span>
@@ -28,12 +43,18 @@ function ProjectCard({ project }: { project: Project }) {
         </p>
       )}
       <details className="disclosure project-more">
-        <summary>More detail</summary>
-        <p className="project-subtitle">{project.subtitle}</p>
-        {project.description.map((d, i) => (
-          <p key={i}>{d}</p>
-        ))}
-        <p className="source-note">Built on: {project.tech.join(", ")}</p>
+        <summary>
+          Details
+          <span className="visually-hidden">: {project.title}</span>
+        </summary>
+        <div className="disclosure-body">
+          {rest && <p>{rest}</p>}
+          <p className="project-subtitle">{project.subtitle}</p>
+          {project.description.map((d, i) => (
+            <p key={i}>{d}</p>
+          ))}
+          <p className="source-note">Built on: {project.tech.join(", ")}</p>
+        </div>
       </details>
       {project.demoUrl && (
         <a
@@ -52,21 +73,20 @@ function ProjectCard({ project }: { project: Project }) {
 
 export default function WorkSection() {
   const current = projects.filter((p) => !p.archived);
-  const featured = current.filter((p) => p.featured);
-  const regular = current.filter((p) => !p.featured);
+  // Featured projects come first.
+  const ordered = [...current.filter((p) => p.featured), ...current.filter((p) => !p.featured)];
   const archived = projects.filter((p) => p.archived);
 
   return (
     <section id="work" className="section">
       <div className="container">
-        <h2 className="section-title">Projects</h2>
-
-        {featured.map((p) => (
-          <ProjectCard key={p.id} project={p} />
-        ))}
+        <header className="section-head" data-reveal>
+          <p className="eyebrow">Work</p>
+          <h2 className="section-title">Projects</h2>
+        </header>
 
         <div className="project-grid">
-          {regular.map((p) => (
+          {ordered.map((p) => (
             <ProjectCard key={p.id} project={p} />
           ))}
         </div>
@@ -74,7 +94,7 @@ export default function WorkSection() {
         {archived.length > 0 && (
           <details className="disclosure archive-list">
             <summary>Earlier work</summary>
-            <ul>
+            <ul className="disclosure-body">
               {archived.map((p) => (
                 <li key={p.id}>
                   {p.demoUrl ? (

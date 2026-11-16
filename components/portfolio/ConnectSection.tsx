@@ -15,25 +15,29 @@ export default function ConnectSection() {
   return (
     <section id="connect" className="section">
       <div className="container">
-        <h2 className="section-title">Get in touch</h2>
-        <p className="connect-intro">{siteConfig.connect.intro}</p>
-        <dl className="connect-list">
+        <header className="section-head" data-reveal>
+          <p className="eyebrow">Connect</p>
+          <h2 className="section-title">Get in touch</h2>
+        </header>
+        <p className="connect-intro" data-reveal>
+          {siteConfig.connect.intro}
+        </p>
+        <ul className="connect-grid">
           {links.map((link) => (
-            <div key={link.label} className="connect-row">
-              <dt className="eyebrow">{link.label}</dt>
-              <dd>
-                <a
-                  href={link.href}
-                  {...(link.external
-                    ? { target: "_blank", rel: "noopener noreferrer" }
-                    : {})}
-                >
-                  {link.text}
-                </a>
-              </dd>
-            </div>
+            <li key={link.label} data-reveal>
+              <a
+                className="card connect-card"
+                href={link.href}
+                {...(link.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                <span className="eyebrow">{link.label}</span>
+                <span className="connect-text">{link.text}</span>
+              </a>
+            </li>
           ))}
-        </dl>
+        </ul>
       </div>
     </section>
   );

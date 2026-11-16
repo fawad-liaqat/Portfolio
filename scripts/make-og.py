@@ -11,7 +11,7 @@ Set CHROME_PATH if Chrome is not at /usr/bin/google-chrome
 
 The text is read from data/site.ts (name, oneliner, tagline), so rerun this
 after changing any of those. Fonts load from Google Fonts, so the machine
-needs internet access. Without it the image falls back to Georgia and Arial.
+needs internet access. Without it the image falls back to Arial.
 On a machine that cannot reach Google, set OG_FONT_CSS to the path of a CSS
 file with @font-face rules for the three families and it is used instead.
 Nothing other than public/og.png is written to disk.
@@ -37,10 +37,13 @@ def field(name: str) -> str:
     return re.sub(r"\\u([0-9A-Fa-f]{4})", lambda m: chr(int(m.group(1), 16)), match.group(1))
 
 name, headline, tagline = field("name"), field("oneliner"), field("tagline")
+# The second sentence of the headline is drawn in the accent colour.
+first, _, second = headline.partition(". ")
+first = first + "." if second else first
 
 FONTS_URL = (
-    "https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,600"
-    "&family=IBM+Plex+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=block"
+    "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600"
+    "&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=block"
 )
 font_css = os.environ.get("OG_FONT_CSS")
 FONTS = (
@@ -52,18 +55,30 @@ FONTS = (
 PAGE = f"""<!doctype html>
 <html><head><meta charset="utf-8">{FONTS}<style>
   * {{ box-sizing: border-box; margin: 0; }}
-  body {{ width: 1200px; height: 630px; background: #FAF8F3; color: #14213D;
-         padding: 72px 80px; display: flex; flex-direction: column;
-         border-top: 14px solid #0B5D4B; }}
-  .name {{ font: 500 30px "IBM Plex Sans", Arial, sans-serif; }}
-  h1 {{ font: 600 76px/1.1 "Source Serif 4", Georgia, serif;
-        letter-spacing: -0.01em; margin-top: auto; text-wrap: balance; }}
-  .tagline {{ font: 500 25px "IBM Plex Mono", "Courier New", monospace;
-              color: #5B6472; margin-top: 44px; padding-top: 28px;
-              border-top: 2px solid #E3DFD5; }}
+  body {{ width: 1200px; height: 630px; background: #070B14; color: #EEF3FA;
+         padding: 68px 80px; display: flex; flex-direction: column;
+         background-image:
+           linear-gradient(rgba(151,173,214,.10) 1px, transparent 1px),
+           linear-gradient(90deg, rgba(151,173,214,.10) 1px, transparent 1px);
+         background-size: 60px 60px; }}
+  .name {{ font: 600 30px "Space Grotesk", Arial, sans-serif;
+           display: flex; align-items: center; gap: 16px; }}
+  .name::before {{ content: ""; width: 14px; height: 14px; border-radius: 3px;
+                   background: #4FE3C1; }}
+  h1 {{ font: 600 84px/1.04 "Space Grotesk", Arial, sans-serif;
+        letter-spacing: -0.03em; margin-top: auto; }}
+  h1 span {{ display: block; color: #4FE3C1; }}
+  .rail {{ position: relative; height: 2px; margin-top: 44px;
+           background: rgba(79,227,193,.35); }}
+  .rail::after {{ content: ""; position: absolute; left: 30%; top: -2px;
+                  width: 120px; height: 6px; border-radius: 6px;
+                  background: linear-gradient(90deg, transparent, #4FE3C1); }}
+  .tagline {{ font: 500 24px "IBM Plex Mono", "Courier New", monospace;
+              color: #A9B6C9; margin-top: 28px; }}
 </style></head><body>
   <p class="name">{html.escape(name)}</p>
-  <h1>{html.escape(headline)}</h1>
+  <h1>{html.escape(first)}<span>{html.escape(second)}</span></h1>
+  <div class="rail"></div>
   <p class="tagline">{html.escape(tagline)}</p>
 </body></html>"""
 

@@ -7,18 +7,24 @@ export default function ResearchSection() {
   return (
     <section id="research" className="section">
       <div className="container">
-        <h2 className="section-title">Research</h2>
+        <header className="section-head" data-reveal>
+          <p className="eyebrow">Writing</p>
+          <h2 className="section-title">Research</h2>
+        </header>
 
         <ul className="research-list">
-          {current.map((paper) => (
-            <li key={paper.id} className="research-item">
-              <p className="research-meta">
-                <span className="tag">{paper.category}</span>
-                <span className="research-status">
-                  {paper.status.charAt(0).toUpperCase() + paper.status.slice(1)}
-                </span>
-              </p>
+          {current.map((paper, i) => (
+            <li key={paper.id} className="research-item" data-reveal>
+              <span className="research-num" aria-hidden="true">
+                {String(i + 1).padStart(2, "0")}
+              </span>
               <div className="research-body">
+                <p className="card-meta">
+                  <span className="tag">{paper.category}</span>
+                  <span className="status">
+                    {paper.status.charAt(0).toUpperCase() + paper.status.slice(1)}
+                  </span>
+                </p>
                 <h3 className="research-title">
                   {paper.url ? (
                     <a href={paper.url} target="_blank" rel="noopener noreferrer">
@@ -28,7 +34,13 @@ export default function ResearchSection() {
                     paper.title
                   )}
                 </h3>
-                <p className="research-desc">{paper.description}</p>
+                <details className="disclosure">
+                  <summary>
+                    Summary
+                    <span className="visually-hidden">: {paper.title}</span>
+                  </summary>
+                  <p className="disclosure-body">{paper.description}</p>
+                </details>
               </div>
             </li>
           ))}
@@ -37,7 +49,7 @@ export default function ResearchSection() {
         {archived.length > 0 && (
           <details className="disclosure archive-list">
             <summary>Earlier writing</summary>
-            <ul>
+            <ul className="disclosure-body">
               {archived.map((paper) => (
                 <li key={paper.id}>
                   {paper.url ? (

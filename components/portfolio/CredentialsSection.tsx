@@ -4,10 +4,13 @@ export default function CredentialsSection() {
   return (
     <section id="training" className="section">
       <div className="container">
-        <h2 className="section-title">Training</h2>
-        <dl className="credential-list">
+        <header className="section-head" data-reveal>
+          <p className="eyebrow">Background</p>
+          <h2 className="section-title">Training</h2>
+        </header>
+        <dl className="credential-grid">
           {credentials.map((group) => (
-            <div key={group.id} className="credential-row">
+            <div key={group.id} className="card credential" data-reveal>
               <dt className="eyebrow">{group.label}</dt>
               <dd>
                 {group.provider && (

@@ -11,7 +11,7 @@ export interface ResearchPaper {
 export const research: ResearchPaper[] = [
   {
     id: "behavioral-last-mile",
-    category: "Payments Infrastructure",
+    category: "Payments",
     title:
       "The Behavioral Last Mile: Why 88% Digital Infrastructure Produces 60% Cash Economies",
     description:
@@ -21,7 +21,7 @@ export const research: ResearchPaper[] = [
   },
   {
     id: "tariff-cascades",
-    category: "Macro-Financial",
+    category: "Payments",
     title:
       "Tariff Cascades and Fintech Infrastructure: How Trade Policy Shapes Digital Inclusion Timelines",
     description:
@@ -32,7 +32,7 @@ export const research: ResearchPaper[] = [
   },
   {
     id: "cbdc-low-literacy",
-    category: "CBDC Design",
+    category: "Digital currency",
     title:
       "CBDC Design for Low-Literacy Populations: What the eNaira and Sand Dollar Got Wrong",
     description:
@@ -42,7 +42,7 @@ export const research: ResearchPaper[] = [
   },
   {
     id: "agentic-ai-compliance",
-    category: "Regulatory",
+    category: "Regulation and AI",
     title:
       "Agentic AI in Compliance: Regulatory Implications of Autonomous Decision-Making in Pakistani Financial Services",
     description:
@@ -52,7 +52,7 @@ export const research: ResearchPaper[] = [
   },
   {
     id: "tokenized-remittances",
-    category: "Blockchain",
+    category: "Digital currency",
     title:
       "Tokenized Remittances: A Feasibility Framework for Blockchain-Based Diaspora Investment in Pakistan",
     description:

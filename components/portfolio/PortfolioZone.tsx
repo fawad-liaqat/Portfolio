@@ -7,6 +7,7 @@ import ResearchSection from "./ResearchSection";
 import CredentialsSection from "./CredentialsSection";
 import ConnectSection from "./ConnectSection";
 import Footer from "./Footer";
+import Enhancements from "./Enhancements";
 
 // Page order. Each section reads its content from a file in data/.
 export default function PortfolioZone() {
@@ -23,6 +24,7 @@ export default function PortfolioZone() {
         <ConnectSection />
       </main>
       <Footer />
+      <Enhancements />
     </div>
   );
 }

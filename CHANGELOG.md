@@ -1,5 +1,49 @@
 # Changelog
 
+## Phase 3: "Signal" dark restyle (17 November 2026)
+
+The light editorial look was rejected as too basic. The site is now dark and
+precise, with calm motion and detail that opens when asked for. Structure and
+data from phase 2 are kept. The light style is in git history (commit fcc50d6).
+
+What changed
+- `styles/globals.css` rewritten for the dark palette: near black blue
+  background, one raised surface, one teal accent, amber for key figures.
+  Fonts are Space Grotesk, Inter and IBM Plex Mono from the same Google Fonts
+  link.
+- Hero is short: label, headline, one sentence, status line, two buttons, with
+  the stack diagram beside it.
+- The stack diagram is now interactive. Each layer is a rail: Identity is a
+  steady line, Payments has pulses moving along it, Data sharing is dashed.
+  Choosing a layer (hover, tap or arrow keys) shows what exists in Pakistan
+  and the projects on it. It is built from radio buttons and CSS, so it works
+  without JavaScript. The inline SVG from phase 2 was replaced by HTML and CSS
+  so text stays readable on phones. `data/stack.ts` gained `state`, `badge`
+  and `note`. The data sharing layer shows "Part 3 of the series, in progress".
+- Key figures count up once when they scroll into view. The final values are
+  in the HTML.
+- Less text on the page. Project cards show the first sentence or two of the
+  summary, with the rest behind "Details". Research rows show the title, with
+  the description behind "Summary". About is four tiles, with the three
+  paragraphs behind "Read more". Training and Connect are compact tiles.
+- Research categories now use the same scheme as projects: Payments, Digital
+  currency, Regulation and AI. Titles and descriptions are unchanged.
+- New `components/portfolio/Enhancements.tsx`: scroll reveal, count up,
+  Escape to close an open disclosure, opening a card from a diagram link, and
+  pausing the rail pulses when the diagram is off screen.
+- Motion is CSS first and switches off under reduced motion. With JavaScript
+  off, all content is visible and every disclosure still opens.
+- `public/og.png`, `app/icon.svg` and the browser theme colour match the dark
+  palette.
+
+Still open
+- Everything under "Still open" in phase 2 except the data sharing wording.
+- Disclosures animate open in recent Chrome and Edge. Other browsers open
+  them at once, without the animation.
+- The diagram panel switch needs a browser that supports `:has()` in CSS
+  (2023 or later). Older browsers show all three panels.
+- Check on a real mid range Android phone, and with the real Google Fonts.
+
 ## Phase 2: redesign (16 November 2026)
 
 The site moved from the dark purple look to a light editorial style
