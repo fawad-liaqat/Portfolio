@@ -1,55 +1,29 @@
-"use client";
-
-import RevealOnScroll from "@/components/ui/RevealOnScroll";
-import GradientText from "@/components/ui/GradientText";
+import { siteConfig } from "@/data/site";
 import NetworkCanvas from "./NetworkCanvas";
 
 export default function HeroSection() {
+  const { hero } = siteConfig;
   return (
     <section id="hero">
-      <RevealOnScroll>
-        <div className="hero-content">
-          <span className="section-label">01 — Identity</span>
-          <h2 className="hero-headline">
-            <GradientText>
-              Building Financial Infrastructure for Emerging Markets
-            </GradientText>
-          </h2>
-          <p className="hero-sub">
-            FinTech senior at FAST Islamabad. Working inside the SBP ecosystem.
-            Building on Pakistan&apos;s open banking stack. Designing
-            tech-driven solutions for populations the formal banking system
-            hasn&apos;t reached.
-          </p>
-          <div className="hero-ctas">
-            <a
-              href="#work"
-              className="btn-primary"
-              onClick={(e) => {
-                e.preventDefault();
-                document
-                  .getElementById("work")
-                  ?.scrollIntoView({ behavior: "smooth" });
-              }}
-            >
-              View Work
-            </a>
-            <a
-              href="https://fawad-liaqat.github.io/Research-Articles/"
-              className="btn-secondary"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              View Research
-            </a>
-          </div>
+      <div className="hero-content">
+        <span className="section-label">{hero.label}</span>
+        <h1 className="hero-headline">
+          <span className="gradient-text">{hero.headline}</span>
+        </h1>
+        <p className="hero-sub">{hero.sub}</p>
+        <p className="hero-sub hero-status">{hero.status}</p>
+        <div className="hero-ctas">
+          <a href="#work" className="btn-primary">
+            {hero.primaryCta}
+          </a>
+          <a href="#research" className="btn-secondary">
+            {hero.secondaryCta}
+          </a>
         </div>
-      </RevealOnScroll>
-      <RevealOnScroll>
-        <div className="network-canvas-container">
-          <NetworkCanvas />
-        </div>
-      </RevealOnScroll>
+      </div>
+      <div className="network-canvas-container" aria-hidden="true">
+        <NetworkCanvas />
+      </div>
     </section>
   );
 }

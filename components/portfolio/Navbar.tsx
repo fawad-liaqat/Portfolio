@@ -3,20 +3,15 @@
 import { useState, useEffect } from "react";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
-interface Props {
-  visible: boolean;
-  onBackToLanding?: () => void;
-}
-
 const NAV_ITEMS = [
   { id: "hero", label: "Home" },
-  { id: "about", label: "About" },
   { id: "work", label: "Work" },
   { id: "research", label: "Research" },
+  { id: "about", label: "About" },
   { id: "connect", label: "Connect" },
 ] as const;
 
-export default function Navbar({ visible, onBackToLanding }: Props) {
+export default function Navbar() {
   const activeSection = useActiveSection();
   const [mobileOpen, setMobileOpen] = useState(false);
 
@@ -39,19 +34,17 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
 
   function handleLogoClick(e: React.MouseEvent) {
     e.preventDefault();
-    if (onBackToLanding) {
-      onBackToLanding();
-    }
+    window.scrollTo({ top: 0, behavior: "smooth" });
   }
 
   return (
     <>
-      <nav className={`navbar ${visible ? "visible" : ""}`} id="navbar">
+      <nav className="navbar visible" id="navbar">
         <a
           href="#"
           className="nav-logo"
           onClick={handleLogoClick}
-          title="Back to landing"
+          title="Back to top"
         >
           FL<span>.</span>
         </a>
@@ -75,6 +68,7 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
         <button
           className="mobile-menu-btn"
           aria-label="Menu"
+          aria-expanded={mobileOpen}
           onClick={() => setMobileOpen(true)}
         >
           &#9776;
@@ -89,17 +83,6 @@ export default function Navbar({ visible, onBackToLanding }: Props) {
         >
           &times;
         </button>
-        <a
-          href="#"
-          className="mobile-link"
-          onClick={(e) => {
-            e.preventDefault();
-            setMobileOpen(false);
-            if (onBackToLanding) onBackToLanding();
-          }}
-        >
-          &#8592; Landing
-        </a>
         {NAV_ITEMS.map((item) => (
           <a
             key={item.id}

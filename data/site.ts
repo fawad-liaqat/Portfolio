@@ -1,39 +1,52 @@
 export const siteConfig = {
   name: "Fawad Liaqat",
-  title: "Fawad Liaqat \u00B7 FinTech Infrastructure",
+  title: "Fawad Liaqat \u00B7 Digital Payments and Public Infrastructure",
   description:
-    "Building the systems that move money where it doesn't yet reach. FinTech infrastructure, blockchain, and emerging markets.",
-  tagline: "FinTech Infrastructure \u00B7 Blockchain \u00B7 Emerging Markets",
-  oneliner: "Building the systems that move money where it doesn't yet reach.",
+    "Pakistan built the rails for digital payments. I study why adoption lags, what global evidence teaches for our demographics, and I explain it in plain language.",
+  tagline: "Digital Public Infrastructure \u00B7 Payments \u00B7 Policy",
+  oneliner: "Pakistan built the rails. Adoption is the hard part.",
   url: "https://fawad-liaqat.netlify.app/",
   email: "fawadliaqat666@gmail.com",
   social: {
     linkedin: "https://www.linkedin.com/in/fawad-liaqat/",
     github: "https://github.com/fawad-liaqat",
   },
+  hero: {
+    label: "Overview",
+    headline: "Pakistan built the rails. Adoption is the hard part.",
+    sub: "I study why Pakistan's digital public infrastructure is used less than it could be, what other countries' evidence teaches for our demographics, and I explain it in plain language.",
+    status:
+      "Final year BS FinTech student at FAST NUCES Islamabad, graduating January 2027.",
+    primaryCta: "See the work",
+    secondaryCta: "Read the research",
+  },
+  connect: {
+    intro:
+      "Open to conversations about digital payments, public infrastructure and policy, and to roles in strategy, research and programme delivery.",
+  },
   about: {
     intro:
-      "I work on authentication and payment infrastructure for markets where the formal banking system has not arrived. The gap I operate in is specific: between the regulatory frameworks that define how financial services should work and the network constraints that determine how they actually can. AwaazOnboard; a voice biometric authentication layer built for Pakistan's open banking stack is the clearest expression of that work: an identity system designed against SBP and NADRA regulations, compressed to function over 2G voice channels. Similarly, testing against the reality that 98% of ATM usage in Pakistan is still cash withdrawal.",
+      "Digital public infrastructure means the shared systems a country runs its digital economy on: identity, payments and data sharing. Pakistan has built much of it. Raast moves money in real time, NADRA anchors identity, and the State Bank has published draft open banking regulations. My interest is in what happens next: whether people and businesses actually use these systems, and why many still do not.",
     market:
-      "Pakistan is not a case study I selected. It is the market I know. I have mapped the SBP regulatory stack from NPSS 2019 through BPRD Circular 01 of 2025 and the Digital Rupee pilot. I have extracted POS deployment data from SBP payment systems reviews and cross-referenced it against Karandaaz financial inclusion surveys. I have modeled the cost chain from US semiconductor tariffs through to merchant acquisition cost in Lahore. The specificity is the credential. Most fintech portfolios gesture at emerging markets. This one works inside a particular one.",
+      "The State Bank's Payment Systems Review for FY26 shows the gap in one line. Digital channels carried more than 92% of retail payments by number, but 38% by value. I work from sources like that review, the World Bank's regional assessment of digital public infrastructure, and the experience of India, Brazil and others. The question I ask is which lessons fit Pakistan's literacy levels, phone access and cash habits, and which do not.",
     standard:
-      "Everything in this portfolio traces to a source or states its assumption. Charts use verified SBP data with extraction dates documented. Models surface every parameter and sensitivity range. Where data does not exist; Pakistan-specific EMI fraud rates, per-unit POS terminal import costs, diaspora investment preferences for tokenized assets: the gap is named, not papered over. The standard is not perfection. It is transparency.",
+      "I also want this to be understood outside finance. Adoption depends on design, cost, trust and whether people know what a tool does for them, so each new piece of work here will come with a plain language explainer. Every figure traces to a source or states its assumption. Where data does not exist, I say so.",
     pillars: [
       {
-        title: "Infrastructure, Not Application",
-        desc: "Authentication layers, payment rails, regulatory compliance architectures. The work sits one level below the products people see. FAPI 1.0 security profiles, VaaS delivery models, SBP framework design \u2014 the infrastructure that other applications depend on.",
+        title: "Infrastructure as one system",
+        desc: "Identity, payments and data sharing work as a stack. I look at how the layers depend on each other, and where Pakistan's stack is strong, partial or missing.",
       },
       {
-        title: "Emerging Market Structural Thinking",
-        desc: "Every problem is framed through structural constraint: 2G bandwidth ceilings, 62% adult literacy, cash economies that coexist with digital payment rails, regulatory environments that move faster than the infrastructure they regulate.",
+        title: "Adoption before technology",
+        desc: "A working rail is not the same as a used one. I study who is left out and what holds them back: cost, trust, acceptance, design and financial literacy.",
       },
       {
-        title: "Regulatory Fluency as Design Constraint",
-        desc: "SBP BPRD Circular 01 of 2025. NADRA Digital Identity Regulations 2025. PTA Critical Infrastructure Rules. SECP Sandbox Framework. PDPA 2023. These are not compliance checkboxes. They are the binding constraints that shape every architectural decision.",
+        title: "Global evidence, local fit",
+        desc: "India's UPI, Brazil's Pix and other cases are useful only when read against Pakistan's own demographics and institutions.",
       },
       {
-        title: "Process over product",
-        desc: "I believe the grandeur of life is in trying. This means showing work in progress, acknowledging limits, and never stopping the pursuit of better. Every claim here is sourced or qualified. Every project carries its honest story. I do not polish beyond evidence;I persist until evidence earns the polish.",
+        title: "Explain it plainly",
+        desc: "If people cannot see how a system helps them, they will not use it. I write for readers outside finance as well as inside it.",
       },
     ],
   },

@@ -5,6 +5,7 @@ export interface ResearchPaper {
   description: string;
   status: "published" | "forthcoming" | "draft";
   url?: string;
+  archived?: boolean;
 }
 
 export const research: ResearchPaper[] = [
@@ -14,7 +15,7 @@ export const research: ResearchPaper[] = [
     title:
       "The Behavioral Last Mile: Why 88% Digital Infrastructure Produces 60% Cash Economies",
     description:
-      "Pakistan's digital payment paradox as a case study in the gap between infrastructure availability and behavioral adoption. Introduces a three-layer analytical framework — trust deficit, incentive misalignment, literacy friction — benchmarked against India's UPI trajectory and Kenya's M-Pesa rollout.",
+      "Pakistan's digital payment paradox as a case study in the gap between infrastructure availability and behavioral adoption. Introduces a three-layer analytical framework (trust deficit, incentive misalignment, literacy friction), benchmarked against India's UPI trajectory and Kenya's M-Pesa rollout.",
     status: "published",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/behavioral-last-mile/",
   },
@@ -26,6 +27,7 @@ export const research: ResearchPaper[] = [
     description:
       "An emerging market analysis tracing cost propagation from semiconductor tariffs to merchant deployment delays. Builds a five-link cost model from tariff announcement through to implied delay in meeting SBP's 70% digital payment adoption target by 2030.",
     status: "published",
+    archived: true,
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/tariff-cascades/",
   },
   {
@@ -34,7 +36,7 @@ export const research: ResearchPaper[] = [
     title:
       "CBDC Design for Low-Literacy Populations: What the eNaira and Sand Dollar Got Wrong",
     description:
-      "Design analysis of CBDC user experience failures and lessons for Pakistan's Digital Rupee. Conducts a design audit of both CBDCs and maps failures against Pakistan's demographic reality — 62% adult literacy, severe urban-rural gaps, predominantly 2G/3G rural connectivity.",
+      "Design analysis of CBDC user experience failures and lessons for Pakistan's Digital Rupee. Conducts a design audit of both CBDCs and maps failures against Pakistan's demographic reality: adult literacy levels, wide gaps between urban and rural areas, and mostly 2G and 3G rural connectivity.",
     status: "published",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/cbdc-low-literacy/",
   },

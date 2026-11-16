@@ -13,9 +13,30 @@ export const metadata: Metadata = {
     siteName: siteConfig.name,
     type: 'website',
   },
+  twitter: {
+    card: 'summary',
+    title: siteConfig.title,
+    description: siteConfig.description,
+  },
+  alternates: {
+    canonical: '/',
+  },
   robots: {
     index: true,
     follow: true,
+  },
+};
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  sameAs: [siteConfig.social.linkedin, siteConfig.social.github],
+  alumniOf: {
+    '@type': 'CollegeOrUniversity',
+    name: 'National University of Computer and Emerging Sciences (FAST NUCES), Islamabad',
   },
 };
 
@@ -38,7 +59,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
-        <div className="scanlines" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
       </body>
     </html>
   );

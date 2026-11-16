@@ -1,46 +1,41 @@
 export interface Signal {
   id: string;
   value: string;
-  isNumeric: boolean;
-  target?: number;
-  suffix?: string;
   label: string;
   context: string;
 }
 
+// All figures: State Bank of Pakistan, Payment Systems Review FY26
+// (July 2025 to June 2026). FY26 figures are provisional in the source.
+export const signalsSource =
+  "Source: State Bank of Pakistan, Payment Systems Review FY26. FY26 figures are provisional.";
+
 export const signals: Signal[] = [
   {
-    id: "accuracy",
-    value: "<1% FAR · <5% FRR",
-    isNumeric: false,
-    label: "Authentication targets",
+    id: "retail",
+    value: "14.3 billion",
+    label: "Retail payments in FY26",
     context:
-      "Targets for speaker verification on AMR-NB narrowband audio against SBP KYC thresholds",
+      "Worth PKR 673 trillion. Up 58% by number and 10% by value in one year.",
   },
   {
-    id: "compliance",
-    value: "SBP BPRD 2025 · Banking on Equality · NFIS 2028",
-    isNumeric: false,
-    label: "Regulatory alignment",
+    id: "digital-share",
+    value: "92% vs 38%",
+    label: "Digital share by number vs by value",
     context:
-      "Built against SBP Circular No. 1 of 2025, gender inclusion policy, and national financial inclusion strategy",
+      "Most transactions are digital. Most of the money is not. The value share was 29% in FY25.",
   },
   {
-    id: "network",
-    value: "AMR-NB · 8 kbps · 2G",
-    isNumeric: false,
-    label: "Network constraint",
-    context:
-      "Engineered for 2G narrowband compression where 48% of Pakistan mobile users operate",
+    id: "raast-p2m",
+    value: "182.5 million",
+    label: "Raast merchant payments in FY26",
+    context: "Up from 4.9 million in FY25.",
   },
   {
-    id: "beneficiaries",
-    value: "9M BISP · 58M reached",
-    isNumeric: true,
-    target: 9,
-    suffix: "M direct",
-    label: "Market scale",
+    id: "qr",
+    value: "3.8 million",
+    label: "QR enabled merchants",
     context:
-      "9 million registered BISP beneficiaries, 58 million citizens reached by program; the population excluded by smartphone assumptions",
+      "Up from 1.1 million in June 2025, under a government subsidy programme.",
   },
 ];

@@ -1,32 +1,22 @@
-"use client";
-
 import { siteConfig } from "@/data/site";
-import RevealOnScroll from "@/components/ui/RevealOnScroll";
-import GradientText from "@/components/ui/GradientText";
 
 export default function ConnectSection() {
   return (
     <section id="connect">
-      <RevealOnScroll>
-        <span className="section-label">05 — Connect</span>
+      <>
+        <span className="section-label">Connect</span>
         <h2 className="section-title">
-          <GradientText>Get in Touch</GradientText>
+          <span className="gradient-text">Get in touch</span>
         </h2>
         <p className="connect-intro">
-          Open to conversations about fintech infrastructure, emerging market
-          systems, research collaboration, and opportunities where the work
-          matters.
+          {siteConfig.connect.intro}
         </p>
-      </RevealOnScroll>
-      <RevealOnScroll>
+      </>
+      <>
         <div className="connect-grid">
           <a
-            href={`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(
-              siteConfig.email,
-            )}`}
+            href={`mailto:${siteConfig.email}`}
             className="connect-card"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <span className="connect-icon">&#9993;</span>
             <h3 className="connect-card-title">Email</h3>
@@ -53,7 +43,7 @@ export default function ConnectSection() {
             <p className="connect-card-detail">{siteConfig.social.github}</p>
           </a>
         </div>
-      </RevealOnScroll>
+      </>
     </section>
   );
 }

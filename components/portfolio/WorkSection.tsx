@@ -1,117 +1,90 @@
-"use client";
+import { projects, type Project } from "@/data/projects";
 
-import { projects } from "@/data/projects";
-import RevealOnScroll from "@/components/ui/RevealOnScroll";
-import GradientText from "@/components/ui/GradientText";
-import Pill from "@/components/ui/Pill";
-import SignalStrip from "./SignalStrip";
-
-function StatusDot({ status }: { status: string }) {
-  const cls = status === "completed" ? "status-complete" : "status-progress";
-  const label = status === "completed" ? "Completed" : "In Progress";
-  return (
-    <p className="project-status" style={{ marginTop: "1rem" }}>
-      <span className={`status-dot ${cls}`} />
-      {label}
-    </p>
-  );
+function statusLabel(status: Project["status"]) {
+  return status === "completed" ? "Completed" : "In progress";
 }
 
-function FeaturedCard({ project }: { project: (typeof projects)[number] }) {
+function ProjectCard({ project }: { project: Project }) {
+  const featured = Boolean(project.featured);
   return (
-    <RevealOnScroll>
-      <div className="featured-card">
-        <span className="featured-badge">Flagship Project · In Progress</span>
-        <h3 className="featured-title">{project.title}</h3>
-        <p className="featured-subtitle">{project.subtitle}</p>
-        {project.description.map((d, i) => (
-          <p key={i} className="featured-desc">
-            {d}
-          </p>
-        ))}
-        <div className="featured-tech">
-          {project.tech.map((t) => (
-            <Pill key={t} label={t} />
-          ))}
-        </div>
-        {project.demoUrl && (
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary"
-            style={{ marginTop: "1.5rem", display: "inline-block" }}
-          >
-            View Demo
-          </a>
-        )}
-      </div>
-    </RevealOnScroll>
-  );
-}
-
-function ProjectCard({ project }: { project: (typeof projects)[number] }) {
-  return (
-    <RevealOnScroll>
-      <div className="project-card">
-        <span className="project-category">{project.category}</span>
-        <h3 className="project-title">{project.title}</h3>
-        <p className="project-subtitle">{project.subtitle}</p>
+    <article className={featured ? "featured-card" : "project-card"}>
+      <span className={featured ? "featured-badge" : "project-category"}>
+        {project.category} · {statusLabel(project.status)}
+      </span>
+      <h3 className={featured ? "featured-title" : "project-title"}>
+        {project.title}
+      </h3>
+      <p className={featured ? "featured-subtitle" : "project-subtitle"}>
+        {project.subtitle}
+      </p>
+      <p className={featured ? "featured-desc" : "project-desc"}>
+        {project.summary}
+      </p>
+      <details className="project-more">
+        <summary>More detail</summary>
         {project.description.map((d, i) => (
           <p key={i} className="project-desc">
             {d}
           </p>
         ))}
-        <div className="featured-tech">
-          {project.tech.map((t) => (
-            <Pill key={t} label={t} />
-          ))}
-        </div>
-        <StatusDot status={project.status} />
-        {project.demoUrl && (
-          <a
-            href={project.demoUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-secondary"
-            style={{
-              marginTop: "0.75rem",
-              display: "inline-block",
-              fontSize: "0.8rem",
-            }}
-          >
-            View Demo →
-          </a>
-        )}
-      </div>
-    </RevealOnScroll>
+        <p className="project-sources">Built on: {project.tech.join(", ")}</p>
+      </details>
+      {project.demoUrl && (
+        <a
+          href={project.demoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn-secondary project-link"
+        >
+          Open the tool
+        </a>
+      )}
+    </article>
   );
 }
 
 export default function WorkSection() {
-  const featured = projects.filter((p) => p.featured);
-  const regular = projects.filter((p) => !p.featured);
+  const current = projects.filter((p) => !p.archived);
+  const featured = current.filter((p) => p.featured);
+  const regular = current.filter((p) => !p.featured);
+  const archived = projects.filter((p) => p.archived);
 
   return (
     <section id="work">
-      <RevealOnScroll>
-        <span className="section-label">03 — Work</span>
-        <h2 className="section-title">
-          <GradientText>Projects</GradientText>
-        </h2>
-      </RevealOnScroll>
+      <span className="section-label">Work</span>
+      <h2 className="section-title">
+        <span className="gradient-text">Projects</span>
+      </h2>
 
       {featured.map((p) => (
-        <FeaturedCard key={p.id} project={p} />
+        <ProjectCard key={p.id} project={p} />
       ))}
-
-      <SignalStrip />
 
       <div className="project-grid">
         {regular.map((p) => (
           <ProjectCard key={p.id} project={p} />
         ))}
       </div>
+
+      {archived.length > 0 && (
+        <details className="archive-list">
+          <summary>Earlier work</summary>
+          <ul>
+            {archived.map((p) => (
+              <li key={p.id}>
+                {p.demoUrl ? (
+                  <a href={p.demoUrl} target="_blank" rel="noopener noreferrer">
+                    {p.title}
+                  </a>
+                ) : (
+                  p.title
+                )}
+                . {p.summary}
+              </li>
+            ))}
+          </ul>
+        </details>
+      )}
     </section>
   );
 }
