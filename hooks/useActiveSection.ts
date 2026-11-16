@@ -2,7 +2,8 @@
 
 import { useEffect, useState } from 'react';
 
-const SECTIONS = ['hero', 'work', 'research', 'about', 'connect'] as const;
+// Keep in step with NAV_ITEMS in components/portfolio/Navbar.tsx.
+const SECTIONS = ['hero', 'work', 'research', 'training', 'about', 'connect'] as const;
 export type SectionId = (typeof SECTIONS)[number];
 
 export function useActiveSection(): SectionId {
@@ -20,6 +21,7 @@ export function useActiveSection(): SectionId {
       setActive(current);
     }
 
+    update();
     window.addEventListener('scroll', update, { passive: true });
     return () => window.removeEventListener('scroll', update);
   }, []);

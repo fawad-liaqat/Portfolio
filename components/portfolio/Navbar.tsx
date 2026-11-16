@@ -1,102 +1,81 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
+import { siteConfig } from "@/data/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
 
+// To add a page section to the menu, add it here and to SECTIONS in
+// hooks/useActiveSection.ts. The id must match the section's id attribute.
 const NAV_ITEMS = [
-  { id: "hero", label: "Home" },
   { id: "work", label: "Work" },
   { id: "research", label: "Research" },
+  { id: "training", label: "Training" },
   { id: "about", label: "About" },
   { id: "connect", label: "Connect" },
 ] as const;
 
 export default function Navbar() {
   const activeSection = useActiveSection();
-  const [mobileOpen, setMobileOpen] = useState(false);
+  const [open, setOpen] = useState(false);
+  const buttonRef = useRef<HTMLButtonElement>(null);
 
+  // Escape closes the mobile menu and returns focus to the button.
   useEffect(() => {
-    if (mobileOpen) {
-      document.body.style.overflow = "hidden";
-    } else {
-      document.body.style.overflow = "";
+    if (!open) return;
+    function onKeyDown(e: KeyboardEvent) {
+      if (e.key === "Escape") {
+        setOpen(false);
+        buttonRef.current?.focus();
+      }
     }
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, [mobileOpen]);
-
-  function scrollTo(id: string) {
-    const el = document.getElementById(id);
-    if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
-    setMobileOpen(false);
-  }
-
-  function handleLogoClick(e: React.MouseEvent) {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
+  }, [open]);
 
   return (
-    <>
-      <nav className="navbar visible" id="navbar">
-        <a
-          href="#"
-          className="nav-logo"
-          onClick={handleLogoClick}
-          title="Back to top"
-        >
-          FL<span>.</span>
+    <header className="site-header">
+      <a href="#main" className="skip-link">
+        Skip to content
+      </a>
+      <div className="container header-inner">
+        <a href="#hero" className="site-name" onClick={() => setOpen(false)}>
+          {siteConfig.name}
         </a>
-        <ul className="nav-links">
-          {NAV_ITEMS.map((item) => (
-            <li key={item.id}>
-              <a
-                href={`#${item.id}`}
-                data-section={item.id}
-                className={activeSection === item.id ? "active" : ""}
-                onClick={(e) => {
-                  e.preventDefault();
-                  scrollTo(item.id);
-                }}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))}
-        </ul>
         <button
-          className="mobile-menu-btn"
-          aria-label="Menu"
-          aria-expanded={mobileOpen}
-          onClick={() => setMobileOpen(true)}
+          ref={buttonRef}
+          type="button"
+          className="menu-button"
+          aria-expanded={open}
+          aria-controls="site-nav"
+          onClick={() => setOpen((v) => !v)}
         >
-          &#9776;
+          {open ? "Close" : "Menu"}
         </button>
-      </nav>
-
-      <div className={`mobile-nav ${mobileOpen ? "open" : ""}`}>
-        <button
-          className="mobile-close"
-          aria-label="Close"
-          onClick={() => setMobileOpen(false)}
+        <nav
+          id="site-nav"
+          className={open ? "site-nav open" : "site-nav"}
+          aria-label="Sections"
         >
-          &times;
-        </button>
-        {NAV_ITEMS.map((item) => (
-          <a
-            key={item.id}
-            href={`#${item.id}`}
-            className="mobile-link"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollTo(item.id);
-            }}
-          >
-            {item.label}
-          </a>
-        ))}
+          <ul>
+            {NAV_ITEMS.map((item) => (
+              <li key={item.id}>
+                <a
+                  href={`#${item.id}`}
+                  aria-current={activeSection === item.id ? "true" : undefined}
+                  onClick={() => {
+                    if (open) {
+                      setOpen(false);
+                      buttonRef.current?.focus();
+                    }
+                  }}
+                >
+                  {item.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-    </>
+    </header>
   );
 }

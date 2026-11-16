@@ -1,5 +1,15 @@
 export type ProjectStatus = "completed" | "in-progress" | "forthcoming";
 
+/** The layer of the DPI stack a project addresses. "all" means it spans the stack. */
+export type StackLayerId = "identity" | "payments" | "data";
+
+/** A headline number for a card. Only add one that traces to a source. */
+export interface KeyFigure {
+  value: string;
+  label: string;
+  source: string;
+}
+
 export interface Project {
   id: string;
   category: string;
@@ -15,11 +25,16 @@ export interface Project {
   summary: string;
   /** Archived items stay in the repo and are listed under "Earlier work". */
   archived?: boolean;
+  /** Pins the project to a layer in the hero diagram (see data/stack.ts). */
+  layer?: StackLayerId | "all";
+  /** Optional. Shown on the card when present. */
+  keyFigure?: KeyFigure;
 }
 
 export const projects: Project[] = [
   {
     id: "awaaz-onboard",
+    layer: "identity",
     category: "Inclusion",
     title: "AwaazOnboard",
     subtitle: "Voice as a second authentication factor for basic phone users",
@@ -36,6 +51,7 @@ export const projects: Project[] = [
   },
   {
     id: "raast-tracker",
+    layer: "payments",
     category: "Payments",
     summary:
       "A dashboard on the distance between Raast's rollout and everyday use, built on State Bank data for FY25. An update to FY26 data is in progress.",
@@ -67,6 +83,7 @@ export const projects: Project[] = [
   },
   {
     id: "cbdc-matrix",
+    layer: "payments",
     category: "Digital currency",
     summary:
       "A comparison of Pakistan's planned Digital Rupee with five central bank digital currencies abroad, across architecture, privacy, offline use, onboarding and interoperability.",
@@ -87,6 +104,7 @@ export const projects: Project[] = [
   },
   {
     id: "voice-feasibility",
+    layer: "identity",
     category: "Inclusion",
     summary:
       "A companion tool to AwaazOnboard. It scores whether voice authentication is workable for a given network, device, noise level and regulatory setting. The weights are my own judgement, not empirical estimates.",
@@ -107,6 +125,7 @@ export const projects: Project[] = [
   },
   {
     id: "regulatory-timeline",
+    layer: "all",
     category: "Regulation",
     summary:
       "An annotated timeline of State Bank, PTA, NADRA and SECP actions that shaped digital finance in Pakistan from 2019 to January 2026, each linked to its source.",
@@ -145,6 +164,7 @@ export const projects: Project[] = [
   },
   {
     id: "stablecoin-remittance",
+    layer: "payments",
     category: "Digital currency",
     summary:
       "What it costs to send USD 500 to Pakistan through banks, money transfer operators, mobile wallets and stablecoin channels, across five corridors. Stablecoin prices are a dated snapshot.",

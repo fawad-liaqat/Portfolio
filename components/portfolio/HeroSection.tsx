@@ -1,28 +1,32 @@
 import { siteConfig } from "@/data/site";
-import NetworkCanvas from "./NetworkCanvas";
+import DpiStackDiagram from "./DpiStackDiagram";
 
+// The animated NetworkCanvas is no longer mounted. It is kept in the repo
+// (components/portfolio/NetworkCanvas.tsx) and replaced here by a static diagram.
 export default function HeroSection() {
   const { hero } = siteConfig;
   return (
-    <section id="hero">
-      <div className="hero-content">
-        <span className="section-label">{hero.label}</span>
-        <h1 className="hero-headline">
-          <span className="gradient-text">{hero.headline}</span>
-        </h1>
-        <p className="hero-sub">{hero.sub}</p>
-        <p className="hero-sub hero-status">{hero.status}</p>
-        <div className="hero-ctas">
-          <a href="#work" className="btn-primary">
-            {hero.primaryCta}
-          </a>
-          <a href="#research" className="btn-secondary">
-            {hero.secondaryCta}
-          </a>
+    <section id="hero" className="hero">
+      <div className="container">
+        <div className="hero-grid">
+          <div className="hero-lead">
+            <p className="eyebrow">{siteConfig.tagline}</p>
+            <h1 className="hero-headline">{hero.headline}</h1>
+          </div>
+          <div className="hero-body">
+            <p className="hero-sub">{hero.sub}</p>
+            <p className="hero-status">{hero.status}</p>
+            <div className="hero-ctas">
+              <a href="#work" className="btn btn-primary">
+                {hero.primaryCta}
+              </a>
+              <a href="#research" className="btn btn-secondary">
+                {hero.secondaryCta}
+              </a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div className="network-canvas-container" aria-hidden="true">
-        <NetworkCanvas />
+        <DpiStackDiagram />
       </div>
     </section>
   );

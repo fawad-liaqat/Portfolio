@@ -4,28 +4,25 @@ export default function AboutSection() {
   const { about } = siteConfig;
 
   return (
-    <section id="about">
-      <>
-        <div className="about-text">
-          <span className="section-label">About</span>
-          <h2 className="section-title">
-            <span className="gradient-text">About</span>
-          </h2>
-          <p>{about.intro}</p>
-          <p>{about.market}</p>
-          <p>{about.standard}</p>
+    <section id="about" className="section">
+      <div className="container">
+        <h2 className="section-title">About</h2>
+        <div className="about-grid">
+          <div className="prose">
+            <p>{about.intro}</p>
+            <p>{about.market}</p>
+            <p>{about.standard}</p>
+          </div>
+          <ul className="pillar-list">
+            {about.pillars.map((pillar) => (
+              <li key={pillar.title} className="pillar">
+                <h3 className="pillar-title">{pillar.title}</h3>
+                <p className="pillar-desc">{pillar.desc}</p>
+              </li>
+            ))}
+          </ul>
         </div>
-      </>
-      <>
-        <div className="about-pillars">
-          {about.pillars.map((pillar) => (
-            <div key={pillar.title} className="pillar">
-              <h4 className="pillar-title">{pillar.title}</h4>
-              <p className="pillar-desc">{pillar.desc}</p>
-            </div>
-          ))}
-        </div>
-      </>
+      </div>
     </section>
   );
 }
