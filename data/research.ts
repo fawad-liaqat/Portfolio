@@ -28,7 +28,7 @@ export const research: ResearchPaper[] = [
     title:
       "Tariff Cascades and Fintech Infrastructure: How Trade Policy Shapes Digital Inclusion Timelines",
     description:
-      "An emerging market analysis tracing cost propagation from semiconductor tariffs to merchant deployment delays. Builds a five-link cost model from tariff announcement through to implied delay in meeting SBP's 70% digital payment adoption target by 2030.",
+      "Archived. Not updated since March 2026. An emerging market analysis tracing cost propagation from semiconductor tariffs to merchant deployment delays. Builds a five-link cost model from tariff announcement through to implied delay in meeting SBP's 70% digital payment adoption target by 2030.",
     status: "published",
     archived: true,
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/tariff-cascades/",
@@ -41,6 +41,7 @@ export const research: ResearchPaper[] = [
     description:
       "Design analysis of CBDC user experience failures and lessons for a Pakistani digital rupee. Audits the eNaira and Sand Dollar and maps their failures against Pakistan's census literacy data and payment networks. The digital rupee pilot was announced in 2025; its live status was unconfirmed as of November 2026.",
     status: "published",
+    updated: "November 2026",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/cbdc-low-literacy/",
   },
   {

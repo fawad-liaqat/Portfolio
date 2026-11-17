@@ -9,10 +9,12 @@
 - New optional `updated` field on projects and research, shown as
   "Updated November 2026" next to the status.
 
-Still open
-- Text for the CBDC matrix, stablecoin comparison and voice checker is still
-  being prepared by the Sources agent. The stablecoin card still cites the
-  FY25 remittance total.
+- Final entries applied in a second commit: CBDC matrix, stablecoin
+  comparison (FY26 remittances, no more "$30 billion in FY25"), voice
+  checker, and an "Archived. Not updated since March 2026." note on the
+  tariff simulator, fraud model and tariff article, shown in the archive
+  lists. Every current project and article is marked "Updated November
+  2026" except AwaazOnboard, which is in progress.
 
 ## Phase 4: light mode and voice edits (17 November 2026)
 

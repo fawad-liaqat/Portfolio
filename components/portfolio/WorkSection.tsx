@@ -1,5 +1,10 @@
 import { projects, type Project } from "@/data/projects";
 
+/** The "Archived. Not updated since ..." note at the start of a description, if any. */
+export function archiveNote(text: string): string {
+  return text.match(/^Archived\.[^.]*\./)?.[0] ?? "";
+}
+
 const STATUS_LABELS: Record<Project["status"], string> = {
   completed: "Completed",
   "in-progress": "In progress",
@@ -110,7 +115,8 @@ export default function WorkSection() {
                   ) : (
                     p.title
                   )}
-                  . {p.summary}
+                  . {p.summary}{" "}
+                  <span className="updated">{archiveNote(p.description[0])}</span>
                 </li>
               ))}
             </ul>

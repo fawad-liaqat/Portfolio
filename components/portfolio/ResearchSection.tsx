@@ -1,4 +1,5 @@
 import { research } from "@/data/research";
+import { archiveNote } from "./WorkSection";
 
 export default function ResearchSection() {
   const current = research.filter((r) => !r.archived);
@@ -61,7 +62,8 @@ export default function ResearchSection() {
                     </a>
                   ) : (
                     paper.title
-                  )}
+                  )}{" "}
+                  <span className="updated">{archiveNote(paper.description)}</span>
                 </li>
               ))}
             </ul>
