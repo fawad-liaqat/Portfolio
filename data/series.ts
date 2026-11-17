@@ -24,6 +24,26 @@ export interface SeriesData {
   label: string;
 }
 
+/**
+ * A chart drawn from the same data as a part's table. Each panel is one
+ * measure, with one bar per row (for example per country).
+ *  - For a record table: `table` is its id (such as "T1") and `columns`
+ *    lists the column keys to plot, as they appear in the data file.
+ *  - For a matrix (scorecard or comparison): `rows` lists the row ids to
+ *    plot; each cell's first number is used.
+ * `source` is the visible source line; ids such as S4 become links.
+ */
+export interface SeriesChart {
+  title: string;
+  unit?: "%";
+  table?: string;
+  columns?: string[];
+  rows?: string[];
+  source: string;
+  /** Bar to emphasise, such as "Pakistan". */
+  highlight?: string;
+}
+
 export interface SeriesPart {
   number: number;
   /** Short title used on cards. The page title comes from brief.md. */
@@ -34,6 +54,8 @@ export interface SeriesPart {
   finding?: string;
   /** The part's table data, if it has any. */
   data?: SeriesData;
+  /** Charts shown above the table, drawn from the same data. */
+  charts?: SeriesChart[];
 }
 
 export const seriesTitle = "Pakistan built the rails";
@@ -49,6 +71,16 @@ export const seriesParts: SeriesPart[] = [
     finding:
       "Pakistan has mostly built these systems. The open question is why so many people are still outside them.",
     data: { file: "scorecard.json", shape: "scorecard", label: "Scorecard" },
+    charts: [
+      {
+        title:
+          "Access and use: adults with an account, and adults who made or received a digital payment (% of adults 15 and over)",
+        unit: "%",
+        rows: ["P6", "P5"],
+        source: "S4 Global Findex 2025, Table B.1, pp. 295 to 298",
+        highlight: "Pakistan",
+      },
+    ],
   },
   {
     number: 2,
@@ -58,6 +90,21 @@ export const seriesParts: SeriesPart[] = [
     finding:
       "Access is the first gap, and it is mostly about women, income, phones and family permission.",
     data: { file: "adoption_data.json", shape: "tables", label: "Data" },
+    charts: [
+      {
+        title: "Account, digital payments, phone and internet use by country (% of adults 15 and over)",
+        unit: "%",
+        table: "T1",
+        columns: [
+          "has_account",
+          "made_or_received_digital_payment",
+          "owns_mobile_phone",
+          "used_internet_past_3_months",
+        ],
+        source: "S1 Global Findex 2025, Table B.1, pp. 295 to 298",
+        highlight: "Pakistan",
+      },
+    ],
   },
   {
     number: 3,

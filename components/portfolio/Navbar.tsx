@@ -108,7 +108,7 @@ export default function Navbar({
         {cv && (
           <a className="cv-link cv-link-header" href={cv.href} download={cv.fileName}>
             <DownloadIcon />
-            <span className="cv-word">Download </span>CV
+            <span className="cv-word">Download</span> CV
             <span className="visually-hidden"> ({cv.meta})</span>
           </a>
         )}

@@ -9,6 +9,8 @@ import { cvLink } from "@/lib/cv";
 import Footer from "@/components/portfolio/Footer";
 import Enhancements from "@/components/portfolio/Enhancements";
 import DataTables from "@/components/series/DataTables";
+import BarChart from "@/components/series/BarChart";
+import { buildChart } from "@/lib/series-charts";
 import SourcesList from "@/components/series/SourcesList";
 
 // One static page per published part: /series/part-1/ and so on.
@@ -87,6 +89,9 @@ export default async function SeriesPartPage({ params }: Props) {
           <section id="data" className="section series-block">
             <div className="container">
               <h2 className="section-title">{part.meta.data.label}</h2>
+              {(part.meta.charts ?? []).map((spec, i) => (
+                <BarChart key={i} id={`chart-${i}`} chart={buildChart(spec, part.data!, n)} />
+              ))}
               <DataTables view={part.data} id="data" />
             </div>
           </section>

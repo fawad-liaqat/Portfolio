@@ -1,5 +1,24 @@
 # Changelog
 
+## Charts on series pages (17 November 2026)
+
+- New bar charts above the data tables, declared per part in
+  `data/series.ts` (`charts`) and built from the same table data by
+  `lib/series-charts.ts`, so a chart can never disagree with its table. A
+  chart that does not match its data stops the build.
+- Part 1: account ownership and digital payment use in four countries.
+  Part 2: account, digital payments, phone and internet use (table T1).
+- Small multiples of horizontal bars in HTML and CSS (no chart library,
+  no SVG text that shrinks on phones). Pakistan is highlighted. Each chart
+  has a visible source line with linked ids and a text version for screen
+  readers.
+
+Still open
+- Part 2 literacy and financial literacy gaps: add a chart entry once the
+  research agent adds that table.
+- Part 3 and Part 4: no chart yet. Their outcomes are different measures
+  (users, consents, accounts) or text, so one bar scale would mislead.
+
 ## CV download (17 November 2026)
 
 - "Download CV" button in the header (reads "CV" on narrow desktops, full

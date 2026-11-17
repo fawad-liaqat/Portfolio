@@ -44,6 +44,8 @@ export interface RecordTable {
   id?: string;
   title: string;
   columns: string[];
+  /** Column keys as written in the data file, same order as `columns`. */
+  keys?: string[];
   rows: DataCell[][];
   /** Shown under the table. */
   meta: { sources?: string; year?: string; evidence?: string; note?: string };
@@ -162,6 +164,7 @@ function tables(d: Json): RecordsView {
           id: t.id,
           title: t.title,
           columns: (t.columns as string[]).map(humanize),
+          keys: t.columns as string[],
           rows: rows.map((r: Json[]) => r.map((v) => ({ value: str(v) ?? "" }))),
           meta,
         };
@@ -177,6 +180,7 @@ function tables(d: Json): RecordsView {
         id: t.id,
         title: t.title,
         columns: [...keys.map(humanize), ...(hasSource ? ["Source"] : [])],
+        keys: [...keys, ...(hasSource ? ["source"] : [])],
         rows: rows.map((r: Json) => [
           ...keys.map((k) => ({ value: str(r[k]) ?? "" })),
           ...(hasSource
