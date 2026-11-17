@@ -1,4 +1,5 @@
 import { siteConfig } from "@/data/site";
+import { cvLink } from "@/lib/cv";
 
 /** Show a web address without the protocol or trailing slash. */
 function display(url: string) {
@@ -6,6 +7,7 @@ function display(url: string) {
 }
 
 export default function ConnectSection() {
+  const cv = cvLink();
   const links = [
     { label: "Email", href: `mailto:${siteConfig.email}`, text: siteConfig.email, external: false },
     { label: "LinkedIn", href: siteConfig.social.linkedin, text: display(siteConfig.social.linkedin), external: true },
@@ -21,6 +23,12 @@ export default function ConnectSection() {
         </header>
         <p className="connect-intro" data-reveal>
           {siteConfig.connect.intro}
+        </p>
+        <p className="connect-cv" data-reveal>
+          <a className="btn btn-primary" href={cv.href} download={cv.fileName}>
+            Download CV
+          </a>
+          <span className="cv-meta">{cv.meta}</span>
         </p>
         <ul className="connect-grid">
           {links.map((link) => (

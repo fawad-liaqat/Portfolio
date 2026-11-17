@@ -5,6 +5,7 @@ import { seriesParts, seriesPath } from "@/data/series";
 import { siteConfig } from "@/data/site";
 import { loadPart, publishedParts } from "@/lib/series";
 import Navbar from "@/components/portfolio/Navbar";
+import { cvLink } from "@/lib/cv";
 import Footer from "@/components/portfolio/Footer";
 import Enhancements from "@/components/portfolio/Enhancements";
 import DataTables from "@/components/series/DataTables";
@@ -56,7 +57,7 @@ export default async function SeriesPartPage({ params }: Props) {
 
   return (
     <div className="page">
-      <Navbar base="/" />
+      <Navbar base="/" cv={cvLink()} />
       <main id="main" className="series-page">
         <header className="series-hero">
           <div className="container">

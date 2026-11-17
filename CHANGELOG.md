@@ -1,5 +1,17 @@
 # Changelog
 
+## CV download (17 November 2026)
+
+- "Download CV" button in the header (reads "CV" on narrow desktops, full
+  name kept for screen readers), inside the phone menu, and in the contact
+  section. All link to `/cv/Fawad_Liaqat_CV.pdf` with a `download`
+  attribute; the size label ("PDF, 14 KB") is read at build time
+  (`lib/cv.ts`).
+- `public/cv/Fawad_Liaqat_CV.pdf` is a temporary "CV coming soon"
+  placeholder made by `scripts/make-cv-placeholder.py`. Replace it with the
+  final CV under the same name and rebuild.
+- The CV is not added to the sitemap: sitemaps list pages, not downloads.
+
 ## Verifier fix F11 (17 November 2026)
 
 - Stablecoin card: the four named countries are now described as the

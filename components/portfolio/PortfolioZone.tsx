@@ -1,4 +1,5 @@
 import Navbar from "./Navbar";
+import { cvLink } from "@/lib/cv";
 import HeroSection from "./HeroSection";
 import SignalStrip from "./SignalStrip";
 import AboutSection from "./AboutSection";
@@ -14,7 +15,7 @@ import Enhancements from "./Enhancements";
 export default function PortfolioZone() {
   return (
     <div className="page">
-      <Navbar />
+      <Navbar cv={cvLink()} />
       <main id="main">
         <HeroSection />
         <SignalStrip />
