@@ -1,0 +1,665 @@
+{
+  "asOf": "2026-11-17",
+  "statusScale": [
+    "in place",
+    "partial",
+    "pilot",
+    "absent",
+    "context",
+    "not assessed",
+    "not found"
+  ],
+  "statusNotes": "Categorical, following the World Bank regional report. 'context' marks demographic or usage indicators that are not a build status. Page references are printed page numbers (S1: PDF page minus 14; S4: PDF page minus 38; S6: PDF page minus 15; S2, S3, S5: same as PDF). No numeric score is computed. Source ids were renumbered in the second pass; see sources.md.",
+  "countries": [
+    {
+      "code": "PK",
+      "name": "Pakistan"
+    },
+    {
+      "code": "IN",
+      "name": "India"
+    },
+    {
+      "code": "BR",
+      "name": "Brazil"
+    },
+    {
+      "code": "EG",
+      "name": "Egypt"
+    }
+  ],
+  "layers": [
+    {
+      "id": "identity",
+      "name": "Digital identity",
+      "indicators": [
+        {
+          "id": "I1",
+          "label": "Foundational ID coverage",
+          "cells": {
+            "PK": {
+              "status": "in place",
+              "value": "97% of men, 89% of women hold an ID",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "8 point gender gap, described as among the largest worldwide. Figure is Findex data as reported by the World Bank regional report",
+              "sourceId": "S1 p.19",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "About 1.34 billion live Aadhaar holders",
+              "year": "March 2026",
+              "note": "Count of holders, not a share of adults. Coverage percentage not found",
+              "sourceId": "S10",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "not assessed",
+              "value": "48.7 million hold the new national ID card (CIN)",
+              "year": "March 2026",
+              "note": "Only the new card was found. Coverage of older ID documents not found, so no status assigned",
+              "sourceId": "S14",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "in place",
+              "value": "Above 99% for both men and women",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "",
+              "sourceId": "S1 p.19",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "I2",
+          "label": "Digital ID with remote authentication",
+          "cells": {
+            "PK": {
+              "status": "pilot",
+              "value": "PAK ID classed as pilot",
+              "year": "2026",
+              "note": "Source is inconsistent: p.17 lists PAK ID as supporting remote authentication and calls it advanced but under development. A state news agency report of March 2025 describes the dematerialised ID as a planned addition to the Pak ID app (S19, SECONDARY)",
+              "sourceId": "S1 p.16, p.17, p.57; S19",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "More than 170 billion cumulative Aadhaar authentications",
+              "year": "March 2026",
+              "note": "",
+              "sourceId": "S10",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "in place",
+              "value": "175 million gov.br users; 83.4 million at gold tier",
+              "year": "March 2026",
+              "note": "",
+              "sourceId": "S14",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "absent",
+              "value": "Haweya digital ID under design",
+              "year": "2026",
+              "note": "",
+              "sourceId": "S1 p.16, p.57",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "I3",
+          "label": "ID reused by financial services",
+          "cells": {
+            "PK": {
+              "status": "partial",
+              "value": "NADRA biometric verification required in draft open banking consent flow; biometric account opening used at cattle markets",
+              "year": "2026",
+              "note": "In person biometric checks are in use. Remote reuse depends on the PAK ID pilot",
+              "sourceId": "S3 p.7; S2 p.21",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "Bank cost of an electronic identity check fell from USD 12 to USD 0.06",
+              "year": "Year not stated in source",
+              "note": "World Bank's citation, not checked against an Indian primary source",
+              "sourceId": "S1 p.75",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "partial",
+              "value": "gov.br login used to reach the central bank's own citizen services",
+              "year": "2025",
+              "note": "One example only. Reuse by private banks not found",
+              "sourceId": "S5 p.38",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "The Central Bank of Egypt annual report was searched for digital identity and electronic KYC and nothing was found",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            }
+          }
+        },
+        {
+          "id": "I4",
+          "label": "Mobile phone ownership (context)",
+          "cells": {
+            "PK": {
+              "status": "context",
+              "value": "63% of adults own a phone. Findex: 65 point gap between men and women; 5% of men have no phone. GSMA: 93% of men, 58% of women",
+              "year": "2024 survey (Global Findex 2025); GSMA Consumer Survey 2024",
+              "note": "The two surveys disagree on the size of the gap (65 points against 35). Findex covers ages 15+, GSMA ages 18+. GSMA values come from a chart table read by an automated reader",
+              "sourceId": "S4 p.25, p.32, p.298; S7 p.25",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "context",
+              "value": "66% of adults own a phone. Findex places the gender gap between 14 and 25 points. GSMA: 84% of men, 71% of women",
+              "year": "2024 survey (Global Findex 2025); GSMA Consumer Survey 2024",
+              "note": "GSMA values from a chart table",
+              "sourceId": "S4 p.25, p.297; S7 p.25",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "context",
+              "value": "92% of adults own a phone",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "Split by gender not stated in the report text",
+              "sourceId": "S4 p.295",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "context",
+              "value": "85% of adults own a phone. Findex places the gender gap between 14 and 25 points. GSMA: 89% of men, 86% of women",
+              "year": "2024 survey (Global Findex 2025); GSMA Consumer Survey 2024",
+              "note": "The two surveys disagree on the gap. GSMA values from a chart table",
+              "sourceId": "S4 p.25, p.296; S7 p.25",
+              "evidence": "PRIMARY"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "payments",
+      "name": "Digital payments",
+      "indicators": [
+        {
+          "id": "P1",
+          "label": "Fast payment system live",
+          "cells": {
+            "PK": {
+              "status": "in place",
+              "value": "Raast",
+              "year": "FY26",
+              "note": "",
+              "sourceId": "S1 p.57; S2 p.14",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "UPI; 741 banks live",
+              "year": "July 2026",
+              "note": "",
+              "sourceId": "S9",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "in place",
+              "value": "Pix; 172 million people and 22.2 million businesses use it",
+              "year": "2025",
+              "note": "",
+              "sourceId": "S5 p.93",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "in place",
+              "value": "Instant Payment Network (InstaPay), launched March 2022; 16 million users",
+              "year": "End June 2025",
+              "note": "",
+              "sourceId": "S1 p.57; S6 p.43",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "P2",
+          "label": "Transactions on the fast payment system",
+          "cells": {
+            "PK": {
+              "status": "in place",
+              "value": "2,755.2 million; PKR 80,050.8 billion",
+              "year": "FY26 (Jul 2025 to Jun 2026), provisional",
+              "note": "",
+              "sourceId": "S2 p.31",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "24,161.69 crore (about 241.6 billion); INR 314.23 lakh crore",
+              "year": "FY 2025-26 (Apr 2025 to Mar 2026)",
+              "note": "Government release of a parliamentary reply, data attributed to NPCI. NPCI's own page blocks automated readers",
+              "sourceId": "S8",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "in place",
+              "value": "7.934 billion in December 2025 alone (6.4 billion in December 2024). Calendar 2025 total close to 80 billion per press",
+              "year": "December 2025; calendar 2025",
+              "note": "Monthly figure is PRIMARY (S5 p.93). The annual total is SECONDARY (S17) because the annual report does not print it",
+              "sourceId": "S5 p.93; S17",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "in place",
+              "value": "About EGP 4.2 trillion in value. Transaction count not stated",
+              "year": "Jul 2024 to Jun 2025",
+              "note": "The central bank's annual report gives value and users but no count",
+              "sourceId": "S6 p.43",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "P3",
+          "label": "Merchant payments on the fast payment system",
+          "cells": {
+            "PK": {
+              "status": "partial",
+              "value": "182.5 million person to merchant payments, 6.6% of Raast volume; 4.9 million a year earlier",
+              "year": "FY26 provisional",
+              "note": "Share is my calculation from the table. Raast is not the only account based merchant channel: account based merchant payments across all channels were 13.0% of retail payments (S2 p.19)",
+              "sourceId": "S2 p.31",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "Person to merchant payments are 63% of UPI volume; 86% of them are below INR 500",
+              "year": "Share: period not stated in release (issued Aug 2026). Ticket size: FY 2025-26",
+              "note": "",
+              "sourceId": "S9",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "in place",
+              "value": "43% of Pix transactions were person to business; 71% of all transactions were BRL 100 or less",
+              "year": "Calendar 2025",
+              "note": "Press report of the Banco Central Pix management report. Not in the annual report",
+              "sourceId": "S17",
+              "evidence": "SECONDARY"
+            },
+            "EG": {
+              "status": "not found",
+              "value": "904 thousand QR codes or request to pay points deployed on mobile wallets (acceptance, not use)",
+              "year": "End June 2025",
+              "note": "Merchant share of network transactions not stated",
+              "sourceId": "S6 p.44",
+              "evidence": "NOT FOUND"
+            }
+          }
+        },
+        {
+          "id": "P4",
+          "label": "Channel for basic phones without internet",
+          "cells": {
+            "PK": {
+              "status": "partial",
+              "value": "USSD, SMS and call centre or IVR channels exist; 46.1 million call centre or IVR banking users",
+              "year": "End June 2026",
+              "note": "Users are registrations, not unique people. Raast access from a basic phone not confirmed",
+              "sourceId": "S2 p.9, p.16",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "UPI123Pay launched for more than 400 million feature phone subscribers; per transaction limit later raised to INR 10,000",
+              "year": "Launched March 2022; limit raised 2024",
+              "note": "Usage data not found in official releases",
+              "sourceId": "S12; S9",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not stated in the Banco Central annual report. Contactless Pix needs a smartphone with NFC and an internet connection (S5 p.93)",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            },
+            "EG": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not stated in the Central Bank of Egypt annual report",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            }
+          }
+        },
+        {
+          "id": "P5",
+          "label": "Adults who made or received a digital payment",
+          "cells": {
+            "PK": {
+              "status": "context",
+              "value": "25%",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "The World Bank regional report prints 24.6% (S1 p.33)",
+              "sourceId": "S4 p.298",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "context",
+              "value": "48%",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "54% of account owners (S4 p.167)",
+              "sourceId": "S4 p.297",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "context",
+              "value": "77%",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "",
+              "sourceId": "S4 p.295",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "context",
+              "value": "36%",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "",
+              "sourceId": "S4 p.296",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "P6",
+          "label": "Adults with a financial account",
+          "cells": {
+            "PK": {
+              "status": "context",
+              "value": "27%; gender gap 30 points",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "The same report's text says 23% on p.167. The annex table value is used",
+              "sourceId": "S4 p.298, p.98, p.167",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "context",
+              "value": "89%; gender gap not statistically significant; 16% of account owners have only inactive accounts",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "",
+              "sourceId": "S4 p.297, p.98, p.197",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "context",
+              "value": "86%",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "Gender split not stated in the report text",
+              "sourceId": "S4 p.295",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "context",
+              "value": "43%",
+              "year": "2024 survey (Global Findex 2025)",
+              "note": "The Central Bank of Egypt reports 76.3% (women 70%) for June 2025 from its own database, which counts bank, post, mobile wallet and prepaid card accounts (S6 p.47, p.49). Different method, not comparable",
+              "sourceId": "S4 p.296",
+              "evidence": "PRIMARY"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "data",
+      "name": "Data sharing",
+      "indicators": [
+        {
+          "id": "D1",
+          "label": "Government data sharing platform",
+          "cells": {
+            "PK": {
+              "status": "absent",
+              "value": "No national platform, no enterprise service bus, no API standards",
+              "year": "2026",
+              "note": "Table 2.2 says under development; Table 2.6 says under design",
+              "sourceId": "S1 p.40, p.57",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not researched; ranked LOW in gaps.md",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            },
+            "BR": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not researched; ranked LOW in gaps.md",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            },
+            "EG": {
+              "status": "in place",
+              "value": "G2G platform since 2015, about 100 public entities connected",
+              "year": "2026",
+              "note": "No enterprise service bus reported",
+              "sourceId": "S1 p.40, p.43",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "D2",
+          "label": "Consent based sharing of financial data",
+          "cells": {
+            "PK": {
+              "status": "pilot",
+              "value": "Draft Open Banking Regulations 2026 with Raast as central API hub; three firms testing open banking in the sandbox",
+              "year": "Draft file dated Oct 2026 (metadata); sandbox cohort Jan 2026",
+              "note": "Not in force",
+              "sourceId": "S3 p.5-6; S2 p.20",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "in place",
+              "value": "595.11 million consents fulfilled; 352.19 million accounts linked",
+              "year": "30 September 2026",
+              "note": "",
+              "sourceId": "S11",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "in place",
+              "value": "96 million bank accounts connected; more than 154 million active consents",
+              "year": "End 2025",
+              "note": "",
+              "sourceId": "S5 p.103",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "absent",
+              "value": "Open banking regulations listed as under development",
+              "year": "Undated tracker page",
+              "note": "Third party tracker. The Central Bank of Egypt annual report does not mention open banking",
+              "sourceId": "S20",
+              "evidence": "SECONDARY"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "enablers",
+      "name": "Enabling layer",
+      "indicators": [
+        {
+          "id": "E1",
+          "label": "Data protection law",
+          "cells": {
+            "PK": {
+              "status": "absent",
+              "value": "Draft only",
+              "year": "2026",
+              "note": "One of seven countries in the regional sample without a law",
+              "sourceId": "S1 p.46, p.47",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "partial",
+              "value": "Act enacted 11 Aug 2023; rules notified 14 Nov 2025 with an eighteen month period for phased compliance",
+              "year": "Release of 17 Nov 2025",
+              "note": "The release does not map provisions to dates",
+              "sourceId": "S13",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "in place",
+              "value": "Law 13,709 of 14 Aug 2018 (LGPD); in force since 18 Sep 2020",
+              "year": "2026",
+              "note": "Law number and date from the regulator's page (PRIMARY). Date in force from a law firm summary (S16, SECONDARY)",
+              "sourceId": "S15; S16",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "partial",
+              "value": "Law enacted 2020",
+              "year": "2026",
+              "note": "Regulator not operational, see E2",
+              "sourceId": "S1 p.46",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "E2",
+          "label": "Data protection regulator working",
+          "cells": {
+            "PK": {
+              "status": "absent",
+              "value": "No law, so no regulator",
+              "year": "2026",
+              "note": "My inference from E1",
+              "sourceId": "S1 p.46",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "partial",
+              "value": "Rules provide for a four member Data Protection Board; release speaks of it in the future tense",
+              "year": "Nov 2025",
+              "note": "Whether the Board is now sitting was not confirmed",
+              "sourceId": "S13",
+              "evidence": "PRIMARY"
+            },
+            "BR": {
+              "status": "in place",
+              "value": "ANPD holds powers to inspect and sanction under the law; one sanction on a private entity reported",
+              "year": "2026",
+              "note": "Powers from the regulator's page (PRIMARY). Sanction count and agency status since Sep 2025 from a law firm summary (S16, SECONDARY)",
+              "sourceId": "S15; S16",
+              "evidence": "PRIMARY"
+            },
+            "EG": {
+              "status": "absent",
+              "value": "Personal Data Protection Center not yet operational",
+              "year": "2026",
+              "note": "",
+              "sourceId": "S1 p.48",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "E3",
+          "label": "Cybersecurity law",
+          "cells": {
+            "PK": {
+              "status": "in place",
+              "value": "Enacted 2016",
+              "year": "2026",
+              "note": "",
+              "sourceId": "S1 p.46",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not researched; ranked LOW in gaps.md",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            },
+            "BR": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not researched; ranked LOW in gaps.md",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            },
+            "EG": {
+              "status": "in place",
+              "value": "Enacted 2018",
+              "year": "2026",
+              "note": "",
+              "sourceId": "S1 p.46",
+              "evidence": "PRIMARY"
+            }
+          }
+        },
+        {
+          "id": "E4",
+          "label": "Data classification and interoperability frameworks",
+          "cells": {
+            "PK": {
+              "status": "partial",
+              "value": "Classification framework yes; interoperability framework no",
+              "year": "2026",
+              "note": "",
+              "sourceId": "S1 p.46",
+              "evidence": "PRIMARY"
+            },
+            "IN": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not researched; ranked LOW in gaps.md",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            },
+            "BR": {
+              "status": "not found",
+              "value": null,
+              "year": null,
+              "note": "Not researched; ranked LOW in gaps.md",
+              "sourceId": null,
+              "evidence": "NOT FOUND"
+            },
+            "EG": {
+              "status": "partial",
+              "value": "Classification framework yes; interoperability framework no",
+              "year": "2026",
+              "note": "",
+              "sourceId": "S1 p.46",
+              "evidence": "PRIMARY"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

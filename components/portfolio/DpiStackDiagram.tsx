@@ -5,6 +5,8 @@ import {
   stackLayers,
   stackTitle,
 } from "@/data/stack";
+import { seriesParts, seriesPath } from "@/data/series";
+import { isPublished } from "@/lib/series";
 
 /*
  * Diagram of Pakistan's digital public infrastructure stack.
@@ -27,6 +29,12 @@ const rows = stackLayers.map((layer, index) => ({
   work: current.filter((p) => p.layer === layer.id),
 }));
 const spanning = current.filter((p) => p.layer === "all");
+
+/** The series part about a layer, if that part is published. */
+function liveSeriesPart(n?: number) {
+  if (!n || !isPublished(n)) return null;
+  return seriesParts.find((p) => p.number === n) ?? null;
+}
 
 function ProjectLinks({ items }: { items: typeof current }) {
   return (
@@ -103,11 +111,23 @@ export default function DpiStackDiagram() {
               </div>
               <div>
                 <p className="stack-label">{stackLabels.work}</p>
-                {row.work.length > 0 ? (
-                  <ProjectLinks items={row.work} />
-                ) : (
-                  row.note && <p className="stack-note">{row.note}</p>
-                )}
+                {row.work.length > 0 && <ProjectLinks items={row.work} />}
+                {(() => {
+                  const part = liveSeriesPart(row.seriesPart);
+                  if (part)
+                    return (
+                      <ul className="stack-links">
+                        <li>
+                          <a href={seriesPath(part.number)}>
+                            Part {part.number}: {part.title}
+                          </a>
+                        </li>
+                      </ul>
+                    );
+                  return row.work.length === 0 && row.note ? (
+                    <p className="stack-note">{row.note}</p>
+                  ) : null;
+                })()}
               </div>
             </div>
           </div>
@@ -130,7 +150,9 @@ export default function DpiStackDiagram() {
               {stackLabels.work}:{" "}
               {row.work.length
                 ? row.work.map((p) => p.title).join(", ")
-                : row.note}
+                : (liveSeriesPart(row.seriesPart)
+                    ? `Part ${row.seriesPart} of the series`
+                    : row.note)}
               .
             </li>
           ))}

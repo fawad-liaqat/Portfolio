@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "marked": "^16.4.2",
     "next": "^15.5.26",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"

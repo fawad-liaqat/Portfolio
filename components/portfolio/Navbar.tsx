@@ -8,6 +8,7 @@ import ThemeToggle from "./ThemeToggle";
 // To add a page section to the menu, add it here and to SECTIONS in
 // hooks/useActiveSection.ts. The id must match the section's id attribute.
 const NAV_ITEMS = [
+  { id: "series", label: "Series" },
   { id: "work", label: "Work" },
   { id: "research", label: "Research" },
   { id: "training", label: "Training" },
@@ -15,7 +16,11 @@ const NAV_ITEMS = [
   { id: "connect", label: "Connect" },
 ] as const;
 
-export default function Navbar() {
+/**
+ * `base` is "" on the homepage (links like #work) and "/" on other pages
+ * (links like /#work, which go back to the homepage section).
+ */
+export default function Navbar({ base = "" }: { base?: "" | "/" }) {
   const activeSection = useActiveSection();
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -39,7 +44,7 @@ export default function Navbar() {
         Skip to content
       </a>
       <div className="container header-inner">
-        <a href="#hero" className="site-name" onClick={() => setOpen(false)}>
+        <a href={`${base}#hero`} className="site-name" onClick={() => setOpen(false)}>
           {siteConfig.name}
         </a>
         <button
@@ -61,8 +66,8 @@ export default function Navbar() {
             {NAV_ITEMS.map((item) => (
               <li key={item.id}>
                 <a
-                  href={`#${item.id}`}
-                  aria-current={activeSection === item.id ? "true" : undefined}
+                  href={`${base}#${item.id}`}
+                  aria-current={!base && activeSection === item.id ? "true" : undefined}
                   onClick={() => {
                     if (open) {
                       setOpen(false);

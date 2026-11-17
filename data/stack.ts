@@ -21,6 +21,8 @@ export interface StackLayer {
   badge?: string;
   /** Shown in place of the project list when no project is pinned here. */
   note?: string;
+  /** Series part about this layer. Linked from the panel once it is published. */
+  seriesPart?: number;
 }
 
 export const stackTitle = "Pakistan's digital public infrastructure stack";
@@ -46,6 +48,7 @@ export const stackLayers: StackLayer[] = [
     state: "draft",
     badge: "Draft",
     note: "Part 3 of the series, in progress",
+    seriesPart: 3,
   },
 ];
 

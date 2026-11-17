@@ -1,0 +1,47 @@
+# Sources for Part 1
+
+Evidence labels: PRIMARY means I read the publisher's own document or page. SECONDARY means press or a third party reporting someone else's data. Web pages were read through an automated page reader. Page numbers are printed page numbers, checked against page footers (S1: PDF page minus 14; S4: PDF page minus 38; S6: PDF page minus 15; S2, S3 and S5: same as the PDF page). Source ids were renumbered in the second pass (17 November 2026); the first pass list is kept in `_v1/sources.md`.
+
+| ID | Title | Publisher | Date | Location and pages used | Accessed | Label |
+|---|---|---|---|---|---|---|
+| S1 | Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan | World Bank | 2026 | Local file `22346e96-Digital_Public_Infrastructure_for_Inclusive_Growth.pdf`; pp. 2, 9, 11, 16, 17, 19, 33, 40, 43, 46, 47, 48, 57, 75 | 16 Nov 2026 | PRIMARY |
+| S2 | Annual Payment Systems Review FY 2025-26 (provisional figures) | State Bank of Pakistan, Digital Financial Services Group | 2026 | Local file `c441f631-Annual-Payment-Systems-Review-FY26.pdf`; pp. 7, 9, 10, 14, 16, 19, 20, 21, 31 | 16 Nov 2026 | PRIMARY |
+| S3 | Open Banking Regulations 2026 (Draft for public consultation) | State Bank of Pakistan, Payment Systems Policy and Oversight Department | File created 30 Oct 2026 (PDF metadata; no date in the text) | Local file `2bbc5a2a-Open_Banking_Regulations_for_Public_Consulatation_Draft.pdf`; pp. 5, 6, 7, 8, 11, 12 | 16 Nov 2026 | PRIMARY |
+| S4 | The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy | World Bank | 2025 (survey year 2024) | Local file `ab0782e0-The_Global_Findex_Database_2025_Connectivity_and_Financial_Inclusion_in_Digital_Economy.pdf`; pp. 20, 25, 32, 83, 98, 167, 170, 197, 265, and Table B.1 pp. 295 to 298 | 17 Nov 2026 | PRIMARY |
+| S5 | Annual Report 2025 | Banco Central do Brasil | 2026 | Local file `2fb8d1e5-BANCO_CENTRAL_DO_BRASIL_Annual_Report_2025.pdf`; pp. 38, 93, 103 | 17 Nov 2026 | PRIMARY |
+| S6 | Annual Report 2024/2025 | Central Bank of Egypt | 2025 | Local file `7946b060-Annual_Report_2024-2025_-_Central_Bank_of_Egypt.pdf`; pp. 43, 44, 47, 49 | 17 Nov 2026 | PRIMARY |
+| S7 | The Mobile Gender Gap Report 2025 (GSMA Consumer Survey 2024, adults 18+) | GSMA | 2025 | https://www.gsma.com/wp-content/uploads/2025/12/The-Mobile-Gender-Gap-Report-2025.pdf ; Figure 5 p. 25, text pp. 18 and 38. Only the first part of the file was read | 16 and 17 Nov 2026 | PRIMARY; ownership values come from a chart table and need a visual check |
+| S8 | Nearly 55.49 Crore Users Onboarded on UPI as in June 2026 (written reply in the Lok Sabha; data attributed to NPCI) | Government of India, Ministry of Finance, via Press Information Bureau | 20 Jul 2026 | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2286608&reg=48&lang=2 | 17 Nov 2026 | PRIMARY (official release; NPCI's own page blocks automated readers) |
+| S9 | UPI Completes 10 Years of Digital Payments Revolution | Government of India, Ministry of Finance, via Press Information Bureau | 24 Aug 2026 | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2 and its factsheet https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc2026824968201.pdf | 17 Nov 2026 | PRIMARY (official release) |
+| S10 | Aadhaar is the world's largest biometric identity system with approximately 134 crore live Aadhaar holders | UIDAI, via Press Information Bureau | 18 Mar 2026 | https://www.uidai.gov.in/images/Aadhaar_is_the_worlds_largest_biometric_identity_system_with_approximately_134_crore_live_Aadhaar_holders.pdf | 16 Nov 2026 | PRIMARY |
+| S11 | Account Aggregator Ecosystem Dashboard | Sahamati | As on 30 Sep 2026 | https://sahamati.org.in/?p=2028 | 16 Nov 2026 | PRIMARY |
+| S12 | Reserve Bank of India launches UPI for feature phones (UPI123Pay) and a 24x7 helpline (DigiSaathi) | Reserve Bank of India | 8 Mar 2022 | https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53385 | 16 Nov 2026 | PRIMARY |
+| S13 | Release on notification of the Digital Personal Data Protection Rules, 2025 | Government of India, via Press Information Bureau | 17 Nov 2025 | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190655&reg=48&lang=2 | 17 Nov 2026 | PRIMARY |
+| S14 | Gov.br alcança a marca de 175 milhões de usuários | Agência Gov (Brazilian federal government news agency) | 24 Mar 2026 | https://agenciagov.ebc.com.br/noticias/202603/gov-br-alcanca-a-marca-de-175-milhoes-de-usuarios | 16 Nov 2026 | PRIMARY |
+| S15 | Competências (powers of the authority under Law 13,709 of 14 August 2018) | Autoridade Nacional de Proteção de Dados (ANPD), Brazil | Page undated; cites decrees of March and May 2026 | https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/competencias | 17 Nov 2026 | PRIMARY |
+| S16 | Data Protection Laws of the World: Brazil | DLA Piper | Updated 30 Mar 2026 | https://www.dlapiperdataprotection.com/index.html?t=law&c=BR | 16 Nov 2026 | SECONDARY |
+| S17 | Volume de transações Pix aumentou 25,7% em 2025 em relação a 2024 (reporting the Banco Central's Relatório de Gestão do Pix) | Viva / Broadcast | 10 Aug 2026 | https://viva.com.br/dinheiro/volume-de-transacoes-pix-aumentou-257-em-2025-em-relacao-a-2024.html | 16 Nov 2026 | SECONDARY |
+| S18 | Table 12: Literacy rate, enrolment and out of school population by sex and rural/urban, Census 2023 (national) | Pakistan Bureau of Statistics | 7th Population and Housing Census 2023 | https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_12_national.pdf | 17 Nov 2026 | PRIMARY |
+| S19 | Pakistan's first dematerialized digital identity card launched on NADRA's silver jubilee | Associated Press of Pakistan (state news agency) | 10 Mar 2025 | https://www.app.com.pk/?p=958340 | 17 Nov 2026 | SECONDARY |
+| S20 | Open Finance Tracker: Egypt | Fiskil | Undated | https://www.fiskil.com/open-finance-tracker/egypt | 16 Nov 2026 | SECONDARY |
+| S21 | National Financial Inclusion Strategy 2024 to 28 | State Bank of Pakistan | Document dated January 2025 (PDF metadata) | Local file supplied by the owner: NFIS2024-28.pdf, 30 pages; https://www.sbp.org.pk/nfis/nfis2024-28.pdf | 17 Nov 2026 | PRIMARY |
+| S22 | Governor's Annual Report 2025-26 | State Bank of Pakistan | 17 Nov 2026 | Local file supplied by the owner: GOVERNOR_S_ANNUAL_REPORT.pdf, 92 PDF pages; printed page numbers cited | 17 Nov 2026 | PRIMARY |
+
+## Sources read in the first pass and now replaced
+
+These are no longer cited. They are listed so the trail is complete.
+
+- Angel One (1 Apr 2026) and World Trade Scanner (21 Jul 2026) on UPI volumes: replaced by S8.
+- Forbes Brasil (21 Jul 2026) on Open Finance consents: replaced by S5.
+- Daily News Egypt (17 Nov 2025) and Zawya (undated) on InstaPay: replaced by S6.
+- Dawn (19 Jul 2024) on census literacy: replaced by S18.
+- digitalpakistan.pk (18 Jul 2025) and a third party copy of the Findex report: replaced by S4.
+- DLA Piper India page (updated 13 Feb 2026): replaced by S13.
+
+## Tried and not retrieved
+
+- SBP National Financial Inclusion Strategy 2024 to 28: two web fetches failed on 17 Nov 2026; the owner then supplied the PDF, now cited as S21.
+
+- NPCI UPI product statistics page: blocked to automated readers on 16 and 17 Nov 2026. Not opened in the owner's browser, as instructed.
+- Banco Central do Brasil Pix statistics page and Open Finance Brasil dashboard: need a browser. Replaced by S5 for all but the annual Pix total and merchant share.
+- World Bank data API for Findex: errors. Replaced by S4.

@@ -1,5 +1,26 @@
 # Changelog
 
+## Phase 5b: the series (17 November 2026)
+
+- New "Series" section on the homepage, first in the menu. Published parts
+  link to their page; the others show as "In progress" cards.
+- New static page per published part at `/series/part-N/`, built with
+  `generateStaticParams`. Order: title and one line finding, the plain words
+  explainer, the scorecard as an accessible table, the full brief behind
+  "Read the full brief", then the numbered Sources list. Every source id in
+  the text and the table links to its entry on the same page.
+- Content lives in `content/series/partN/` and is rendered from markdown at
+  build time (new dependency: `marked`). Adding a part is a data change:
+  `bash scripts/sync-series.sh <folder> <N>`. The script copies a part only
+  when its research folder also has `method.md` and `gaps.md`. Card text
+  and findings are in `data/series.ts`.
+- The stack diagram's data sharing panel links to Part 3 once it is published.
+- Part pages are in the sitemap.
+
+Still open
+- Parts 2 to 4. Part 2's table file is `adoption_data.json`; the page only
+  renders `scorecard.json` shaped data so far.
+
 ## Phase 5a: project and article text on latest sources (17 November 2026)
 
 - Applied the Sources agent's approved text (sources-audit/SITE_CHANGES.md):
