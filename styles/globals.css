@@ -1862,27 +1862,41 @@ a:hover {
   text-decoration-color: var(--accent);
 }
 
-/* Scorecard */
-.scorecard {
+/* Data tables (scorecard, comparison, record tables) */
+.matrix {
   min-width: 860px;
 }
 
-.scorecard caption {
+.records {
+  min-width: 560px;
+}
+
+.records[data-cols="5"],
+.records[data-cols="6"],
+.records[data-cols="7"] {
+  min-width: 760px;
+}
+
+.data-table caption {
   padding: 12px 12px 4px;
   color: var(--meta);
   font-size: 13px;
   text-align: left;
 }
 
-.scorecard th[scope="row"] {
+.matrix th[scope="row"] {
   width: 22%;
 }
 
-.scorecard td {
+.matrix td {
   width: 19.5%;
 }
 
-.scorecard-layer th {
+.data-table tbody th[scope="row"] {
+  font-weight: 500;
+}
+
+.group-row th {
   padding-top: 16px;
   background: var(--surface-2);
   color: var(--accent);
@@ -1958,9 +1972,58 @@ a:hover {
   font-size: 13px;
 }
 
-.scorecard-note {
+.table-footnote {
   max-width: var(--prose-width);
   margin: 12px 0 8px;
+}
+
+.record-block + .record-block {
+  margin-top: 36px;
+}
+
+.record-title {
+  margin-bottom: 12px;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.cell-label {
+  display: block;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.cell-value.is-first {
+  margin-top: 0;
+}
+
+.cell-list {
+  margin: 0;
+  padding-left: 1.1em;
+  list-style: disc;
+}
+
+.cell-list li + li {
+  margin-top: 6px;
+}
+
+.chip-tag {
+  margin-top: 6px;
+  border-radius: 6px;
+  white-space: normal;
+}
+
+.table-footnote + .record-block {
+  margin-top: 28px;
+}
+
+.cell-note {
+  display: block;
+  margin-top: 6px;
+  color: var(--meta);
+  font-size: 13px;
 }
 
 .cell-notes > div {

@@ -1,5 +1,26 @@
 # Changelog
 
+## Phase 5c: all four parts, and Next.js security update (17 November 2026)
+
+- Parts 2, 3 and 4 synced and published at `/series/part-2/` to `part-4/`.
+- Each part declares its data file and table shape in `data/series.ts`.
+  `lib/series-data.ts` reads four shapes (scorecard, comparison, tables,
+  casebook) into two accessible table layouts; `components/series/DataTables.tsx`
+  renders them with evidence labels and linked source ids.
+- `scripts/sync-series.sh <work folder>` now syncs every complete part in
+  one command.
+- Sources read from owner supplied files show page references and the
+  official URL only, never the local file name.
+- Next.js and eslint-config-next upgraded to 15.5.29 (separate commit),
+  which clears the critical Next.js advisory.
+
+Still open
+- npm audit still lists build time advisories in the ESLint toolchain
+  (minimatch, moderate) and in source-map-js via PostCSS (high). None of it
+  ships in the static site.
+- Wording in the part files that refers to `sources.md` or data file names
+  is being fixed at source.
+
 ## Phase 5b: the series (17 November 2026)
 
 - New "Series" section on the homepage, first in the menu. Published parts

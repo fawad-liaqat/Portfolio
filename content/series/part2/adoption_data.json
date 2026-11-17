@@ -1,0 +1,326 @@
+{
+  "asOf": "2026-11-17",
+  "notes": "Every value carries a source id from sources.md and a printed page where the source is a PDF. 'calc' marks my own arithmetic; inputs are cited. Findex page numbers are printed pages (PDF page minus 38).",
+  "tables": [
+    {
+      "id": "T1",
+      "title": "Account ownership and digital payment use, adults 15+ (%)",
+      "source": "S1 Table B.1, pp. 295 to 298",
+      "year": "Global Findex 2025, survey year 2024",
+      "evidence": "PRIMARY",
+      "columns": [
+        "country",
+        "has_account",
+        "made_or_received_digital_payment",
+        "owns_mobile_phone",
+        "used_internet_past_3_months"
+      ],
+      "rows": [
+        [
+          "Pakistan",
+          27,
+          25,
+          63,
+          36
+        ],
+        [
+          "India",
+          89,
+          48,
+          66,
+          46
+        ],
+        [
+          "Brazil",
+          86,
+          77,
+          92,
+          88
+        ],
+        [
+          "Egypt",
+          43,
+          36,
+          85,
+          55
+        ]
+      ]
+    },
+    {
+      "id": "T2",
+      "title": "Pakistan: who is outside (gaps in percentage points or shares)",
+      "rows": [
+        {
+          "indicator": "Gender gap in account ownership",
+          "value": "30 points",
+          "source": "S1 p.98",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "Labour force gap in account ownership (in vs out of labour force)",
+          "value": "29 points, largest in South Asia",
+          "source": "S1 p.101",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "Gender gap in mobile phone ownership",
+          "value": "65 points",
+          "source": "S1 p.25",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "Men without a phone",
+          "value": "5%",
+          "source": "S1 p.32 note 15",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "Women without a phone citing family disapproval",
+          "value": "40% (no men)",
+          "source": "S1 p.32",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "Account owners using digital payments, women vs men",
+          "value": "74% vs 95%",
+          "source": "S1 p.170",
+          "evidence": "PRIMARY",
+          "note": "Figure title on the same page says the gap is not present in Pakistan. See gaps.md"
+        },
+        {
+          "indicator": "Account owners using digital payments, poorer and wealthier households",
+          "value": "90% or more in both",
+          "source": "S1 p.171",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "Literacy, age 10+: male / female / rural female",
+          "value": "68.00 / 52.84 / 41.67",
+          "source": "S6",
+          "year": "Census 2023",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "K-FIS 2024 inclusion: men / women",
+          "value": "56% / 14%",
+          "source": "S12",
+          "year": "2024 survey",
+          "evidence": "SECONDARY",
+          "note": "Definition: bank, mobile wallet or nonbank financial account; 6,624 households"
+        },
+        {
+          "indicator": "K-FIS 2024 phone ownership: men / women",
+          "value": "82% / 46%",
+          "source": "S12",
+          "evidence": "SECONDARY"
+        },
+        {
+          "indicator": "K-FIS 2024 SIM registered in own name: men / women",
+          "value": "78% / 47%",
+          "source": "S12",
+          "evidence": "SECONDARY"
+        },
+        {
+          "indicator": "SBP: share of adults with a bank account / gender gap",
+          "value": "69% / 29% (2025); women 52% (Dec 2025)",
+          "source": "S11 pp.47-48; S10",
+          "year": "2025",
+          "evidence": "PRIMARY",
+          "note": "SBP definition: broadly the share of adults with a bank account, SBP data. Baseline 64% (2023), target 75% by 2028 (S15 pp.1, 23)"
+        },
+        {
+          "indicator": "P-FII 2025: overall / access / usage / quality",
+          "value": "59.5 / 74.1 / 68.5 / 43.5",
+          "source": "S11 p.48",
+          "evidence": "PRIMARY"
+        },
+        {
+          "indicator": "People aged 13 to 18 covered by the teenager account framework",
+          "value": "about 26 million",
+          "source": "S11 p.48",
+          "evidence": "PRIMARY"
+        }
+      ]
+    },
+    {
+      "id": "T3",
+      "title": "Barriers to having a bank account, adults without one (%), respondents could choose several",
+      "source": "S1 p.111 (South Asia, India excluded) and p.113 (India)",
+      "year": "Global Findex 2025, survey year 2024",
+      "evidence": "PRIMARY",
+      "columns": [
+        "region",
+        "not_enough_money",
+        "fees_too_high",
+        "family_member_has_account",
+        "too_far",
+        "do_not_trust",
+        "lack_documents"
+      ],
+      "rows": [
+        [
+          "South Asia excl. India",
+          70,
+          36,
+          17,
+          24,
+          15,
+          20
+        ],
+        [
+          "India",
+          60,
+          55,
+          67,
+          48,
+          34,
+          31
+        ],
+        [
+          "Middle East and North Africa",
+          78,
+          24,
+          23,
+          13,
+          20,
+          11
+        ],
+        [
+          "Latin America and Caribbean",
+          32,
+          57,
+          41,
+          46,
+          32,
+          30
+        ]
+      ],
+      "note": "Pakistan's own row is not printed. Financial literacy was not one of the six options."
+    },
+    {
+      "id": "T4",
+      "title": "Use among those inside: cash persistence and acceptance in Pakistan",
+      "year": "FY26 provisional",
+      "rows": [
+        {
+          "indicator": "Over the counter share of retail value",
+          "value": "about 62% (PKR 415.7 of 672.7 trillion)",
+          "source": "S2 p.9",
+          "calc": true
+        },
+        {
+          "indicator": "Currency in circulation",
+          "value": "PKR 11,941.5 billion, up from 10,634.5 (about 12% growth)",
+          "source": "S2 p.9",
+          "calc": true
+        },
+        {
+          "indicator": "Cash deposits made at branches and agents",
+          "value": "nearly 98%",
+          "source": "S2 p.19"
+        },
+        {
+          "indicator": "Raast P2P IDs / merchants on Raast P2M alias",
+          "value": "49.2 million / 3.6 million",
+          "source": "S2 p.11"
+        },
+        {
+          "indicator": "QR merchants and QR or till payments",
+          "value": "3,836,522 merchants; 297 million payments; about 77 per merchant per year",
+          "source": "S2 pp.9,10",
+          "calc": true
+        },
+        {
+          "indicator": "Raast person to merchant share of volume",
+          "value": "6.6%",
+          "source": "S2 p.31",
+          "calc": true
+        },
+        {
+          "indicator": "UPI person to merchant share of volume (India)",
+          "value": "63%",
+          "source": "S8",
+          "year": "release Aug 2026, period not stated"
+        },
+        {
+          "indicator": "Raast P2M subsidy",
+          "value": "PKR 3.5 billion; 0.5% of value or PKR 100, whichever lower; 1 Sep 2025 to 30 Jun 2026",
+          "source": "S11 pp.21,58"
+        },
+        {
+          "indicator": "Raast P2M transactions per month",
+          "value": "4.3 million (Sep 2025) to 86 million (Jun 2026)",
+          "source": "S11 p.21"
+        },
+        {
+          "indicator": "Registered Raast merchants / onboarded in FY26",
+          "value": "3.63 million / 2.68 million",
+          "source": "S11 p.58"
+        },
+        {
+          "indicator": "P2M payments per registered merchant, June 2026",
+          "value": "about 24",
+          "source": "S11 pp.21,58",
+          "calc": true
+        },
+        {
+          "indicator": "OTC share of retail value",
+          "value": "above 60% (FY26); 70.8% (FY25)",
+          "source": "S11 p.21"
+        }
+      ]
+    },
+    {
+      "id": "T5",
+      "title": "Financial literacy hypothesis: what the data can and cannot say",
+      "rows": [
+        {
+          "evidence_item": "Reading or writing difficulty is the top single barrier to mobile internet for Pakistani men and women",
+          "direction": "supports (basic literacy, not financial literacy)",
+          "source": "S5 Figure 20, pp. 66 to 67",
+          "evidence": "PRIMARY, column mapping needs visual check"
+        },
+        {
+          "evidence_item": "71% of South Asian adults without accounts have primary education or less",
+          "direction": "supports (education, confounded with income)",
+          "source": "S1 p.110"
+        },
+        {
+          "evidence_item": "South Asian women without a bank account are at least 19 points more likely than men to say they would need help using one",
+          "direction": "supports (confidence or capability)",
+          "source": "S1 p.246"
+        },
+        {
+          "evidence_item": "Lack of money (70%) and fees (36%) are the most cited barriers in South Asia",
+          "direction": "competing explanation",
+          "source": "S1 p.111"
+        },
+        {
+          "evidence_item": "90% or more of Pakistani account owners use digital payments in both poorer and wealthier households",
+          "direction": "weakens literacy as a barrier to use once inside",
+          "source": "S1 p.171"
+        },
+        {
+          "evidence_item": "40% of Pakistani women without a phone cite family disapproval",
+          "direction": "competing explanation",
+          "source": "S1 p.32"
+        },
+        {
+          "evidence_item": "SBP's financial education roadmap reached 2.6 million people in FY26; curriculum project finalised 192 learning outcomes",
+          "direction": "policy input, not an outcome test",
+          "source": "S11 p.48"
+        },
+        {
+          "evidence_item": "NFIS plans a new A2F survey to capture the level of financial literacy; last A2F surveys were 2008 and 2015",
+          "direction": "confirms no current national measure",
+          "source": "S15 pp.4,19"
+        },
+        {
+          "evidence_item": "No Pakistan cross tabulation of account ownership by education or literacy was readable; financial literacy itself is not measured in any source read",
+          "direction": "cannot settle",
+          "source": "gaps.md"
+        }
+      ]
+    }
+  ]
+}

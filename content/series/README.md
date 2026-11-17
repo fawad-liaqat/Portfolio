@@ -13,7 +13,9 @@ Files a part needs before it appears as a page:
 
 Optional:
 
-- `scorecard.json` a comparison table, rendered as an accessible table.
+- A data file (`scorecard.json`, `adoption_data.json`, `comparison.json`,
+  `casebook.json`). Its name and shape are declared for each part in
+  `data/series.ts`; `lib/series-data.ts` turns each shape into a table.
 
 Working files such as `method.md` and `gaps.md` stay with the research and
 are not copied here.
@@ -27,4 +29,8 @@ The sync script copies a part only when its research folder also has
 
 To copy a part in (from the repo root, normal user):
 
-    bash scripts/sync-series.sh /path/to/part2 2
+    bash scripts/sync-series.sh /path/to/work           (all parts)
+    bash scripts/sync-series.sh /path/to/work/part2 2   (one part)
+
+Sources read from files the owner supplied are shown with their page
+references and official URL only; the local file name is never shown.

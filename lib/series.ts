@@ -9,6 +9,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { marked } from "marked";
 import { seriesParts, type SeriesPart } from "@/data/series";
+import { allStrings, readData, type DataView } from "@/lib/series-data";
 
 const ROOT = path.join(process.cwd(), "content", "series");
 const REQUIRED = ["brief.md", "explainer.md", "sources.md"];
@@ -23,31 +24,6 @@ export interface Source {
   label: string; // PRIMARY, SECONDARY, ...
 }
 
-export interface ScorecardCell {
-  status: string;
-  value?: string;
-  year?: string;
-  note?: string;
-  sourceId?: string | null;
-  evidence?: string;
-}
-
-export interface Scorecard {
-  asOf?: string;
-  statusScale?: string[];
-  statusNotes?: string;
-  countries: { code: string; name: string }[];
-  layers: {
-    id: string;
-    name: string;
-    indicators: {
-      id: string;
-      label: string;
-      cells: Record<string, ScorecardCell>;
-    }[];
-  }[];
-}
-
 export interface LoadedPart {
   meta: SeriesPart;
   title: string;
@@ -55,7 +31,10 @@ export interface LoadedPart {
   briefHtml: string;
   sources: Source[];
   sourceNotesHtml: string;
-  scorecard: Scorecard | null;
+  /** The part's table data, ready to render, if it has any. */
+  data: DataView | null;
+  /** Date the evidence runs to, from the data file (YYYY-MM-DD). */
+  asOf?: string;
   /** Every source id cited anywhere on the page, for checks. */
   citedIds: string[];
 }
@@ -130,6 +109,20 @@ function render(md: string, cited: Set<string>): string {
   return wrapTables(linkSources(marked.parse(md, { async: false }) as string, cited));
 }
 
+/**
+ * Some sources were read from files the owner supplied. The page shows their
+ * page references and official URL, never the local file name or path.
+ * Handles "Local file `name.pdf` (owner supplied); pp. 1, 4" and
+ * "Local file supplied by the owner: name.pdf, 30 pages; https://...".
+ */
+export function publicLocation(location: string): string {
+  return location
+    .replace(/Local file supplied by the owner:[^;]*;?/gi, "")
+    .replace(/Local file\s*`[^`]*`\s*(\(owner supplied\))?\s*;?/gi, "")
+    .replace(/^[\s;,]+|[\s;,]+$/g, "")
+    .trim();
+}
+
 /** Reads the `| S1 | Title | Publisher | Date | Location | Accessed | Label |` rows. */
 function parseSources(md: string): { sources: Source[]; rest: string } {
   const sources: Source[] = [];
@@ -141,7 +134,7 @@ function parseSources(md: string): { sources: Source[]; rest: string } {
       : null;
     if (cells && /^S\d+$/.test(cells[0]) && cells.length >= 7) {
       const [id, title, publisher, date, location, accessed, label] = cells;
-      sources.push({ id, title, publisher, date, location, accessed, label });
+      sources.push({ id, title, publisher, date, location: publicLocation(location), accessed, label });
       continue;
     }
     // Drop the table header and divider rows too.
@@ -172,13 +165,15 @@ export function loadPart(n: number): LoadedPart | null {
   const [, notesBody] = splitTitle(rest);
   const sourceNotesHtml = render(notesBody.trim(), cited);
 
-  const raw = read(n, "scorecard.json");
-  const scorecard: Scorecard | null = raw ? JSON.parse(raw) : null;
-  if (scorecard) {
-    for (const layer of scorecard.layers)
-      for (const ind of layer.indicators)
-        for (const cell of Object.values(ind.cells))
-          for (const m of (cell.sourceId ?? "").matchAll(SOURCE_ID)) cited.add(m[0]);
+  let data: DataView | null = null;
+  let asOf: string | undefined;
+  const raw = meta.data ? read(n, meta.data.file) : null;
+  if (meta.data && raw) {
+    const json = JSON.parse(raw);
+    asOf = json.asOf;
+    data = readData(meta.data.shape, json);
+    for (const text of allStrings(json))
+      for (const m of text.matchAll(SOURCE_ID)) cited.add(m[0]);
   }
 
   return {
@@ -188,7 +183,8 @@ export function loadPart(n: number): LoadedPart | null {
     briefHtml,
     sources,
     sourceNotesHtml,
-    scorecard,
+    data,
+    asOf,
     citedIds: [...cited],
   };
 }

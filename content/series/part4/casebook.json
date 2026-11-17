@@ -1,0 +1,128 @@
+{
+  "asOf": "2026-11-17",
+  "notes": "One documented case per vertical. value_strength: documented, general (benefit stated as a general finding, not measured for the case), or none found. Page numbers are printed pages.",
+  "conditions": [
+    {
+      "pattern": "An institution sets the default",
+      "cases": [
+        "Brazil aid",
+        "Cote d'Ivoire fees",
+        "NADRA counters"
+      ],
+      "sources": [
+        "S1 p.260",
+        "S7 p.10",
+        "S3 p.58"
+      ]
+    },
+    {
+      "pattern": "The payment repeats",
+      "sources": [
+        "S1 p.179"
+      ]
+    },
+    {
+      "pattern": "Cash is costly or risky",
+      "sources": [
+        "S7 p.18",
+        "S2 p.21"
+      ]
+    },
+    {
+      "pattern": "The payer pays nothing extra",
+      "sources": [
+        "S1 p.260",
+        "S7 p.11",
+        "S3 p.58"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "vertical": "Government to person transfers",
+      "case": "Brazil emergency aid (Auxilio Emergencial)",
+      "adoption": "More than 100 million people reached in nine months via free digital social savings accounts and Pix",
+      "adoption_source": "S1 p.260",
+      "value": "Speed cited as a reason for digital delivery",
+      "value_source": "S1 p.260",
+      "value_strength": "general",
+      "pakistan": [
+        "BISP over 10 million beneficiaries, mostly women; Social Protection Wallets instructions (S3 p.57)",
+        "Ramzan package 2026: about PKR 23.2 billion to about 1.79 million families (S3 pp.56-57)",
+        "Fuel subsidy PKR 13.3 billion to accounts and wallets using Pakistan Digital Authority data (S3 p.57)",
+        "Pandemic support reached on average 51% of population in countries using databases, Pakistan included (S4 p.73)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "vertical": "Merchant payments",
+      "case": "India UPI person to merchant",
+      "adoption": "P2M 63% of UPI volume; 86% of P2M below INR 500; 24,162 crore UPI transactions FY 2025-26; 741 banks live July 2026",
+      "adoption_source": "S5",
+      "value": "Not measured in the release",
+      "value_source": null,
+      "value_strength": "none found",
+      "pakistan": [
+        "PKR 3.5 billion Raast P2M subsidy, 0.5% of value capped at PKR 100, Sep 2025 to Jun 2026 (S3 pp.21,58)",
+        "Monthly P2M 4.3 million (Sep 2025) to 86 million (Jun 2026) (S3 p.21)",
+        "3.63 million registered merchants, 2.68 million onboarded in FY26 (S3 p.58)",
+        "New business accounts must carry at least one digital payment method (S3 p.55)"
+      ],
+      "confidence": "medium on direction, low on durability"
+    },
+    {
+      "vertical": "Remittances",
+      "case": "Pakistan inbound remittances credited to accounts (Egypt as comparator)",
+      "adoption": "About 92% of home remittances credited directly to accounts or wallets; Raast account to account credit allowed",
+      "adoption_source": "S3 pp.55,58",
+      "value": "Research cited by Findex: accounts raise frequency and volume of remittances; SBP links direct crediting to lower cost receipt",
+      "value_source": "S1 p.165; S3 p.55",
+      "value_strength": "general",
+      "pakistan": [
+        "Egypt instant network credits inward remittances 24/7 (S6 p.43)"
+      ],
+      "confidence": "high on credit, medium on wider use"
+    },
+    {
+      "vertical": "Utility and bill payments",
+      "case": "Kenya",
+      "adoption": "Close to 100% of utility bill payers paid digitally",
+      "adoption_source": "S1 p.179",
+      "value": "Regular cadence builds habit; digital payment can improve on time payment (general)",
+      "value_source": "S1 p.179",
+      "value_strength": "general",
+      "pakistan": [
+        "89% of bill payments and top ups digital by count in FY26, from 85% in FY24 (S2 p.18)",
+        "About a third of utility payers in South Asia pay digitally (S1 p.179)"
+      ],
+      "confidence": "high"
+    },
+    {
+      "vertical": "Agriculture and supply chains",
+      "case": "Kenya agricultural payments",
+      "adoption": "71% of agricultural payment recipients paid digitally, mostly mobile money",
+      "adoption_source": "S1 p.187",
+      "value": "Accounts help farmers save across seasons and buy inputs (general)",
+      "value_source": "S1 p.186",
+      "value_strength": "general",
+      "pakistan": [
+        "Eid ul Azha 2026: 123 cattle markets, about 481,000 transactions, PKR 34 billion, about 12,500 new accounts; 2025: 54 markets, PKR 4.7 billion (S2 p.21)",
+        "Zarkhez-e digital agriculture lending launched (S3 p.48)"
+      ],
+      "confidence": "medium"
+    },
+    {
+      "vertical": "Education and health fees",
+      "case": "Cote d'Ivoire secondary school fees",
+      "adoption": "2014-15: 99% of 1,479,916 payments digital, 94% by mobile money (2011-12: 60% digital, 3% mobile money)",
+      "adoption_source": "S7 p.10",
+      "value": "Lost payments, fraud and theft drastically reduced; earlier collection; better records; disputes at one provider 12% to 1%",
+      "value_source": "S7 pp.10,18-19",
+      "value_strength": "documented (qualitative plus dispute rates)",
+      "pakistan": [
+        "Raast QR expanded to educational and healthcare facilities; QR exclusive at NADRA centres (S3 p.58)"
+      ],
+      "confidence": "medium"
+    }
+  ]
+}

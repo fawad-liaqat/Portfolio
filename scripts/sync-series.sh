@@ -1,35 +1,49 @@
 #!/usr/bin/env bash
-# Copies one part of the series into content/series/partN/.
+# Copies the series parts into content/series/partN/.
 #
-# Usage, from the repo root, as a normal user:
-#   bash scripts/sync-series.sh <folder with the part's files> <part number>
-# Example:
-#   bash scripts/sync-series.sh ../work/part2 2
+# Run from the repo root, as a normal user (no admin rights needed).
 #
-# Only the files the site uses are copied (method.md and gaps.md stay with
-# the research). Files already in the target folder
-# are overwritten by the new versions; nothing else is deleted. Commit the
-# result with git so the previous version stays in history.
+#   All parts at once, from a folder that holds part1/, part2/, ...:
+#     bash scripts/sync-series.sh /path/to/work
+#   One part:
+#     bash scripts/sync-series.sh /path/to/work/part2 2
+#
+# A part is copied only when its research is complete: brief.md,
+# explainer.md, sources.md, method.md and gaps.md must all exist. Parts that
+# are not complete are skipped and stay "In progress" on the site.
+#
+# Copied: brief.md, explainer.md, sources.md and every .json data file.
+# method.md and gaps.md stay with the research. Files already in the target
+# folder are overwritten; nothing else is deleted. Commit the result with git
+# so earlier versions stay in history. Rerunning is safe: it gives the same
+# result for the same input.
 set -euo pipefail
 
-src="${1:?folder with the part files}"
-num="${2:?part number}"
-dest="content/series/part${num}"
+sync_part() {
+  local src="$1" num="$2" dest="content/series/part$2"
+  for f in brief.md explainer.md sources.md method.md gaps.md; do
+    if [ ! -f "$src/$f" ]; then
+      echo "Part $num skipped: $src/$f is missing, so it stays In progress." >&2
+      return 0
+    fi
+  done
+  mkdir -p "$dest"
+  cp "$src/brief.md" "$src/explainer.md" "$src/sources.md" "$dest/"
+  shopt -s nullglob
+  for j in "$src"/*.json; do cp "$j" "$dest/"; done
+  shopt -u nullglob
+  echo "Part $num copied: $(ls "$dest" | tr '\n' ' ')"
+}
 
-# A part is copied only when the research is complete: its brief, explainer
-# and sources, plus the method and gaps notes that show how it was checked.
-for f in brief.md explainer.md sources.md method.md gaps.md; do
-  if [ ! -f "$src/$f" ]; then
-    echo "Not copied: $src/$f is missing, so the part stays In progress." >&2
-    exit 1
-  fi
-done
-
-mkdir -p "$dest"
-for f in brief.md explainer.md sources.md scorecard.json; do
-  if [ -f "$src/$f" ]; then
-    cp "$src/$f" "$dest/$f"
-    echo "copied $f"
-  fi
-done
-echo "Done. Run npm run build to check the page."
+if [ $# -eq 2 ]; then
+  sync_part "$1" "$2"
+elif [ $# -eq 1 ]; then
+  for dir in "$1"/part[0-9]*; do
+    [ -d "$dir" ] || continue
+    sync_part "$dir" "${dir##*part}"
+  done
+else
+  echo "Usage: bash scripts/sync-series.sh <work folder>  or  <part folder> <number>" >&2
+  exit 1
+fi
+echo "Done. Run npm run build to check the pages."

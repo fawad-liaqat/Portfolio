@@ -1,0 +1,163 @@
+{
+  "asOf": "2026-11-17",
+  "title": "Open banking compared: Pakistan draft, UK, Brazil, India",
+  "sourceKey": "Ids resolve to part3/sources.md",
+  "countries": [
+    "PK",
+    "UK",
+    "BR",
+    "IN"
+  ],
+  "dimensions": [
+    {
+      "id": "mandate",
+      "label": "Who mandated it",
+      "cells": {
+        "PK": {
+          "value": "SBP draft regulation; all banks, MFBs and EMIs must expose APIs",
+          "sources": "S1 s.4 and s.5.1, p.5",
+          "evidence": "PRIMARY",
+          "note": "Draft for consultation; not yet in force"
+        },
+        "UK": {
+          "value": "CMA Retail Banking Market Investigation Order 2017; nine largest banks (CMA9) created and funded the implementation entity, Open Banking Limited",
+          "sources": "S11; S10 p.15 and p.27",
+          "evidence": "PRIMARY",
+          "note": "Moving to a not for profit future entity without statutory enforcement powers (S10 pp.7, 19 to 20)"
+        },
+        "BR": {
+          "value": "Banco Central do Brasil; mandatory data sharing participants; new governance structure defined by the central bank",
+          "sources": "S7 p.103",
+          "evidence": "PRIMARY",
+          "note": ""
+        },
+        "IN": {
+          "value": "RBI licenses Account Aggregators as NBFCs; banks acting as financial information providers must share on a valid consent artefact",
+          "sources": "S14 paras 4.1, 7.1",
+          "evidence": "PRIMARY",
+          "note": "Directions do not say every bank must join (S14)"
+        }
+      }
+    },
+    {
+      "id": "architecture",
+      "label": "Central hub or distributed APIs",
+      "cells": {
+        "PK": {
+          "value": "Central API hub on Raast run by RPP; bilateral or multilateral links also allowed for account information",
+          "sources": "S1 s.5.4, p.6",
+          "evidence": "PRIMARY",
+          "note": ""
+        },
+        "UK": {
+          "value": "Standards body with directory and certification services",
+          "sources": "S10 p.19",
+          "evidence": "PRIMARY",
+          "note": "Whether traffic routes through a hub: NOT FOUND"
+        },
+        "BR": {
+          "value": "Standardised system for sharing among participating institutions",
+          "sources": "S7 p.102",
+          "evidence": "PRIMARY",
+          "note": "Routing: NOT FOUND"
+        },
+        "IN": {
+          "value": "Several licensed aggregators pass data from providers to users and may not hold it",
+          "sources": "S14 paras 4.1, 5(7)",
+          "evidence": "PRIMARY",
+          "note": ""
+        }
+      }
+    },
+    {
+      "id": "consent",
+      "label": "Consent model",
+      "cells": {
+        "PK": {
+          "value": "Explicit, specific, time bound; scope, duration, purpose, payment limits; NADRA biometric check, bank OTP, app PIN; online dashboard; revoke any time",
+          "sources": "S1 s.7 to 7.5, pp.7 to 8",
+          "evidence": "PRIMARY",
+          "note": "No maximum duration; no non app path"
+        },
+        "UK": {
+          "value": "NOT FOUND",
+          "sources": "",
+          "evidence": "NOT FOUND",
+          "note": "Regulation 67 of the Payment Services Regulations 2017 is referenced in S12 but was not read"
+        },
+        "BR": {
+          "value": "Customer authorises sharing to receive offers; Pix Automatico authorisation can be cancelled any time with a maximum amount, tracked in the bank app",
+          "sources": "S7 p.102 and p.95",
+          "evidence": "PRIMARY",
+          "note": ""
+        },
+        "IN": {
+          "value": "Consent artefact records identity, data type, purpose, recipients, creation and expiry dates; revocable in whole or part",
+          "sources": "S14 paras 6.1, 6.3, 6.6",
+          "evidence": "PRIMARY",
+          "note": ""
+        }
+      }
+    },
+    {
+      "id": "liability",
+      "label": "Liability for unauthorised payments and recourse",
+      "cells": {
+        "PK": {
+          "value": "Bank credits customer within 7 business days of a valid claim and recovers from provider if at fault; burden of proof on firms; RPP resolves bank and provider disputes",
+          "sources": "S1 s.8.1, 8.2, pp.8 to 9",
+          "evidence": "PRIMARY",
+          "note": ""
+        },
+        "UK": {
+          "value": "Account provider refunds by end of next business day; payment initiation provider compensates it if liable",
+          "sources": "S12",
+          "evidence": "PRIMARY",
+          "note": ""
+        },
+        "BR": {
+          "value": "NOT FOUND for open finance; for Pix, Special Refund Mechanism applies in scam or fraud",
+          "sources": "S7 p.95",
+          "evidence": "PRIMARY",
+          "note": "Pix rule, not an open finance rule"
+        },
+        "IN": {
+          "value": "No standalone liability clause; complaints resolved within one month, then RBI Integrated Ombudsman Scheme",
+          "sources": "S14 paras 11.2, 12",
+          "evidence": "PRIMARY",
+          "note": "Account Aggregators share data only; no payment initiation"
+        }
+      }
+    },
+    {
+      "id": "uptake",
+      "label": "Uptake so far",
+      "cells": {
+        "PK": {
+          "value": "No live service; three firms (Neem, Digi Khata, Swich Retail) in the sandbox cohort selected January 2026, up to six months",
+          "sources": "S3 p.20; S4",
+          "evidence": "PRIMARY",
+          "note": ""
+        },
+        "UK": {
+          "value": "16.56 million connected users and 32.93 million payments in November 2025; over 40 million payments in May 2026; 1 billion cumulative by June 2026",
+          "sources": "S8; S9",
+          "evidence": "PRIMARY",
+          "note": "Connections, not unique people"
+        },
+        "BR": {
+          "value": "96 million accounts connected; over 154 million active consents; over BRL 15 billion in payments in 2025",
+          "sources": "S7 p.103",
+          "evidence": "PRIMARY",
+          "note": "End 2025"
+        },
+        "IN": {
+          "value": "352.19 million accounts linked; 595.11 million consents fulfilled (cumulative)",
+          "sources": "S15",
+          "evidence": "PRIMARY",
+          "note": "As on 30 September 2026; accounts and consents, not people"
+        }
+      }
+    }
+  ]
+}

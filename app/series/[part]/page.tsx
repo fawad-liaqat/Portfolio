@@ -7,7 +7,7 @@ import { loadPart, publishedParts } from "@/lib/series";
 import Navbar from "@/components/portfolio/Navbar";
 import Footer from "@/components/portfolio/Footer";
 import Enhancements from "@/components/portfolio/Enhancements";
-import ScorecardTable from "@/components/series/ScorecardTable";
+import DataTables from "@/components/series/DataTables";
 import SourcesList from "@/components/series/SourcesList";
 
 // One static page per published part: /series/part-1/ and so on.
@@ -65,12 +65,10 @@ export default async function SeriesPartPage({ params }: Props) {
             </p>
             <h1 className="series-title">{part.title}</h1>
             {part.meta.finding && <p className="series-finding">{part.meta.finding}</p>}
-            {part.scorecard?.asOf && (
-              <p className="source-note">Evidence as of {formatDate(part.scorecard.asOf)}</p>
-            )}
+            {part.asOf && <p className="source-note">Evidence as of {formatDate(part.asOf)}</p>}
             <nav className="series-toc" aria-label="On this page">
               <a href="#explainer">In plain words</a>
-              {part.scorecard && <a href="#scorecard">Scorecard</a>}
+              {part.data && part.meta.data && <a href="#data">{part.meta.data.label}</a>}
               <a href="#brief">Full brief</a>
               <a href="#sources">Sources</a>
             </nav>
@@ -84,11 +82,11 @@ export default async function SeriesPartPage({ params }: Props) {
           </div>
         </section>
 
-        {part.scorecard && (
-          <section id="scorecard" className="section series-block">
+        {part.data && part.meta.data && (
+          <section id="data" className="section series-block">
             <div className="container">
-              <h2 className="section-title">Scorecard</h2>
-              <ScorecardTable data={part.scorecard} />
+              <h2 className="section-title">{part.meta.data.label}</h2>
+              <DataTables view={part.data} id="data" />
             </div>
           </section>
         )}
