@@ -1,5 +1,16 @@
 # Changelog
 
+## FY25 edition and progress links (18 November 2026)
+
+- Raast tracker card and the behavioural last mile article now link to
+  their FY25 edition and to the "Progress FY25 to FY26" view, as small
+  secondary links (`links` field on projects and research).
+- Targets checked against the sources-update branches: the tracker reads
+  `?edition=fy25` in `src/main.jsx` and the progress block has
+  `id="progress"`; the article has `fy25/index.html` and
+  `<section id="progress">`. These pages go live when the owner pushes
+  those repos.
+
 ## Final series sync after the fix pass (18 November 2026)
 
 - Parts 1 to 4 re-synced from the research folders after the Verifier's

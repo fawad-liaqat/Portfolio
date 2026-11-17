@@ -1,3 +1,5 @@
+import type { ExtraLink } from "./projects";
+
 export interface ResearchPaper {
   id: string;
   category: string;
@@ -8,6 +10,8 @@ export interface ResearchPaper {
   archived?: boolean;
   /** Month the article was last refreshed, e.g. "November 2026". */
   updated?: string;
+  /** Secondary links, such as an earlier edition. */
+  links?: ExtraLink[];
 }
 
 export const research: ResearchPaper[] = [
@@ -21,6 +25,16 @@ export const research: ResearchPaper[] = [
     status: "published",
     updated: "November 2026",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/behavioral-last-mile/",
+    links: [
+      {
+        label: "FY25 edition",
+        url: "https://fawad-liaqat.github.io/Research-Articles/articles/behavioral-last-mile/fy25/",
+      },
+      {
+        label: "Progress FY25 to FY26",
+        url: "https://fawad-liaqat.github.io/Research-Articles/articles/behavioral-last-mile/#progress",
+      },
+    ],
   },
   {
     id: "tariff-cascades",

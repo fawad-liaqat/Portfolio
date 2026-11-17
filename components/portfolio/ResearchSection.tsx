@@ -38,6 +38,18 @@ export default function ResearchSection() {
                     paper.title
                   )}
                 </h3>
+                {paper.links && paper.links.length > 0 && (
+                  <ul className="extra-links">
+                    {paper.links.map((l) => (
+                      <li key={l.url}>
+                        <a href={l.url} target="_blank" rel="noopener noreferrer">
+                          {l.label}
+                          <span className="visually-hidden">: {paper.title} (opens in a new tab)</span>
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                )}
                 <details className="disclosure">
                   <summary>
                     Summary

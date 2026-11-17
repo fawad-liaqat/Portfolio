@@ -78,6 +78,18 @@ function ProjectCard({ project }: { project: Project }) {
           <span className="visually-hidden">: {project.title} (opens in a new tab)</span>
         </a>
       )}
+      {project.links && project.links.length > 0 && (
+        <ul className="extra-links">
+          {project.links.map((l) => (
+            <li key={l.url}>
+              <a href={l.url} target="_blank" rel="noopener noreferrer">
+                {l.label}
+                <span className="visually-hidden">: {project.title} (opens in a new tab)</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      )}
     </article>
   );
 }

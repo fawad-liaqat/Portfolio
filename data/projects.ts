@@ -10,6 +10,12 @@ export interface KeyFigure {
   source: string;
 }
 
+/** A secondary link on a card, such as an earlier edition. */
+export interface ExtraLink {
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   category: string;
@@ -31,6 +37,8 @@ export interface Project {
   keyFigure?: KeyFigure;
   /** Month the data and text were last refreshed, e.g. "November 2026". */
   updated?: string;
+  /** Secondary links shown under the main link, such as an earlier edition. */
+  links?: ExtraLink[];
 }
 
 export const projects: Project[] = [
@@ -67,6 +75,10 @@ export const projects: Project[] = [
     status: "completed",
     updated: "November 2026",
     demoUrl: "https://fawad-liaqat.github.io/raast-tracker/",
+    links: [
+      { label: "FY25 edition", url: "https://fawad-liaqat.github.io/raast-tracker/?edition=fy25" },
+      { label: "Progress FY25 to FY26", url: "https://fawad-liaqat.github.io/raast-tracker/#progress" },
+    ],
   },
   {
     id: "tariff-simulator",

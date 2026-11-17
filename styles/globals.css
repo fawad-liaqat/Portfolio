@@ -1114,6 +1114,28 @@ a:hover {
   font-family: var(--font-mono);
 }
 
+/* Secondary links on a card, such as an earlier edition. */
+.extra-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 18px;
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.extra-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  color: var(--muted);
+  text-decoration-color: var(--line-strong);
+}
+
+.extra-links a:hover {
+  color: var(--accent);
+  text-decoration-color: var(--accent);
+}
+
 .archive-list {
   margin-top: 24px;
 }
