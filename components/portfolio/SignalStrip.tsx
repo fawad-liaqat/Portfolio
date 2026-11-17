@@ -13,6 +13,16 @@ export default function SignalStrip() {
                 {s.value}
               </dd>
               <dd className="signal-context">{s.context}</dd>
+              {s.details && (
+                <dd className="signal-details">
+                  <details className="disclosure">
+                    <summary>
+                      Details<span className="visually-hidden">: {s.label}</span>
+                    </summary>
+                    <p className="disclosure-body">{s.details}</p>
+                  </details>
+                </dd>
+              )}
             </div>
           ))}
         </dl>

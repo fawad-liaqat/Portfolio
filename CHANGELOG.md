@@ -1,5 +1,13 @@
 # Changelog
 
+## Compact key figures strip (18 November 2026)
+
+- The QR merchants figure keeps a one line context ("under a government
+  subsidy"); the approved dates and the November 2026 announcement, with
+  their sources, sit behind "Details". Signals can now carry an optional
+  `details` note in `data/signals.ts`. The strip is back to about 200px
+  tall on desktop.
+
 ## Site copy: inclusion, protection and ease of use (17 November 2026)
 
 - Hero sentence now names the people left out, and safety and ease of use.

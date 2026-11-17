@@ -1005,6 +1005,27 @@ a:hover {
   margin-top: 12px;
 }
 
+.signal-details {
+  order: 4;
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.signal-details .disclosure > summary {
+  min-height: 32px;
+  font-size: 14px;
+}
+
+.signal-details .disclosure-body {
+  color: var(--meta);
+}
+
+/* Open details make only their own card taller. */
+.signal-grid:has(details[open]) {
+  align-items: start;
+}
+
 /* 8. Projects ------------------------------------------------------------- */
 
 .project-grid {

@@ -3,6 +3,8 @@ export interface Signal {
   value: string;
   label: string;
   context: string;
+  /** Optional longer note, with its sources, shown behind "Details" so the strip stays short. */
+  details?: string;
 }
 
 // All figures: State Bank of Pakistan, Payment Systems Review FY26
@@ -36,6 +38,8 @@ export const signals: Signal[] = [
     value: "3.8 million",
     label: "QR enabled merchants",
     context:
-      "Up from 1.1 million in June 2025, under a government subsidy that ran from 1 September 2025 to 30 June 2026 (SBP Governor's Annual Report 2025-26, p. 58). On 13 November 2026 the government said it would continue subsidising merchant fees on Raast QR payments; the terms were not published (Business Recorder).",
+      "Up from 1.1 million in June 2025, under a government subsidy.",
+    details:
+      "The subsidy ran from 1 September 2025 to 30 June 2026 (SBP Governor's Annual Report 2025-26, p. 58). On 13 November 2026 the government said it would continue subsidising merchant fees on Raast QR payments; the terms were not published (Business Recorder).",
   },
 ];
