@@ -178,12 +178,11 @@ export const projects: Project[] = [
     subtitle:
       "Remittance costs across banks, MTOs, mobile wallets and stablecoin channels for Pakistan's top five inbound corridors.",
     description: [
-      "Pakistan received a record US$41.6 billion in workers' remittances in FY26, mainly from Saudi Arabia, the UAE, the UK and the US. This analysis puts stablecoin channels alongside banks, money transfer operators and mobile wallets, corridor by corridor, and compares the total cost of sending $500: explicit fees, FX spread and the time value of settlement. Prices are a snapshot dated 30 March 2026; the legal context (Virtual Assets Act 2026, the State Bank's April 2026 circular on licensed providers) was updated in November 2026.",
+      "Pakistan received a record US$41.6 billion in workers' remittances in FY26. In June 2026 the largest sources were Saudi Arabia, the UAE, the UK and the US. This analysis puts stablecoin channels alongside banks, money transfer operators and mobile wallets, corridor by corridor, and compares the total cost of sending $500: explicit fees, FX spread and the time value of settlement. Prices are a snapshot dated 30 March 2026; the legal context (Virtual Assets Act 2026, the State Bank's April 2026 circular on licensed providers) was updated in November 2026.",
     ],
     tech: [
       "World Bank RPW Data",
       "Binance P2P",
-      "On-chain Analysis",
       "SBP FX Manual",
     ],
     status: "completed",

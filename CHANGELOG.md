@@ -1,5 +1,13 @@
 # Changelog
 
+## Verifier fix F11 (17 November 2026)
+
+- Stablecoin card: the four named countries are now described as the
+  largest sources in June 2026, which is what the SBP release supports.
+- Removed the "On-chain Analysis" tag; the project has no on chain data.
+- Removed "PKR_612T" (an FY25 figure) and "PDPA_2023" (a bill, not a law)
+  from the unused landing animation's word list.
+
 ## Phase 5c: all four parts, and Next.js security update (17 November 2026)
 
 - Parts 2, 3 and 4 synced and published at `/series/part-2/` to `part-4/`.
