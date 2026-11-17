@@ -6,6 +6,8 @@ export interface ResearchPaper {
   status: "published" | "forthcoming" | "draft";
   url?: string;
   archived?: boolean;
+  /** Month the article was last refreshed, e.g. "November 2026". */
+  updated?: string;
 }
 
 export const research: ResearchPaper[] = [
@@ -13,10 +15,11 @@ export const research: ResearchPaper[] = [
     id: "behavioral-last-mile",
     category: "Payments",
     title:
-      "The Behavioral Last Mile: Why 88% Digital Infrastructure Produces 60% Cash Economies",
+      "The Behavioral Last Mile: Why Pakistan's Payment Rails Run Ahead of Its People",
     description:
-      "Pakistan's digital payment paradox as a case study in the gap between infrastructure availability and behavioral adoption. Introduces a three-layer analytical framework (trust deficit, incentive misalignment, literacy friction), benchmarked against India's UPI trajectory and Kenya's M-Pesa rollout.",
+      "Pakistan's payment rails carry 92% of retail payments by count, yet only 27% of adults have an account. Updated in November 2026 with SBP FY26 and Findex 2025 data, the article argues access comes first, then trust, incentives, and design and literacy, compared with India's UPI and Kenya's M-Pesa.",
     status: "published",
+    updated: "November 2026",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/behavioral-last-mile/",
   },
   {
@@ -36,7 +39,7 @@ export const research: ResearchPaper[] = [
     title:
       "CBDC Design for Low-Literacy Populations: What the eNaira and Sand Dollar Got Wrong",
     description:
-      "Design analysis of CBDC user experience failures and lessons for Pakistan's Digital Rupee. Conducts a design audit of both CBDCs and maps failures against Pakistan's demographic reality: adult literacy levels, wide gaps between urban and rural areas, and mostly 2G and 3G rural connectivity.",
+      "Design analysis of CBDC user experience failures and lessons for a Pakistani digital rupee. Audits the eNaira and Sand Dollar and maps their failures against Pakistan's census literacy data and payment networks. The digital rupee pilot was announced in 2025; its live status was unconfirmed as of November 2026.",
     status: "published",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/cbdc-low-literacy/",
   },
@@ -46,8 +49,9 @@ export const research: ResearchPaper[] = [
     title:
       "Agentic AI in Compliance: Regulatory Implications of Autonomous Decision-Making in Pakistani Financial Services",
     description:
-      "Policy analysis mapping the regulatory vacuum around agentic AI in SBP's framework. Maps the vacuum against the EU AI Act, Singapore's MAS FEAT principles, and the UK FCA's evolving AI discussion papers, producing a regulatory gap matrix with specific recommendations.",
+      "Policy analysis of the gap in Pakistan's published rules for agentic AI in financial compliance, compared with the EU AI Act (high risk duties now from December 2027), Singapore's final MAS AI risk management guidelines (October 2026) and the UK's Mills Review (July 2026), with a regulatory gap matrix and proposals for the SBP. Updated November 2026.",
     status: "published",
+    updated: "November 2026",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/agentic-ai-compliance/",
   },
   {
@@ -56,8 +60,9 @@ export const research: ResearchPaper[] = [
     title:
       "Tokenized Remittances: A Feasibility Framework for Blockchain-Based Diaspora Investment in Pakistan",
     description:
-      "Can asset tokenization convert Pakistan's $30 billion remittance flow from consumption into productive investment? Designs the regulatory, technical, and economic framework for compliant tokenized investment products accessible from abroad.",
+      "Could tokenization channel part of Pakistan's US$41.6 billion in FY26 remittances into regulated investment? Maps the foreign exchange rules, the Virtual Assets Act 2026 and the SBP's 2026 VASP circular, and sets out a compliant design and a sandbox path. Updated November 2026.",
     status: "published",
+    updated: "November 2026",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/tokenized-remittances/",
   },
 ];

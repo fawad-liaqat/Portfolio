@@ -279,6 +279,13 @@ a:hover {
   background: var(--accent);
 }
 
+/* "Updated November 2026" next to a status. */
+.updated {
+  color: var(--meta);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
 .source-note {
   color: var(--meta);
   font-family: var(--font-mono);

@@ -1,5 +1,19 @@
 # Changelog
 
+## Phase 5a: project and article text on latest sources (17 November 2026)
+
+- Applied the Sources agent's approved text (sources-audit/SITE_CHANGES.md):
+  Raast tracker now on SBP FY26 and Findex 2025, regulatory timeline to
+  October 2026, new title for the behavioural last mile article, updated
+  descriptions for the CBDC, agentic AI and tokenized remittances articles.
+- New optional `updated` field on projects and research, shown as
+  "Updated November 2026" next to the status.
+
+Still open
+- Text for the CBDC matrix, stablecoin comparison and voice checker is still
+  being prepared by the Sources agent. The stablecoin card still cites the
+  FY25 remittance total.
+
 ## Phase 4: light mode and voice edits (17 November 2026)
 
 Light mode

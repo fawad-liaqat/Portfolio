@@ -24,6 +24,9 @@ export default function ResearchSection() {
                   <span className="status">
                     {paper.status.charAt(0).toUpperCase() + paper.status.slice(1)}
                   </span>
+                  {paper.updated && (
+                    <span className="updated">Updated {paper.updated}</span>
+                  )}
                 </p>
                 <h3 className="research-title">
                   {paper.url ? (

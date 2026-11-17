@@ -35,6 +35,9 @@ function ProjectCard({ project }: { project: Project }) {
         <span className={`status status-${project.status}`}>
           {STATUS_LABELS[project.status]}
         </span>
+        {project.updated && (
+          <span className="updated">Updated {project.updated}</span>
+        )}
       </p>
       <h3 className="card-title">{project.title}</h3>
       <p className="card-lead">{lead}</p>

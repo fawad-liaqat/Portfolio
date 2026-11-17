@@ -29,6 +29,8 @@ export interface Project {
   layer?: StackLayerId | "all";
   /** Optional. Shown on the card when present. */
   keyFigure?: KeyFigure;
+  /** Month the data and text were last refreshed, e.g. "November 2026". */
+  updated?: string;
 }
 
 export const projects: Project[] = [
@@ -54,15 +56,16 @@ export const projects: Project[] = [
     layer: "payments",
     category: "Payments",
     summary:
-      "A dashboard on the distance between Raast's rollout and everyday use, built on State Bank data for FY25. An update to FY26 data is in progress.",
+      "A dashboard on the distance between Raast's growth and who actually uses it, on State Bank data for FY26.",
     title: "Raast Adoption Gap Tracker",
     subtitle:
-      "Interactive dashboard mapping the distance between Raast infrastructure rollout and actual behavioral adoption across Pakistan.",
+      "Dashboard tracking the gap between Pakistan's Raast payment rail and everyday use, access first, then use.",
     description: [
-      "Raast transaction volumes doubled in FY25. Pakistan now processes 9.1 billion retail transactions worth PKR 612 trillion annually, with 88% flowing through digital channels. These numbers suggest success. They are incomplete. 98% of ATM transactions remain cash withdrawals. Rural POS terminal density is a fraction of urban coverage. The dashboard renders four analytical blocks from SBP Annual Payment Systems Review FY25 data, including a computed Adoption Gap Index (the ratio of active digital transactions to total registered accounts), converting a complex behavioral problem into a single trackable number.",
+      "Raast moved 2,755 million transactions in FY26, more than double the year before, and digital channels carried 92% of retail payments by count. By value the digital share was 38%. Only 27% of Pakistani adults had an account in the latest Findex survey, while most of those who do already pay digitally. The dashboard uses the State Bank's FY26 Payment Systems Review and Findex 2025, puts a numbered source on every figure, and computes an Adoption Gap Index of about 52 person to person payments per registered Raast ID a year.",
     ],
-    tech: ["React", "Recharts", "SBP FY25 Data", "Behavioral Modeling"],
+    tech: ["React", "Recharts", "SBP FY26 Data", "Findex 2025"],
     status: "completed",
+    updated: "November 2026",
     demoUrl: "https://fawad-liaqat.github.io/raast-tracker/",
   },
   {
@@ -128,15 +131,16 @@ export const projects: Project[] = [
     layer: "all",
     category: "Regulation",
     summary:
-      "An annotated timeline of State Bank, PTA, NADRA and SECP actions that shaped digital finance in Pakistan from 2019 to January 2026, each linked to its source.",
+      "An annotated timeline of State Bank, PTA, NADRA, SECP and PVARA actions that shaped digital finance in Pakistan from 2019 to October 2026, each linked to its source.",
     title: "Pakistan Open Banking Regulatory Timeline",
     subtitle:
-      "Annotated timeline of SBP, PTA, NADRA and SECP regulatory actions shaping digital finance from 2019 to 2026.",
+      "Annotated timeline of SBP, PTA, NADRA, SECP and PVARA regulatory actions shaping digital finance from 2019 to 2026.",
     description: [
-      "Pakistan's fintech regulatory landscape has moved faster in seven years than most markets manage in fifteen. From NPSS 2019 through Raast's phased launch, EMI Regulations of 2023, the Digital Bank Framework, BPRD Circular 01 of 2025, the CBDC pilot,, and NADRA Digital Identity Regulations 2025, the stack is deep and still changing. This timeline lays the chronology out for people building products rather than for lawyers. Each milestone gets a one-sentence annotation answering: what changed, and what it means for fintech architecture. Each entry links to the official circular or gazette it draws on.",
+      "Pakistan's fintech rules have moved quickly since 2019: NPSS, Raast's phased launch, the 2023 EMI regulations, the digital bank framework, the 2025 onboarding framework and NADRA's digital identity rules, and in 2026 the Virtual Assets Act, banking access for licensed virtual asset providers and the State Bank's draft Open Banking Regulations. This timeline lays the chronology out for people building products. Each milestone gets a short note on what changed and what it means for fintech architecture, and the page ends with a numbered list of sources marked primary or secondary. Updated November 2026.",
     ],
     tech: ["React", "SBP Circulars", "PTA Regulations", "NADRA", "SECP"],
     status: "completed",
+    updated: "November 2026",
     demoUrl:
       "https://fawad-liaqat.github.io/Pakistan-Fintech-Regulatory-Timeline/",
   },
