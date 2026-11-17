@@ -1,5 +1,11 @@
 # Changelog
 
+## Final series sync after the fix pass (18 November 2026)
+
+- Parts 1 to 4 re-synced from the research folders after the Verifier's
+  fix pass and the reader facing source notes cleanup. The site copy matches
+  the research files byte for byte.
+
 ## Compact key figures strip (18 November 2026)
 
 - The QR merchants figure keeps a one line context ("under a government

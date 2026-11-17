@@ -1,7 +1,7 @@
 {
   "asOf": "2026-11-17",
   "title": "Open banking compared: Pakistan draft, UK, Brazil, India",
-  "sourceKey": "Ids resolve to part3/sources.md",
+  "sourceKey": "Source ids match the numbered source list for Part 3",
   "countries": [
     "PK",
     "UK",
@@ -23,7 +23,7 @@
           "value": "CMA Retail Banking Market Investigation Order 2017; nine largest banks (CMA9) created and funded the implementation entity, Open Banking Limited",
           "sources": "S11; S10 p.15 and p.27",
           "evidence": "PRIMARY",
-          "note": "Moving to a not for profit future entity without statutory enforcement powers (S10 pp.7, 19 to 20)"
+          "note": "Moving to a not for profit future entity without statutory enforcement powers (S10, pp. 7 and 19 to 20)"
         },
         "BR": {
           "value": "Banco Central do Brasil; mandatory data sharing participants; new governance structure defined by the central bank",
@@ -35,7 +35,7 @@
           "value": "RBI licenses Account Aggregators as NBFCs; banks acting as financial information providers must share on a valid consent artefact",
           "sources": "S14 paras 4.1, 7.1",
           "evidence": "PRIMARY",
-          "note": "Directions do not say every bank must join (S14)"
+          "note": "The directions do not say every bank must join (S14)"
         }
       }
     },
@@ -83,7 +83,7 @@
           "value": "NOT FOUND",
           "sources": "",
           "evidence": "NOT FOUND",
-          "note": "Regulation 67 of the Payment Services Regulations 2017 is referenced in S12 but was not read"
+          "note": "The consent rule (regulation 67 of the Payment Services Regulations 2017) was not read for this comparison"
         },
         "BR": {
           "value": "Customer authorises sharing to receive offers; Pix Automatico authorisation can be cancelled any time with a maximum amount, tracked in the bank app",
@@ -104,14 +104,14 @@
       "label": "Liability for unauthorised payments and recourse",
       "cells": {
         "PK": {
-          "value": "Bank credits customer within 7 business days of a valid claim and recovers from provider if at fault; burden of proof on firms; RPP resolves bank and provider disputes",
+          "value": "Bank credits customer within 7 business days of a valid claim, unless it suspects customer negligence, and recovers from provider if at fault; burden of proof on firms; RPP resolves bank and provider disputes",
           "sources": "S1 s.8.1, 8.2, pp.8 to 9",
           "evidence": "PRIMARY",
-          "note": ""
+          "note": "Burden of proof rule closely follows UK regulation 75 (S19)"
         },
         "UK": {
-          "value": "Account provider refunds by end of next business day; payment initiation provider compensates it if liable",
-          "sources": "S12",
+          "value": "Account provider refunds by end of next business day; payment initiation provider compensates it if liable; provider must prove authentication, and recorded PIN use is not enough on its own",
+          "sources": "S12; S19",
           "evidence": "PRIMARY",
           "note": ""
         },

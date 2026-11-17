@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-11-17",
-  "notes": "One documented case per vertical. value_strength: documented, general (benefit stated as a general finding, not measured for the case), or none found. Page numbers are printed pages.",
+  "asOf": "2026-11-18",
+  "notes": "One documented case per vertical. Each case shows how strong the evidence of benefit is: documented (measured for the case), general (stated by the source as a general finding, not measured for the case), or none found. Page numbers are printed pages; source ids refer to the source list below. Page numbers for the Côte d'Ivoire case study could not be confirmed and are omitted.",
   "conditions": [
     {
       "pattern": "An institution sets the default",
@@ -11,7 +11,7 @@
       ],
       "sources": [
         "S1 p.260",
-        "S7 p.10",
+        "S7",
         "S3 p.58"
       ]
     },
@@ -24,7 +24,7 @@
     {
       "pattern": "Cash is costly or risky",
       "sources": [
-        "S7 p.18",
+        "S7",
         "S2 p.21"
       ]
     },
@@ -32,7 +32,7 @@
       "pattern": "The payer pays nothing extra",
       "sources": [
         "S1 p.260",
-        "S7 p.11",
+        "S7",
         "S3 p.58"
       ]
     }
@@ -63,7 +63,7 @@
       "value_source": null,
       "value_strength": "none found",
       "pakistan": [
-        "PKR 3.5 billion Raast P2M subsidy, 0.5% of value capped at PKR 100, Sep 2025 to Jun 2026 (S3 pp.21,58)",
+        "PKR 3.5 billion Raast P2M subsidy, 0.5% of value capped at PKR 100, ran 1 Sep 2025 to 30 Jun 2026 (S3 pp.21,58); on 13 Nov 2026 the government said it would continue subsidising merchant fees on Raast QR payments, terms not published (S9)",
         "Monthly P2M 4.3 million (Sep 2025) to 86 million (Jun 2026) (S3 p.21)",
         "3.63 million registered merchants, 2.68 million onboarded in FY26 (S3 p.58)",
         "New business accounts must carry at least one digital payment method (S3 p.55)"
@@ -115,9 +115,9 @@
       "vertical": "Education and health fees",
       "case": "Cote d'Ivoire secondary school fees",
       "adoption": "2014-15: 99% of 1,479,916 payments digital, 94% by mobile money (2011-12: 60% digital, 3% mobile money)",
-      "adoption_source": "S7 p.10",
+      "adoption_source": "S7",
       "value": "Lost payments, fraud and theft drastically reduced; earlier collection; better records; disputes at one provider 12% to 1%",
-      "value_source": "S7 pp.10,18-19",
+      "value_source": "S7",
       "value_strength": "documented (qualitative plus dispute rates)",
       "pakistan": [
         "Raast QR expanded to educational and healthcare facilities; QR exclusive at NADRA centres (S3 p.58)"

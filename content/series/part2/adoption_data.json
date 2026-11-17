@@ -1,6 +1,6 @@
 {
-  "asOf": "2026-11-17",
-  "notes": "Every value carries a source id from sources.md and a printed page where the source is a PDF. 'calc' marks my own arithmetic; inputs are cited. Findex page numbers are printed pages (PDF page minus 38).",
+  "asOf": "2026-11-18",
+  "notes": "Every value has a source id from the source list below and the printed page of the report where it appears. Values described as my calculation are simple arithmetic on the cited figures.",
   "tables": [
     {
       "id": "T1",
@@ -85,7 +85,7 @@
           "value": "74% vs 95%",
           "source": "S1 p.170",
           "evidence": "PRIMARY",
-          "note": "Figure title on the same page says the gap is not present in Pakistan. See gaps.md"
+          "note": "The figure title on the same page says the gap is not present in Pakistan, so this is treated as unsettled."
         },
         {
           "indicator": "Account owners using digital payments, poorer and wealthier households",
@@ -94,39 +94,33 @@
           "evidence": "PRIMARY"
         },
         {
-          "indicator": "Literacy, age 10+: male / female / rural female",
-          "value": "68.00 / 52.84 / 41.67",
+          "indicator": "Literacy, age 10 and over (2023 census): male / female",
+          "value": "68.00% / 52.84%",
           "source": "S6",
           "year": "Census 2023",
           "evidence": "PRIMARY"
         },
         {
-          "indicator": "K-FIS 2024 inclusion: men / women",
-          "value": "56% / 14%",
-          "source": "S12",
+          "indicator": "Karandaaz survey 2024, financial inclusion: men / women",
+          "value": "56% / 14% (gap 42 points)",
+          "source": "S12 p.7",
           "year": "2024 survey",
-          "evidence": "SECONDARY",
-          "note": "Definition: bank, mobile wallet or nonbank financial account; 6,624 households"
+          "evidence": "PRIMARY",
+          "note": "Adults 15+ with an account in their own name at a regulated bank, mobile money provider or nonbank financial institution (S12 p.3); 6,722 interviews (S12 p.5)"
         },
         {
-          "indicator": "K-FIS 2024 phone ownership: men / women",
-          "value": "82% / 46%",
-          "source": "S12",
-          "evidence": "SECONDARY"
-        },
-        {
-          "indicator": "K-FIS 2024 SIM registered in own name: men / women",
+          "indicator": "Karandaaz survey 2024, owns a SIM card: men / women",
           "value": "78% / 47%",
-          "source": "S12",
-          "evidence": "SECONDARY"
+          "source": "S12 p.10",
+          "evidence": "PRIMARY"
         },
         {
           "indicator": "SBP: share of adults with a bank account / gender gap",
-          "value": "69% / 29% (2025); women 52% (Dec 2025)",
-          "source": "S11 pp.47-48; S10",
+          "value": "69% / 29% (2025)",
+          "source": "S11 pp.47-48",
           "year": "2025",
           "evidence": "PRIMARY",
-          "note": "SBP definition: broadly the share of adults with a bank account, SBP data. Baseline 64% (2023), target 75% by 2028 (S15 pp.1, 23)"
+          "note": "SBP definition: broadly the share of adults with a bank account, from SBP data. Baseline 64% (2023), target 75% by 2028 (S15 pp.1, 23). Separately, the Governor put women's inclusion at 52% in December 2025 (S10)."
         },
         {
           "indicator": "P-FII 2025: overall / access / usage / quality",
@@ -195,7 +189,7 @@
           30
         ]
       ],
-      "note": "Pakistan's own row is not printed. Financial literacy was not one of the six options."
+      "note": "Pakistan's own row is not printed. Financial literacy was not one of the six options in this question."
     },
     {
       "id": "T4",
@@ -206,13 +200,13 @@
           "indicator": "Over the counter share of retail value",
           "value": "about 62% (PKR 415.7 of 672.7 trillion)",
           "source": "S2 p.9",
-          "calc": true
+          "note": "Includes my calculation from the cited figures"
         },
         {
           "indicator": "Currency in circulation",
           "value": "PKR 11,941.5 billion, up from 10,634.5 (about 12% growth)",
           "source": "S2 p.9",
-          "calc": true
+          "note": "Includes my calculation from the cited figures"
         },
         {
           "indicator": "Cash deposits made at branches and agents",
@@ -228,13 +222,13 @@
           "indicator": "QR merchants and QR or till payments",
           "value": "3,836,522 merchants; 297 million payments; about 77 per merchant per year",
           "source": "S2 pp.9,10",
-          "calc": true
+          "note": "Includes my calculation from the cited figures"
         },
         {
           "indicator": "Raast person to merchant share of volume",
           "value": "6.6%",
           "source": "S2 p.31",
-          "calc": true
+          "note": "Includes my calculation from the cited figures"
         },
         {
           "indicator": "UPI person to merchant share of volume (India)",
@@ -244,8 +238,8 @@
         },
         {
           "indicator": "Raast P2M subsidy",
-          "value": "PKR 3.5 billion; 0.5% of value or PKR 100, whichever lower; 1 Sep 2025 to 30 Jun 2026",
-          "source": "S11 pp.21,58"
+          "value": "PKR 3.5 billion; 0.5% of value or PKR 100, whichever lower; ran 1 Sep 2025 to 30 Jun 2026 (S11). On 13 Nov 2026 the government said it would continue subsidising merchant fees on Raast QR payments; terms not published (S13)",
+          "source": "S11 pp.21,58; S13"
         },
         {
           "indicator": "Raast P2M transactions per month",
@@ -258,10 +252,10 @@
           "source": "S11 p.58"
         },
         {
-          "indicator": "P2M payments per registered merchant, June 2026",
+          "indicator": "Raast P2M payments per registered Raast merchant, June 2026",
           "value": "about 24",
           "source": "S11 pp.21,58",
-          "calc": true
+          "note": "Includes my calculation from the cited figures"
         },
         {
           "indicator": "OTC share of retail value",
@@ -275,30 +269,40 @@
       "title": "Financial literacy hypothesis: what the data can and cannot say",
       "rows": [
         {
+          "evidence_item": "Karandaaz financial literacy test (risk diversification, inflation, percentages, interest compounding), 2024: men 32%, women 12%; urban 27%, rural 19%; no formal education 7%, higher education 42%; financially included 38%, excluded 12%",
+          "direction": "direct measure; strong association with inclusion, not proof of cause",
+          "source": "S12 p.11"
+        },
+        {
+          "evidence_item": "Karandaaz Financial Literacy Index (0 to 100): men 63, women 49; included 70, excluded 48; no formal education 41, higher education 71; age not a differentiator",
+          "direction": "direct measure; association",
+          "source": "S12 p.30"
+        },
+        {
+          "evidence_item": "Share of adults passing the Karandaaz financial literacy measure rose from 16% (2016) to 22% (2024)",
+          "direction": "trend",
+          "source": "S12 p.10"
+        },
+        {
+          "evidence_item": "SIM ownership: 96% of included vs 44% of excluded adults, a wider gap than financial literacy (38% vs 12%)",
+          "direction": "competing explanation of similar or larger size (gap sizes are my calculation)",
+          "source": "S12 p.11"
+        },
+        {
           "evidence_item": "Reading or writing difficulty is the top single barrier to mobile internet for Pakistani men and women",
-          "direction": "supports (basic literacy, not financial literacy)",
+          "direction": "supports a basic literacy role",
           "source": "S5 Figure 20, pp. 66 to 67",
-          "evidence": "PRIMARY, column mapping needs visual check"
+          "evidence": "PRIMARY; chart columns to be checked against the printed figure"
         },
         {
-          "evidence_item": "71% of South Asian adults without accounts have primary education or less",
-          "direction": "supports (education, confounded with income)",
-          "source": "S1 p.110"
+          "evidence_item": "Digital Literacy Index: men 65, women 48; urban 70, rural 51; included 77, excluded 42",
+          "direction": "supports a digital skills role",
+          "source": "S12 p.30"
         },
         {
-          "evidence_item": "South Asian women without a bank account are at least 19 points more likely than men to say they would need help using one",
-          "direction": "supports (confidence or capability)",
-          "source": "S1 p.246"
-        },
-        {
-          "evidence_item": "Lack of money (70%) and fees (36%) are the most cited barriers in South Asia",
+          "evidence_item": "Lack of money (70%) and fees (36%) are the most cited barriers to a bank account in South Asia",
           "direction": "competing explanation",
           "source": "S1 p.111"
-        },
-        {
-          "evidence_item": "90% or more of Pakistani account owners use digital payments in both poorer and wealthier households",
-          "direction": "weakens literacy as a barrier to use once inside",
-          "source": "S1 p.171"
         },
         {
           "evidence_item": "40% of Pakistani women without a phone cite family disapproval",
@@ -306,21 +310,114 @@
           "source": "S1 p.32"
         },
         {
-          "evidence_item": "SBP's financial education roadmap reached 2.6 million people in FY26; curriculum project finalised 192 learning outcomes",
-          "direction": "policy input, not an outcome test",
-          "source": "S11 p.48"
+          "evidence_item": "90% or more of Pakistani account owners use digital payments in poorer and wealthier households",
+          "direction": "once inside, use is common",
+          "source": "S1 p.171"
         },
         {
-          "evidence_item": "NFIS plans a new A2F survey to capture the level of financial literacy; last A2F surveys were 2008 and 2015",
-          "direction": "confirms no current national measure",
-          "source": "S15 pp.4,19"
-        },
-        {
-          "evidence_item": "No Pakistan cross tabulation of account ownership by education or literacy was readable; financial literacy itself is not measured in any source read",
-          "direction": "cannot settle",
-          "source": "gaps.md"
+          "evidence_item": "No study read tests whether financial literacy training raises account use in Pakistan",
+          "direction": "cause cannot be settled",
+          "source": "S12; S15 p.19"
         }
       ]
+    },
+    {
+      "id": "T6",
+      "title": "Literacy, 2023 census, age 10 and over (%)",
+      "source": "S6",
+      "evidence": "PRIMARY",
+      "columns": [
+        "group",
+        "literate"
+      ],
+      "rows": [
+        [
+          "Pakistan",
+          60.65
+        ],
+        [
+          "Male",
+          68.0
+        ],
+        [
+          "Female",
+          52.84
+        ],
+        [
+          "Urban",
+          74.09
+        ],
+        [
+          "Rural",
+          51.56
+        ],
+        [
+          "Urban male",
+          78.13
+        ],
+        [
+          "Urban female",
+          69.71
+        ],
+        [
+          "Rural male",
+          61.02
+        ],
+        [
+          "Rural female",
+          41.67
+        ]
+      ],
+      "note": "Gaps within the census: men and women 15.16 points; urban and rural 22.53 points; urban men and rural women 36.46 points (my calculation)."
+    },
+    {
+      "id": "T7",
+      "title": "Karandaaz financial literacy measure, 2024 (% passing)",
+      "source": "S12 p.11",
+      "evidence": "PRIMARY",
+      "columns": [
+        "group",
+        "value"
+      ],
+      "rows": [
+        [
+          "Men",
+          32
+        ],
+        [
+          "Women",
+          12
+        ],
+        [
+          "Urban",
+          27
+        ],
+        [
+          "Rural",
+          19
+        ],
+        [
+          "No formal education",
+          7
+        ],
+        [
+          "Higher education",
+          42
+        ],
+        [
+          "Madrassa educated",
+          11
+        ],
+        [
+          "Financially included",
+          38
+        ],
+        [
+          "Financially excluded",
+          12
+        ]
+      ],
+      "note": "Measure covers risk diversification, inflation, percentages and interest compounding. The link with inclusion is an association, not proof of cause."
     }
   ]
 }

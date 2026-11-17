@@ -6,7 +6,7 @@ Digital payments are not useful everywhere at once. They win in particular jobs,
 Brazil paid pandemic aid into free digital accounts and reached more than 100 million people in nine months [S1]. Pakistan is moving the same way: BISP, which serves over 10 million people, mostly women, is shifting to digital wallets [S3].
 
 **2. Paying at the shop.**
-In India, most UPI payments go to shops, and most are under 500 rupees [S5]. In Pakistan, a government subsidy helped push shop payments on Raast from about 4 million a month to 86 million [S3]. The subsidy has ended, so the real test is now.
+In India, most UPI payments go to shops, and most are under 500 rupees [S5]. In Pakistan, a government subsidy helped push shop payments on Raast from about 4 million a month to 86 million [S3]. The first scheme ran to June 2026, and in November the government said it would continue the subsidy [S9]. The real test is whether people keep paying this way.
 
 **3. Money from family abroad.**
 About 92 in 100 remittances to Pakistan now land straight in an account or wallet [S3]. This one already works.
@@ -37,4 +37,4 @@ Pakistan has built the rails. The next step is helping more people get on them, 
 
 I would value feedback and other readings of the data.
 
-*Source note: [S1] World Bank Global Findex 2025; [S2] State Bank of Pakistan Payment Systems Review FY26 (provisional); [S3] SBP Governor's Annual Report 2025-26; [S5] Government of India release on UPI, Aug 2026; [S7] GSMA case study on school fees in Côte d'Ivoire, 2015. Full list in sources.md.*
+*Source note: [S1] World Bank Global Findex 2025; [S2] State Bank of Pakistan Payment Systems Review FY26 (provisional); [S3] SBP Governor's Annual Report 2025-26; [S5] Government of India release on UPI, Aug 2026; [S7] GSMA case study on school fees in Côte d'Ivoire, 2015; [S9] Business Recorder, Nov 2026. Full list in the source list.*

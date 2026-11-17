@@ -1,15 +1,15 @@
 # Sources for Part 1
 
-Evidence labels: PRIMARY means I read the publisher's own document or page. SECONDARY means press or a third party reporting someone else's data. Web pages were read through an automated page reader. Page numbers are printed page numbers, checked against page footers (S1: PDF page minus 14; S4: PDF page minus 38; S6: PDF page minus 15; S2, S3 and S5: same as the PDF page). Source ids were renumbered in the second pass (17 November 2026); the first pass list is kept in `_v1/sources.md`.
+Evidence labels: PRIMARY means I read the publisher's own document or page. SECONDARY means press or a third party reporting someone else's data. Web pages were read through an automated page reader. Page numbers are the printed page numbers of each report.
 
 | ID | Title | Publisher | Date | Location and pages used | Accessed | Label |
 |---|---|---|---|---|---|---|
-| S1 | Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan | World Bank | 2026 | Local file `22346e96-Digital_Public_Infrastructure_for_Inclusive_Growth.pdf`; pp. 2, 9, 11, 16, 17, 19, 33, 40, 43, 46, 47, 48, 57, 75 | 16 Nov 2026 | PRIMARY |
-| S2 | Annual Payment Systems Review FY 2025-26 (provisional figures) | State Bank of Pakistan, Digital Financial Services Group | 2026 | Local file `c441f631-Annual-Payment-Systems-Review-FY26.pdf`; pp. 7, 9, 10, 14, 16, 19, 20, 21, 31 | 16 Nov 2026 | PRIMARY |
-| S3 | Open Banking Regulations 2026 (Draft for public consultation) | State Bank of Pakistan, Payment Systems Policy and Oversight Department | File created 30 Oct 2026 (PDF metadata; no date in the text) | Local file `2bbc5a2a-Open_Banking_Regulations_for_Public_Consulatation_Draft.pdf`; pp. 5, 6, 7, 8, 11, 12 | 16 Nov 2026 | PRIMARY |
-| S4 | The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy | World Bank | 2025 (survey year 2024) | Local file `ab0782e0-The_Global_Findex_Database_2025_Connectivity_and_Financial_Inclusion_in_Digital_Economy.pdf`; pp. 20, 25, 32, 83, 98, 167, 170, 197, 265, and Table B.1 pp. 295 to 298 | 17 Nov 2026 | PRIMARY |
-| S5 | Annual Report 2025 | Banco Central do Brasil | 2026 | Local file `2fb8d1e5-BANCO_CENTRAL_DO_BRASIL_Annual_Report_2025.pdf`; pp. 38, 93, 103 | 17 Nov 2026 | PRIMARY |
-| S6 | Annual Report 2024/2025 | Central Bank of Egypt | 2025 | Local file `7946b060-Annual_Report_2024-2025_-_Central_Bank_of_Egypt.pdf`; pp. 43, 44, 47, 49 | 17 Nov 2026 | PRIMARY |
+| S1 | Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan | World Bank | 2026 | Report (PDF); pp. 2, 9, 11, 16, 17, 19, 33, 40, 43, 46, 47, 48, 57, 75 | 16 Nov 2026 | PRIMARY |
+| S2 | Annual Payment Systems Review FY 2025-26 (provisional figures) | State Bank of Pakistan, Digital Financial Services Group | 2026 | Report (PDF); pp. 7, 9, 10, 14, 16, 19, 20, 21, 31 | 16 Nov 2026 | PRIMARY |
+| S3 | Open Banking Regulations 2026 (Draft for public consultation) | State Bank of Pakistan, Payment Systems Policy and Oversight Department | Undated in the text; October 2026 per the document properties | Report (PDF); pp. 5, 6, 7, 8, 11, 12 | 16 Nov 2026 | PRIMARY |
+| S4 | The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy | World Bank | 2025 (survey year 2024) | Report (PDF); pp. 20, 25, 32, 83, 98, 167, 170, 197, 265, and Table B.1 pp. 295 to 298 | 17 Nov 2026 | PRIMARY |
+| S5 | Annual Report 2025 | Banco Central do Brasil | 2026 | Report (PDF); pp. 38, 93, 103 | 17 Nov 2026 | PRIMARY |
+| S6 | Annual Report 2024/2025 | Central Bank of Egypt | 2025 | Report (PDF); pp. 43, 44, 47, 49 | 17 Nov 2026 | PRIMARY |
 | S7 | The Mobile Gender Gap Report 2025 (GSMA Consumer Survey 2024, adults 18+) | GSMA | 2025 | https://www.gsma.com/wp-content/uploads/2025/12/The-Mobile-Gender-Gap-Report-2025.pdf ; Figure 5 p. 25, text pp. 18 and 38. Only the first part of the file was read | 16 and 17 Nov 2026 | PRIMARY; ownership values come from a chart table and need a visual check |
 | S8 | Nearly 55.49 Crore Users Onboarded on UPI as in June 2026 (written reply in the Lok Sabha; data attributed to NPCI) | Government of India, Ministry of Finance, via Press Information Bureau | 20 Jul 2026 | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2286608&reg=48&lang=2 | 17 Nov 2026 | PRIMARY (official release; NPCI's own page blocks automated readers) |
 | S9 | UPI Completes 10 Years of Digital Payments Revolution | Government of India, Ministry of Finance, via Press Information Bureau | 24 Aug 2026 | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2 and its factsheet https://static.pib.gov.in/WriteReadData/specificdocs/documents/2026/aug/doc2026824968201.pdf | 17 Nov 2026 | PRIMARY (official release) |
@@ -24,24 +24,6 @@ Evidence labels: PRIMARY means I read the publisher's own document or page. SECO
 | S18 | Table 12: Literacy rate, enrolment and out of school population by sex and rural/urban, Census 2023 (national) | Pakistan Bureau of Statistics | 7th Population and Housing Census 2023 | https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_12_national.pdf | 17 Nov 2026 | PRIMARY |
 | S19 | Pakistan's first dematerialized digital identity card launched on NADRA's silver jubilee | Associated Press of Pakistan (state news agency) | 10 Mar 2025 | https://www.app.com.pk/?p=958340 | 17 Nov 2026 | SECONDARY |
 | S20 | Open Finance Tracker: Egypt | Fiskil | Undated | https://www.fiskil.com/open-finance-tracker/egypt | 16 Nov 2026 | SECONDARY |
-| S21 | National Financial Inclusion Strategy 2024 to 28 | State Bank of Pakistan | Document dated January 2025 (PDF metadata) | Local file supplied by the owner: NFIS2024-28.pdf, 30 pages; https://www.sbp.org.pk/nfis/nfis2024-28.pdf | 17 Nov 2026 | PRIMARY |
-| S22 | Governor's Annual Report 2025-26 | State Bank of Pakistan | 17 Nov 2026 | Local file supplied by the owner: GOVERNOR_S_ANNUAL_REPORT.pdf, 92 PDF pages; printed page numbers cited | 17 Nov 2026 | PRIMARY |
+| S21 | National Financial Inclusion Strategy 2024 to 28 | State Bank of Pakistan | January 2025 (per the document properties) | Report (PDF), printed pp. 1, 4, 19, 23; https://www.sbp.org.pk/nfis/nfis2024-28.pdf | 17 Nov 2026 | PRIMARY |
+| S22 | Governor's Annual Report 2025-26 | State Bank of Pakistan | 17 Nov 2026 | Report (PDF), printed pp. 47, 48 | 17 Nov 2026 | PRIMARY |
 
-## Sources read in the first pass and now replaced
-
-These are no longer cited. They are listed so the trail is complete.
-
-- Angel One (1 Apr 2026) and World Trade Scanner (21 Jul 2026) on UPI volumes: replaced by S8.
-- Forbes Brasil (21 Jul 2026) on Open Finance consents: replaced by S5.
-- Daily News Egypt (17 Nov 2025) and Zawya (undated) on InstaPay: replaced by S6.
-- Dawn (19 Jul 2024) on census literacy: replaced by S18.
-- digitalpakistan.pk (18 Jul 2025) and a third party copy of the Findex report: replaced by S4.
-- DLA Piper India page (updated 13 Feb 2026): replaced by S13.
-
-## Tried and not retrieved
-
-- SBP National Financial Inclusion Strategy 2024 to 28: two web fetches failed on 17 Nov 2026; the owner then supplied the PDF, now cited as S21.
-
-- NPCI UPI product statistics page: blocked to automated readers on 16 and 17 Nov 2026. Not opened in the owner's browser, as instructed.
-- Banco Central do Brasil Pix statistics page and Open Finance Brasil dashboard: need a browser. Replaced by S5 for all but the annual Pix total and merchant share.
-- World Bank data API for Findex: errors. Replaced by S4.

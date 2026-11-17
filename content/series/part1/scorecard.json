@@ -9,7 +9,7 @@
     "not assessed",
     "not found"
   ],
-  "statusNotes": "Categorical, following the World Bank regional report. 'context' marks demographic or usage indicators that are not a build status. Page references are printed page numbers (S1: PDF page minus 14; S4: PDF page minus 38; S6: PDF page minus 15; S2, S3, S5: same as PDF). No numeric score is computed. Source ids were renumbered in the second pass; see sources.md.",
+  "statusNotes": "Categorical, following the World Bank regional report. 'Context' marks demographic or usage figures that are not a build status. Page numbers are the printed page numbers of each report. Source ids refer to the source list below. No numeric score is computed.",
   "countries": [
     {
       "code": "PK",
@@ -155,15 +155,15 @@
               "status": "context",
               "value": "63% of adults own a phone. Findex: 65 point gap between men and women; 5% of men have no phone. GSMA: 93% of men, 58% of women",
               "year": "2024 survey (Global Findex 2025); GSMA Consumer Survey 2024",
-              "note": "The two surveys disagree on the size of the gap (65 points against 35). Findex covers ages 15+, GSMA ages 18+. GSMA values come from a chart table read by an automated reader",
+              "note": "The two surveys disagree on the size of the gap (65 points against 35). Findex covers ages 15+, GSMA ages 18+. GSMA values come from a chart and should be checked against the printed figure",
               "sourceId": "S4 p.25, p.32, p.298; S7 p.25",
               "evidence": "PRIMARY"
             },
             "IN": {
               "status": "context",
-              "value": "66% of adults own a phone. Findex places the gender gap between 14 and 25 points. GSMA: 84% of men, 71% of women",
+              "value": "66% of adults own a phone. Findex names India among four large economies whose gender gaps, as a group, are 14 to 25 points; no single country value is given. GSMA: 84% of men, 71% of women",
               "year": "2024 survey (Global Findex 2025); GSMA Consumer Survey 2024",
-              "note": "GSMA values from a chart table",
+              "note": "GSMA values from a chart",
               "sourceId": "S4 p.25, p.297; S7 p.25",
               "evidence": "PRIMARY"
             },
@@ -177,9 +177,9 @@
             },
             "EG": {
               "status": "context",
-              "value": "85% of adults own a phone. Findex places the gender gap between 14 and 25 points. GSMA: 89% of men, 86% of women",
+              "value": "85% of adults own a phone. Findex names Egypt among four large economies whose gender gaps, as a group, are 14 to 25 points; no single country value is given. GSMA: 89% of men, 86% of women",
               "year": "2024 survey (Global Findex 2025); GSMA Consumer Survey 2024",
-              "note": "The two surveys disagree on the gap. GSMA values from a chart table",
+              "note": "The two surveys disagree on the gap. GSMA values from a chart",
               "sourceId": "S4 p.25, p.296; S7 p.25",
               "evidence": "PRIMARY"
             }
@@ -319,10 +319,10 @@
             },
             "IN": {
               "status": "in place",
-              "value": "UPI123Pay launched for more than 400 million feature phone subscribers; per transaction limit later raised to INR 10,000",
-              "year": "Launched March 2022; limit raised 2024",
+              "value": "UPI123Pay launched for more than 400 million feature phone subscribers",
+              "year": "Launched March 2022",
               "note": "Usage data not found in official releases",
-              "sourceId": "S12; S9",
+              "sourceId": "S12",
               "evidence": "PRIMARY"
             },
             "BR": {
@@ -441,7 +441,7 @@
               "status": "not found",
               "value": null,
               "year": null,
-              "note": "Not researched; ranked LOW in gaps.md",
+              "note": "Not researched; low priority for this comparison",
               "sourceId": null,
               "evidence": "NOT FOUND"
             },
@@ -449,7 +449,7 @@
               "status": "not found",
               "value": null,
               "year": null,
-              "note": "Not researched; ranked LOW in gaps.md",
+              "note": "Not researched; low priority for this comparison",
               "sourceId": null,
               "evidence": "NOT FOUND"
             },
@@ -599,7 +599,7 @@
               "status": "not found",
               "value": null,
               "year": null,
-              "note": "Not researched; ranked LOW in gaps.md",
+              "note": "Not researched; low priority for this comparison",
               "sourceId": null,
               "evidence": "NOT FOUND"
             },
@@ -607,7 +607,7 @@
               "status": "not found",
               "value": null,
               "year": null,
-              "note": "Not researched; ranked LOW in gaps.md",
+              "note": "Not researched; low priority for this comparison",
               "sourceId": null,
               "evidence": "NOT FOUND"
             },
@@ -637,7 +637,7 @@
               "status": "not found",
               "value": null,
               "year": null,
-              "note": "Not researched; ranked LOW in gaps.md",
+              "note": "Not researched; low priority for this comparison",
               "sourceId": null,
               "evidence": "NOT FOUND"
             },
@@ -645,7 +645,7 @@
               "status": "not found",
               "value": null,
               "year": null,
-              "note": "Not researched; ranked LOW in gaps.md",
+              "note": "Not researched; low priority for this comparison",
               "sourceId": null,
               "evidence": "NOT FOUND"
             },

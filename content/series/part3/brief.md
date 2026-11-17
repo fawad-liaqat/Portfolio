@@ -2,15 +2,15 @@
 
 **Part 3 of 4: the State Bank's draft Open Banking Regulations read as a consumer product, against the UK, Brazil and India**
 
-Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S1] resolve to the Sources section at the end and to `sources.md`. Section numbers such as s. 7.2 refer to the draft itself [S1].
+Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S1] resolve to the Sources section at the end. Section numbers such as s. 7.2 refer to the draft itself [S1].
 
 ## Where Parts 1 and 2 leave us
 
-Part 1 found that Pakistan's payment rail works but its data sharing layer is still a draft. Part 2 looked at who is outside the system and found that access comes first: only 27 percent of adults hold an account in the latest global survey [S5, p. 298]. This part asks a narrower question. If the State Bank's open banking rules are adopted as drafted, what will a customer need to understand to benefit from them and stay safe, and who has to work together to get that understanding to people?
+Part 1 found that Pakistan's payment rail works but its data sharing layer is still a draft. Part 2 looked at who is outside the system and found that access comes first: only 27 percent of adults hold an account in the latest global survey [S5, p. 298]. This part reads the State Bank's open banking draft through three lenses: customer protection, customer experience and financial inclusion. If the rules are adopted as drafted, what will a customer need to understand to benefit from them and stay safe, and who has to work together to get that understanding to people?
 
 ## What the draft establishes
 
-The State Bank of Pakistan (SBP) published the draft Open Banking Regulations 2026 for public consultation. The file is dated 30 October 2026; the text gives no date and no comment deadline [S1]. It is issued under the Payment Systems and Electronic Fund Transfers Act 2007 [S1, s. 4, p. 5]. In plain terms:
+The State Bank of Pakistan (SBP) published the draft Open Banking Regulations 2026 for public consultation. It is dated 30 October 2026, though the text itself prints no date and no comment deadline [S1]. It is issued under the Payment Systems and Electronic Fund Transfers Act 2007 [S1, s. 4, p. 5]. In plain terms:
 
 **Who must open up, and what.** Every bank, microfinance bank and electronic money institution must expose APIs to authorised third party providers [S1, s. 5.1, p. 5]. Only two kinds of data are in scope: account balance and transaction history, for current, saving and other payment accounts, including branchless banking accounts and wallets [S1, s. 2(i), p. 4; s. 5.2, p. 5].
 
@@ -18,7 +18,7 @@ The State Bank of Pakistan (SBP) published the draft Open Banking Regulations 20
 
 **Raast as the hub.** Third party providers must use Raast's central API hub, under standards set by Raast Payments Pakistan (RPP). Bilateral or multilateral links through designated operators are also allowed for account information [S1, s. 5.4, p. 6]. RPP, an SBP subsidiary, now runs Raast [S2, p. 58].
 
-**Authorisation.** New providers get an in principle approval, then integrate with Raast and test in the sandbox. Existing banks and payment firms may offer the services after 30 days' notice [S1, s. 6, p. 6].
+**Authorisation.** New providers get in principle approval, then test in the sandbox; existing banks and payment firms need 30 days' notice [S1, s. 6, p. 6].
 
 **Consent.** Consent must be explicit, specific and time bound, and must state scope, duration, purpose and, for payments, daily and monthly limits [S1, s. 7, p. 7]. Providers may never ask for a customer's bank PIN or password [S1, s. 7(iii), p. 7]. The journey has four steps: the customer starts on the provider's app; the provider checks identity through NADRA biometric verification; the bank sends a one time password to the registered mobile number; the customer then confirms with an M-PIN or T-PIN inside the bank's own app [S1, s. 7.1 to 7.3, pp. 7 to 8].
 
@@ -36,43 +36,43 @@ The State Bank of Pakistan (SBP) published the draft Open Banking Regulations 20
 
 ## How it compares
 
-Table 1 compares four systems on five dimensions. Every cell is sourced in `comparison.json`.
+Table 1 compares four systems on five dimensions. Every cell carries a source marker.
 
 | Dimension | Pakistan (draft) | United Kingdom | Brazil | India |
 |---|---|---|---|---|
 | Who mandated it | SBP regulation covering all banks, MFBs and EMIs [S1] | Competition authority order of 2017 on the nine largest banks [S10] [S11] | Central bank, with mandatory data sharing participants [S7] | RBI licenses aggregators; banks that are information providers must share on valid consent [S14] |
 | Hub or distributed | Central hub on Raast, bilateral links also allowed [S1] | Shared standards, directory and certification body [S10]; traffic routing NOT FOUND | Standardised system among participants [S7]; routing NOT FOUND | Several licensed aggregators pass data through without holding it [S14] |
 | Consent model | Explicit, time bound, limits; NADRA biometric, OTP, app PIN [S1] | NOT FOUND in sources read | Customer authorises sharing [S7]; recurring payments can be cancelled any time with a maximum amount [S7] | Consent artefact with purpose, recipients, expiry; revocable [S14] |
-| Liability for unauthorised payments | Bank credits within 7 business days, recovers from provider [S1] | Account provider refunds by end of next business day; provider compensates it [S12] | NOT FOUND for open finance; Pix refund mechanism for fraud [S7] | No standalone liability clause; one month grievance limit, then RBI Ombudsman [S14] |
+| Liability for unauthorised payments | Bank credits within 7 business days, recovers from provider [S1] | Account provider refunds by end of next business day [S12]; firms must prove authorisation [S19] | NOT FOUND for open finance; Pix refund mechanism for fraud [S7] | No standalone liability clause; one month grievance limit, then RBI Ombudsman [S14] |
 | Uptake so far | Three firms in the sandbox; no live service [S3] [S4] | 16.56 million connected users, Nov 2025 [S8]; over 40 million payments in May 2026 [S9] | 96 million accounts, over 154 million active consents, end 2025 [S7] | 352.19 million accounts linked, 595.11 million consents fulfilled, by 30 Sep 2026 [S15] |
 
 Three things stand out.
 
-First, Pakistan's draft is the most central of the four. The UK began with an order on nine banks that created a standards body [S10, p. 15], which is now being replaced by a not for profit "future entity" without statutory enforcement powers [S10, pp. 7 and 19 to 20]. India licenses several private aggregators that may not keep the data they pass on [S14, paras 4.1 and 5(7)]. Pakistan puts all banks in from day one and routes traffic through a public hub [S1, s. 5.1 and 5.4]. That makes standards and statistics easier to control. It also makes RPP the single point that must work.
+First, Pakistan's draft is the most central of the four. The UK began with an order on nine banks that created a standards body [S10, p. 15], which is now being replaced by a not for profit "future entity" without statutory enforcement powers [S10, pp. 7 and 19 to 20]. India licenses several private aggregators that may not keep the data they pass on [S14, paras 4.1 and 5(7)]. Pakistan puts all banks in from day one and routes traffic through a public hub [S1, s. 5.1 and 5.4]. That eases control of standards and statistics, but makes RPP a single point that must work.
 
-Second, the draft's consumer protections are strong on paper. The reversed burden of proof [S1, s. 8.2] and the credit refusal notice [S1, s. 11(iv)] have no counterpart in the sources I read for the other three. The refund clock is slower, though: seven business days [S1, s. 8.1(iv)] against the UK's end of the next business day [S12].
+Second, the draft borrows proven protections. Its burden of proof rule [S1, s. 8.2] closely follows UK payments law, where the provider must prove a disputed payment was authenticated and a record of PIN use is not enough on its own [S19]. Its credit refusal notice goes a step further than the UK rule I read. UK law makes a lender name the credit reference agency when it refuses credit on that agency's information [S20]; the draft also covers offers on worse terms and tells the customer she can obtain the underlying information [S1, s. 11(iv)]. The refund clock is slower: seven business days, which the bank may withhold if it suspects customer negligence [S1, s. 8.1(iv)], against the UK's end of the next business day [S12].
 
 Third, scale took years elsewhere. The UK order dates from 2017 [S11], and Brazil's open finance completed five years in 2025 [S7, p. 102]. Pakistan's open banking cohort entered the sandbox in January 2026 for up to six months [S3, p. 20] [S4].
 
-## The consumer view
+## The consumer view: protection, experience, inclusion
 
-To benefit and stay safe, a customer has to understand four things: what she is agreeing to share and for how long; how to see and cancel that agreement; who pays her back if money goes missing; and where to complain. The draft writes each one down. Consent must state scope, duration and purpose [S1, s. 7]. Revocation is immediate [S1, s. 7.5]. The bank pays first [S1, s. 8.1(iv)]. Complaints have channels and deadlines [S1, Annexure A].
+CGAP's framework for a responsible digital finance ecosystem is a useful frame. It holds that no single actor can make consumers safe and able to get value from digital finance; authorities, providers, consumer representatives and market facilitators each carry part of the load, led by one authority with a clear consumer protection mandate [S21, pp. 9 to 10 and p. 12]. Read that way, the draft does well on the provider side and less well on the consumer side.
 
-The harder question is who can use these rights. The journey assumes a person who already holds an account, owns a phone with apps from both the provider and the bank, can pass a biometric check, receive an OTP and read a dashboard [S1, s. 7.1 to 7.4]. That describes a minority here. The UK built its model for a population where only 2 percent of adults are digitally excluded [S13, p. 13]. SBP counts 30.4 million mobile banking users and 99.1 million branchless banking app users, but also 46.1 million call centre and IVR banking users [S3, p. 9]. The consent and revocation path in the draft is online only [S1, s. 7.4]; complaints, by contrast, can be made by phone or in a branch [S1, Annexure A].
+**Protection.** To benefit and stay safe, a customer has to understand four things: what she shares and for how long; how to see and cancel that agreement; who repays her if money goes missing; and where to complain. The draft writes each one down. Consent must state scope, duration and purpose [S1, s. 7]. Revocation is immediate [S1, s. 7.5]. The bank pays first [S1, s. 8.1(iv)]. Complaints have channels and deadlines [S1, Annexure A].
 
-Part 1 showed that women are further from this journey. Findex reports a 30 point gender gap in account ownership and a 65 point gap in phone ownership in Pakistan [S5, p. 98 and p. 25]. SBP's own measure gives a 29 percent gender gap, using a different definition [S2, pp. 47 to 48]. Different surveys put the size differently, but they agree on the direction. The draft does not mention gender, language or basic phones (my search of the text).
+**Experience.** The journey assumes a person who already holds an account, has the provider's app and the bank's app, can pass a biometric check, receive an OTP and read a dashboard [S1, s. 7.1 to 7.4]. The interface rules [S1, s. 14] write good design into law. But consent and revocation are online only [S1, s. 7.4], while complaints can be made by phone or in a branch [S1, Annexure A]. SBP counts 46.1 million call centre and IVR banking users [S3, p. 9]. The UK built its model for a population where only 2 percent of adults are digitally excluded [S13, p. 13].
 
-Understanding also cannot be left to the customer alone. The World Bank's Findex team argues that financial education helps but is not enough on its own, and that consumer protection and education are complements [S5, p. 239]. Earlier CGAP research found low income customers in India had little awareness of how providers used their data, and borrowers in Nairobi were willing to pay double for loans with privacy features [S16]. So consumers care about data use but rarely see it. That is a design problem as much as a literacy one. The draft's interface rules [S1, s. 14] and awareness duty [S1, s. 11(vii)] point the right way, but neither has a measure attached.
+**Inclusion.** The Karandaaz survey of 2024 gives Pakistani evidence on the skills this journey needs. Only half of adults have ever sent or received a text message, and 78 percent of men but 47 percent of women own a SIM card [S22, p. 10]. On its financial literacy measure, 32 percent of men and 12 percent of women scored as literate [S22, p. 11]. Its digital literacy score is 77 for financially included adults and 42 for the excluded, and 65 for men against 48 for women [S22, p. 30]. These are correlations, not causes. Findex points the same way, with a 30 point gender gap in account ownership and a 65 point gap in phone ownership [S5, p. 98 and p. 25]. The draft does not mention gender, language or basic phones (my search of the text).
 
-There is a channel to build on. Under SBP's financial education roadmap, banks and SBP offices reached 2.6 million people in FY26 [S2, p. 48].
+Understanding cannot be left to the customer alone. Findex argues that financial education helps but is not enough without consumer protection [S5, p. 239]. Earlier CGAP research found low income customers in India had little awareness of how providers used their data, while borrowers in Nairobi would pay double for loans with privacy features [S16]. Design matters as much as literacy. The draft's awareness duty [S1, s. 11(vii)] has no measure attached. There is a channel to build on: under SBP's financial education roadmap, banks and SBP offices reached 2.6 million people in FY26 [S2, p. 48].
 
 ## Who has to work together
 
-Open banking reaches people outside the system only if several actors move together.
+CGAP's framework names the actors; the draft gives most of them a concrete job [S21, pp. 12 to 13].
 
 - **SBP and RPP:** final rules, the hub, standards, dispute handling between firms, and public statistics [S1, s. 5.4 and 8.2].
 - **Banks, microfinance banks and EMIs:** open APIs, run the dashboard and the authorisation screen, and refund first [S1, s. 5.1, 7.3 and 8.1].
-- **Fintechs as providers:** build the product that gives a reason to consent. Neem, Digi Khata and Swich Retail are the open banking cohort in the sandbox [S4]. Neem describes itself as an embedded finance platform that lets businesses offer financial services in their own apps [S17], building on banking APIs it launched in 2023 [S18]. What it tests in the sandbox is not public in the sources read. SBP has also approved 14 of more than 30 fintechs that applied to join Raast [S2, p. 58].
+- **Fintechs as providers:** build the product that gives a reason to consent. Neem, Digi Khata and Swich Retail are the open banking cohort in the sandbox [S4]. Press reports describe Neem as an embedded finance platform that lets businesses offer financial services in their own apps [S17], building on banking APIs it launched in 2023 [S18]. What it tests in the sandbox is not public in the sources read. SBP has also approved 14 of more than 30 fintechs that applied to join Raast [S2, p. 58].
 - **NADRA:** biometric identity checks in every consent [S1, s. 7.2(i)].
 - **Telcos:** the OTP goes to the registered mobile number [S1, s. 7.2(ii)], so SIM registration and delivery matter.
 - **Agents:** 837,244 branchless banking agents [S3, p. 9] are where many people meet finance. The draft gives them no role (my reading).
@@ -91,18 +91,18 @@ These are my suggestions, not findings. Each is tied to a gap in the draft.
 - The draft may change after consultation; no comment deadline appears in the text [S1].
 - UK consent rules and routing, and Brazil's routing and liability, were not found in the sources read.
 - India's figures count accounts and consents, not people [S15]. UK figures count connections, not unique people [S8].
-- Neem's description is from press, not its own site, which blocked automated reading.
-- The CGAP evidence is from 2020 and from India and Kenya [S16].
+- Neem's description is from press; its own site blocked automated reading.
+- The CGAP data evidence is from 2020, India and Kenya [S16].
 
 ## Next: Part 4
 
-Rules and rights matter only if people have a reason to use them. Part 4 looks for documented cases, by vertical, where a digital payment or data tool made its value obvious to ordinary users, and asks what it would take here.
+Rights matter only if people have a reason to use them. Part 4 looks for documented cases, by vertical, where a digital payment or data tool made its value obvious, and asks what it would take here.
 
 I would value feedback and other readings of the draft.
 
 ## Sources
 
-Full details, access dates and evidence labels are in `sources.md`.
+Each source is listed with its publisher and date; access dates and evidence labels are kept with the project's full source list.
 
 - [S1] State Bank of Pakistan (2026), *Open Banking Regulations 2026*, draft for public consultation.
 - [S2] State Bank of Pakistan (2026), *Governor's Annual Report 2025-26*.
@@ -122,3 +122,7 @@ Full details, access dates and evidence labels are in `sources.md`.
 - [S16] CGAP (21 April 2020), *Customers Want Data Protection: How Can Open API Providers Deliver?*
 - [S17] The Express Tribune (23 January 2026), report on Neem's funding round. Secondary.
 - [S18] PYMNTS (25 September 2023), report on Neem's payments infrastructure. Secondary.
+- [S19] UK Payment Services Regulations 2017, regulation 75.
+- [S20] UK Consumer Credit Act 1974, section 157.
+- [S21] CGAP (September 2024), *Responsible Digital Finance Ecosystem (RDFE): A Conceptual Framework*, working paper.
+- [S22] Karandaaz Pakistan (2025), *Karandaaz Financial Inclusion Survey (K-FIS) 2024, Narrative Report*.

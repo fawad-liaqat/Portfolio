@@ -2,7 +2,7 @@
 
 **Part 4 of 4: Pakistan's digital public infrastructure series**
 
-Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S1] resolve to the Sources section at the end and to `sources.md`. Case data is in `casebook.json`.
+Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S1] refer to the source list at the end. The case table behind the charts follows the same source list.
 
 ## The question
 
@@ -28,7 +28,7 @@ A note on the bar. A case counts only if a primary or official source documents 
 
 **Pakistan.** The State Bank and the federal government ran a natural experiment. A PKR 3.5 billion subsidy paid 0.5 percent of each Raast merchant payment, capped at PKR 100, from September 2025 to June 2026 [S3, pp. 21 and 58]. Monthly merchant payments rose from 4.3 million to 86 million [S3, p. 21]. Registered merchants reached 3.63 million, with 2.68 million joining in FY26 [S3, p. 58]. Banks must now give every new business account at least one digital payment method [S3, p. 55].
 
-**What it would take.** Use that survives the end of the subsidy in June 2026 [S3, p. 58]. The test is the data from July 2026 onward, which I could not find yet. Confidence: medium on direction, low on durability.
+**What it would take.** The subsidy ran from 1 September 2025 to 30 June 2026 [S3, p. 58]. On 13 November 2026 the government said it would continue subsidising merchant fees on Raast QR payments; the terms were not published [S9]. The real test is use that holds once payments are no longer subsidised. Confidence: medium on direction, low on durability.
 
 ## 3. Remittances
 
@@ -62,9 +62,9 @@ A note on the bar. A case counts only if a primary or official source documents 
 
 ## 6. Education and health fees
 
-**The case: Côte d'Ivoire's school fees.** From a 2011 pilot, the education ministry moved secondary school registration fees to digital channels. By 2014 to 2015, 99 percent of 1.48 million payments were digital and 94 percent were by mobile money [S7, p. 10]. The case study reports sharp falls in lost payments, fraud and theft, earlier collection of funds and better student records [S7, pp. 18 to 19]. Disputed transactions at one provider fell from 12 percent to 1 percent between 2012 and 2014 [S7, p. 10]. Students paid no transaction fee; the ministry paid providers a flat fee per payment [S7, p. 11]. This case dates from 2015.
+**The case: Côte d'Ivoire's school fees.** From a 2011 pilot, the education ministry moved secondary school registration fees to digital channels. By 2014 to 2015, 99 percent of 1.48 million payments were digital and 94 percent were by mobile money [S7]. The case study reports sharp falls in lost payments, fraud and theft, earlier collection of funds and better student records [S7]. Disputed transactions at one provider fell from 12 percent to 1 percent between 2012 and 2014 [S7]. Students paid no transaction fee; the ministry paid providers a flat fee per payment [S7]. This case dates from 2015.
 
-**Conditions.** One payee, the ministry, setting the rule; a single deadline; a known amount; and the payer spared the fee. September brings nearly 80 percent of payments, which stretched agent cash [S7, p. 15].
+**Conditions.** One payee, the ministry, setting the rule; a single deadline; a known amount; and the payer spared the fee. September brings nearly 80 percent of payments, which stretched agent cash [S7].
 
 **Pakistan.** Raast QR acceptance has spread to educational and healthcare facilities and public service points, and QR is now the only way to pay at NADRA centres [S3, p. 58]. I found no figures on fee volumes at schools or hospitals.
 
@@ -74,12 +74,14 @@ A note on the bar. A case counts only if a primary or official source documents 
 
 Read together, the cases show a pattern.
 
-1. **An institution sets the default.** A government, a ministry or a regulator decides that money arrives or must be paid digitally: Brazil's aid [S1, p. 260], Côte d'Ivoire's fees [S7, p. 10], NADRA's counters [S3, p. 58].
+1. **An institution sets the default.** A government, a ministry or a regulator decides that money arrives or must be paid digitally: Brazil's aid [S1, p. 260], Côte d'Ivoire's fees [S7], NADRA's counters [S3, p. 58].
 2. **The payment repeats.** Bills, school terms and transfers come on a schedule [S1, p. 179].
-3. **Cash is costly or risky.** Theft at fee collection [S7, p. 18] and large cash sums at cattle markets [S2, p. 21].
-4. **The payer pays nothing extra.** Free accounts in Brazil [S1, p. 260], no fee for Ivorian students [S7, p. 11], subsidised Raast merchant payments [S3, p. 58].
+3. **Cash is costly or risky.** Theft at fee collection [S7] and large cash sums at cattle markets [S2, p. 21].
+4. **The payer pays nothing extra.** Free accounts in Brazil [S1, p. 260], no fee for Ivorian students [S7], subsidised Raast merchant payments [S3, p. 58].
 
 Everyday merchant payments are the one vertical where none of these hold naturally, which is why they took a subsidy in Pakistan.
+
+Seen from the customer's side, the same four conditions are about inclusion, experience and protection. The payment reaches people the system often misses, such as BISP's beneficiaries, who are mostly women [S3, p. 57]. It saves families time spent queuing, as in Côte d'Ivoire [S7]. And it can protect them, as the fall in lost and stolen fee payments in Côte d'Ivoire shows [S7].
 
 ## Series synthesis
 
@@ -96,14 +98,14 @@ Everyday merchant payments are the one vertical where none of these hold natural
 - Several cases measure adoption well and benefit only in general terms [S1] [S5].
 - The Côte d'Ivoire case is from 2015 [S7].
 - Pakistan's FY26 figures are provisional [S2].
-- No post subsidy data on Raast merchant payments was available [S3].
+- No Raast merchant data after June 2026, and no terms for the continued subsidy, were available [S3] [S9].
 - Kenya figures are survey shares of adults, while Pakistan's bill figure counts transactions [S1, p. 179] [S2, p. 18].
 
 I would value feedback and other readings of the data.
 
 ## Sources
 
-Full details, access dates and evidence labels are in `sources.md`.
+Each source is listed with its publisher and date.
 
 - [S1] World Bank (2025), *The Global Findex Database 2025*.
 - [S2] State Bank of Pakistan (2026), *Annual Payment Systems Review FY 2025-26* (provisional).
@@ -113,3 +115,4 @@ Full details, access dates and evidence labels are in `sources.md`.
 - [S6] Central Bank of Egypt (2025), *Annual Report 2024/2025*.
 - [S7] GSMA (September 2015), *Paying school fees with mobile money in Côte d'Ivoire*.
 - [S8] Banco Central do Brasil (2026), *Annual Report 2025*.
+- [S9] Business Recorder (13 November 2026), report on the government's decision to continue the Raast QR subsidy. Secondary.

@@ -2,7 +2,7 @@
 
 **Part 1 of 4: an evaluation of Pakistan's digital public infrastructure against India, Brazil and Egypt**
 
-Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S2] resolve to the Sources section at the end and to `sources.md`.
+Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S2] refer to the source list at the end.
 
 ## The question
 
@@ -18,7 +18,7 @@ Digital public infrastructure (DPI) means the shared digital foundations that ma
 
 ## Scorecard summary
 
-Statuses are: in place, partial, pilot, absent. Every cell is sourced in `scorecard.json`.
+Statuses are: in place, partial, pilot, absent. Every cell is sourced in the scorecard below.
 
 | Layer | Pakistan | India | Brazil | Egypt |
 |---|---|---|---|---|
@@ -117,7 +117,7 @@ I would value feedback and other readings of the data.
 
 ## Sources
 
-Full details, access dates and evidence labels are in `sources.md`. Open items are in `gaps.md`.
+Each source below is listed with its publisher and date; access dates, evidence labels and open items are kept in the project's source notes.
 
 - [S1] World Bank (2026), *Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan*.
 - [S2] State Bank of Pakistan (2026), *Annual Payment Systems Review FY 2025-26* (provisional).
@@ -139,3 +139,5 @@ Full details, access dates and evidence labels are in `sources.md`. Open items a
 - [S18] Pakistan Bureau of Statistics, Census 2023, Table 12 (national).
 - [S19] Associated Press of Pakistan (10 March 2025), report on NADRA's dematerialised ID card. Secondary.
 - [S20] Fiskil, Open Finance Tracker: Egypt (undated). Secondary.
+- [S21] State Bank of Pakistan (2025), *National Financial Inclusion Strategy 2024 to 28*.
+- [S22] State Bank of Pakistan (17 November 2026), *Governor's Annual Report 2025-26*.

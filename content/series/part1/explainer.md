@@ -26,4 +26,4 @@ The bigger issue is who is on the rail. Only 27 in 100 Pakistani adults have any
 
 Pakistan has mostly built these systems. The open question is why so many people are still outside them. The phone they own, cost, trust, places to pay, family permission or know how? Part 2 looks into that.
 
-*Source note: [S1] World Bank regional DPI assessment 2026; [S2] State Bank of Pakistan Payment Systems Review FY26 (provisional); [S3] SBP draft Open Banking Regulations 2026; [S4] World Bank Global Findex 2025; [S7] GSMA Mobile Gender Gap Report 2025; [S13] Government of India release on data protection rules; [S15] Brazil's data protection authority. Full list in sources.md.*
+*Source note: [S1] World Bank regional DPI assessment 2026; [S2] State Bank of Pakistan Payment Systems Review FY26 (provisional); [S3] SBP draft Open Banking Regulations 2026; [S4] World Bank Global Findex 2025; [S7] GSMA Mobile Gender Gap Report 2025; [S13] Government of India release on data protection rules; [S15] Brazil's data protection authority. Full list in the source list.*
