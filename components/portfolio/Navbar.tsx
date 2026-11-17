@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { siteConfig } from "@/data/site";
 import { useActiveSection } from "@/hooks/useActiveSection";
+import ThemeToggle from "./ThemeToggle";
 
 // To add a page section to the menu, add it here and to SECTIONS in
 // hooks/useActiveSection.ts. The id must match the section's id attribute.
@@ -74,7 +75,10 @@ export default function Navbar() {
               </li>
             ))}
           </ul>
+          <ThemeToggle variant="menu" />
         </nav>
+        {/* Desktop copy, after the links so focus order matches what is seen. */}
+        <ThemeToggle variant="header" />
       </div>
     </header>
   );

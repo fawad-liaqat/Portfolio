@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from 'next';
 import { siteConfig } from '@/data/site';
+import { themeInitScript, THEME_COLORS } from '@/lib/theme';
 import '@/styles/globals.css';
 
 export const metadata: Metadata = {
@@ -52,13 +53,15 @@ const personJsonLd = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  themeColor: '#070B14',
+  themeColor: THEME_COLORS.dark,
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* Sets the saved theme before the first paint. See lib/theme.ts. */}
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link

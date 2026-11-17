@@ -15,14 +15,13 @@ export const siteConfig = {
     label: "Overview",
     headline: "Pakistan built the rails. Adoption is the hard part.",
     sub: "I study why Pakistan's digital public infrastructure is used less than it could be, what other countries' evidence teaches for our demographics, and I explain it in plain language.",
-    status:
-      "Final year BS FinTech student at FAST NUCES Islamabad, graduating January 2027.",
+    status: "BS Financial Technology, FAST NUCES Islamabad. Graduating January 2027.",
     primaryCta: "See the work",
     secondaryCta: "Read the research",
   },
   connect: {
     intro:
-      "Open to conversations about digital payments, public infrastructure and policy, and to roles in strategy, research and programme delivery.",
+      "Open to conversations about digital payments, public infrastructure and policy, and to roles in strategy, research and programme delivery. I welcome feedback and other views on anything published here.",
   },
   about: {
     intro:

@@ -39,7 +39,7 @@ export const projects: Project[] = [
     title: "AwaazOnboard",
     subtitle: "Voice as a second authentication factor for basic phone users",
     summary:
-      "My final year project, built with a team. It explores voice as a supporting identity check for people who bank through basic phones on 2G networks.",
+      "A four person project I led on architecture and unit economics. It explores voice as a supporting identity check for people who bank through basic phones on 2G networks.",
     description: [
       "AwaazOnboard explores voice as a second authentication factor for people who bank through basic phones on 2G networks. The aim is that identity checks tied to NADRA records, and payments on rails like Raast, can reach users who have no smartphone or mobile data.",
       "The hard part is the network. Narrowband voice codecs remove much of the audio detail that speaker verification models rely on. The work therefore focuses on enrollment in controlled settings and on models that tolerate compressed audio.",

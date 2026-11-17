@@ -19,7 +19,10 @@ function splitSummary(summary: string): [string, string] {
 
 function ProjectCard({ project }: { project: Project }) {
   const { keyFigure } = project;
-  const [lead, rest] = splitSummary(project.summary);
+  // The featured card has room for the whole summary.
+  const [lead, rest] = project.featured
+    ? [project.summary, ""]
+    : splitSummary(project.summary);
   return (
     <article
       id={`project-${project.id}`}

@@ -1,5 +1,33 @@
 # Changelog
 
+## Phase 4: light mode and voice edits (17 November 2026)
+
+Light mode
+- A sun or moon button in the header (and a labelled one in the phone menu)
+  switches between dark and light. Dark stays the default.
+- The light theme overrides the same CSS tokens under `[data-theme="light"]`
+  on `<html>`. Every text colour passes WCAG AA in both themes; the checked
+  ratios are noted in `styles/globals.css`.
+- The choice is kept in the visitor's own browser (localStorage, key
+  `theme`). If storage is blocked, the theme still changes for that visit.
+  The system colour setting is not followed: with nothing saved, the site
+  opens dark.
+- A small inline script in `<head>` (see `lib/theme.ts`) applies the saved
+  theme before the first paint, so there is no flash on reload. It also sets
+  the browser bar colour.
+- With JavaScript off the page is dark and the buttons are not shown.
+- Printing always uses the light colours.
+
+Copy edits (owner's voice feedback)
+- Hero status line now reads as an education line, without "student".
+- AwaazOnboard summary names the team size and Fawad's role. The featured
+  card now shows its whole summary.
+- Connect intro invites feedback and other views.
+- Training: "EAG Associate, 2026 cohort", now that the programme is complete.
+
+Still open
+- Everything listed as open under phase 3.
+
 ## Phase 3: "Signal" dark restyle (17 November 2026)
 
 The light editorial look was rejected as too basic. The site is now dark and

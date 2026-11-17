@@ -33,7 +33,7 @@ export const credentials: CredentialGroup[] = [
     id: "programme",
     label: "Programme",
     items: [
-      "EAG Associate Programme, 2026 cohort. Economic Advisory Group. Workshops on macroeconomic policy, trade, international economics and structural transformation.",
+      "EAG Associate, 2026 cohort. Economic Advisory Group. Workshops on macroeconomic policy, trade, international economics and structural transformation.",
     ],
   },
 ];
