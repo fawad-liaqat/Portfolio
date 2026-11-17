@@ -1,5 +1,15 @@
 # Changelog
 
+## Site copy: inclusion, protection and ease of use (17 November 2026)
+
+- Hero sentence now names the people left out, and safety and ease of use.
+- About pillars: "Adoption before technology" is now "Inclusion first"
+  (names women as the largest gap, from Part 2); "Explain it plainly" is now
+  "Protection and ease of use" (consent and recourse, from Part 3). Plain
+  writing is still stated in the hero and the About text.
+- QR merchants figure: approved wording on the Raast QR subsidy period and
+  the November 2026 announcement (SITE_CHANGES.md addendum).
+
 ## Charts on series pages (17 November 2026)
 
 - New bar charts above the data tables, declared per part in

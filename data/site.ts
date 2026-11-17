@@ -14,7 +14,7 @@ export const siteConfig = {
   hero: {
     label: "Overview",
     headline: "Pakistan built the rails. Adoption is the hard part.",
-    sub: "I study why Pakistan's digital public infrastructure is used less than it could be, what other countries' evidence teaches for our demographics, and I explain it in plain language.",
+    sub: "I study why Pakistan's digital public infrastructure is used less than it could be, what would bring in the people it leaves out, safely and easily, and I explain it in plain language.",
     status: "BS Financial Technology, FAST NUCES Islamabad. Graduating January 2027.",
     primaryCta: "See the work",
     secondaryCta: "Read the research",
@@ -36,16 +36,16 @@ export const siteConfig = {
         desc: "Identity, payments and data sharing work as a stack. I look at how the layers depend on each other, and where Pakistan's stack is strong, partial or missing.",
       },
       {
-        title: "Adoption before technology",
-        desc: "A working rail is not the same as a used one. I study who is left out and what holds them back: cost, trust, acceptance, design and financial literacy.",
+        title: "Inclusion first",
+        desc: "A working rail is not the same as a used one. I study who is left out, women most of all, and what holds them back: cost, trust, acceptance, design and financial literacy.",
       },
       {
         title: "Global evidence, local fit",
         desc: "India's UPI, Brazil's Pix and other cases are useful only when read against Pakistan's own demographics and institutions.",
       },
       {
-        title: "Explain it plainly",
-        desc: "If people cannot see how a system helps them, they will not use it. I write for readers outside finance as well as inside it.",
+        title: "Protection and ease of use",
+        desc: "People use what is safe, affordable and easy to understand. I look at consent, recourse when something goes wrong, and whether a product makes sense to someone new to digital money.",
       },
     ],
   },
