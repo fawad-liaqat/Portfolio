@@ -75,8 +75,10 @@ const SOURCE_ID = /\bS(\d{1,3})\b/g;
 /**
  * Turns source ids such as S2 in rendered text into links to the Sources
  * list on the same page. Text inside links, code and headings is left alone.
+ * Ids not in `known` (for example a source the notes say was removed) stay
+ * plain text, so no link ever points at a missing entry.
  */
-function linkSources(html: string, cited: Set<string>): string {
+function linkSources(html: string, cited: Set<string>, known: Set<string>): string {
   let skip = 0;
   return html
     .split(/(<[^>]+>)/)
@@ -88,6 +90,7 @@ function linkSources(html: string, cited: Set<string>): string {
       }
       if (skip) return part;
       return part.replace(SOURCE_ID, (id) => {
+        if (!known.has(id)) return id;
         cited.add(id);
         return `<a class="source-ref" href="#source-${id}">${id}</a>`;
       });
@@ -105,8 +108,8 @@ function wrapTables(html: string): string {
     .replace(/<\/table>/g, "</table></div>");
 }
 
-function render(md: string, cited: Set<string>): string {
-  return wrapTables(linkSources(marked.parse(md, { async: false }) as string, cited));
+function render(md: string, cited: Set<string>, known: Set<string>): string {
+  return wrapTables(linkSources(marked.parse(md, { async: false }) as string, cited, known));
 }
 
 /**
@@ -119,6 +122,8 @@ export function publicLocation(location: string): string {
   return location
     .replace(/Local file supplied by the owner:[^;]*;?/gi, "")
     .replace(/Local file\s*`[^`]*`\s*(\(owner supplied\))?\s*;?/gi, "")
+    // Page offset notes such as "(printed = PDF page minus 18)" are for checking, not readers.
+    .replace(/\s*\((printed( page)?\s*=\s*)?PDF page minus \d+\)/gi, "")
     .replace(/^[\s;,]+|[\s;,]+$/g, "")
     .trim();
 }
@@ -154,16 +159,18 @@ export function loadPart(n: number): LoadedPart | null {
   if (!meta || !isPublished(n)) return null;
   const cited = new Set<string>();
 
+  const { sources, rest } = parseSources(read(n, "sources.md")!);
+  const known = new Set(sources.map((src) => src.id));
+
   const [title, briefBody] = splitTitle(read(n, "brief.md")!);
   // The page has its own Sources list, so the brief's short list is not repeated.
-  const briefHtml = render(dropSection(briefBody, "Sources"), cited);
+  const briefHtml = render(dropSection(briefBody, "Sources"), cited, known);
 
   const [, explainerBody] = splitTitle(read(n, "explainer.md")!);
-  const explainerHtml = render(explainerBody, cited);
+  const explainerHtml = render(explainerBody, cited, known);
 
-  const { sources, rest } = parseSources(read(n, "sources.md")!);
   const [, notesBody] = splitTitle(rest);
-  const sourceNotesHtml = render(notesBody.trim(), cited);
+  const sourceNotesHtml = render(notesBody.trim(), cited, known);
 
   let data: DataView | null = null;
   let asOf: string | undefined;
