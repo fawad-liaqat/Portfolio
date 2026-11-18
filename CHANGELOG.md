@@ -1,5 +1,11 @@
 # Changelog
 
+## Release fix: branded 404 page (18 November 2026)
+
+- `app/not-found.tsx` replaces the default Next.js page: site header and
+  footer, both themes, a link home and to the series, one title tag, and
+  no conflicting robots tags (both say noindex).
+
 ## Release fix B4: article titles (18 November 2026)
 
 - Three article titles now match the approved titles used on the article
