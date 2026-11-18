@@ -15,14 +15,9 @@ export const siteConfig = {
     label: "Overview",
     headline: "Pakistan built the rails. Adoption is the hard part.",
     sub: "I study why Pakistan's digital public infrastructure is used less than it could be, what financial inclusion would take for the people it leaves out, and I explain it in plain language.",
-    status: "BS Financial Technology, FAST NUCES Islamabad. Graduating January 2027.",
+    status: "Islamabad. Open to product roles in open banking and embedded finance.",
     primaryCta: "See the work",
-    secondaryCta: "Read the research",
-  },
-  /** Pointer at the top of Work for readers who come for open banking. */
-  startHere: {
-    lead: "New to open banking? Start here:",
-    part: 3,
+    secondaryCta: "Where to start",
   },
   connect: {
     intro:

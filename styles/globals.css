@@ -20,6 +20,9 @@
    16. Reduced motion
    17. Print
    18. Theme toggle
+   19 to 22. Series, CV, charts, 404
+   23. Where to start and the Work groups
+   24. CV page
 
    Themes: dark is the default and lives on :root. The light theme overrides
    the same tokens under [data-theme="light"] on <html>. The inline script in
@@ -126,7 +129,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   margin: 0;
   color: var(--text);
   font-family: var(--font-display);
@@ -1112,17 +1116,6 @@ a:hover {
   content: "\2197";
   margin-left: 6px;
   font-family: var(--font-mono);
-}
-
-/* "Start here" pointer under the Projects heading. */
-.start-here {
-  margin-top: 12px;
-  color: var(--muted);
-  font-size: 16px;
-}
-
-.start-here a {
-  font-weight: 500;
 }
 
 /* Secondary links on a card, such as an earlier edition. */
@@ -2479,4 +2472,228 @@ a:hover {
   max-width: 34em;
   margin-top: 16px;
   font-size: 18px;
+}
+
+/* 23. Where to start and the Work groups --------------------------------- */
+
+/* A short band under the hero: four questions, each with where to go. */
+.start {
+  padding: 40px 0 44px;
+  border-top: 1px solid var(--line);
+}
+
+.start-eyebrow {
+  margin-bottom: 14px;
+  color: var(--accent);
+}
+
+.start-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.start-grid > li {
+  display: flex;
+}
+
+.start-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: 100%;
+  padding: 16px 18px 18px;
+  overflow: hidden;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+/* A thin signal line that runs along the top edge on hover. */
+.start-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  transform: scaleX(0.18);
+  transform-origin: left;
+  transition: transform 320ms ease;
+}
+
+.start-card:hover::before,
+.start-card:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.start-card:hover {
+  color: var(--muted);
+}
+
+.start-num {
+  color: var(--meta);
+  font-family: var(--font-mono);
+  font-size: 13px;
+}
+
+.start-q {
+  color: var(--text);
+  font-family: var(--font-display);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.3;
+}
+
+.start-a {
+  margin-top: auto;
+  padding-top: 4px;
+  color: var(--accent);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.start-a::after {
+  content: "\2192";
+  margin-left: 6px;
+  font-family: var(--font-mono);
+}
+
+.start-a.is-external::after {
+  content: "\2197";
+}
+
+/* Jump links under the Work heading. */
+.group-jump {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.group-jump a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 36px;
+  padding: 4px 14px;
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  color: var(--text);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.group-jump a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.work-group + .work-group {
+  margin-top: 64px;
+}
+
+.group-head {
+  margin-bottom: 22px;
+}
+
+.group-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--accent);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+/* The group number sits on a short rail, like the stack diagram. */
+.group-index {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--meta);
+}
+
+.group-index::after {
+  content: "";
+  width: 28px;
+  height: 1px;
+  background: var(--line-strong);
+}
+
+.group-title {
+  margin-top: 10px;
+  font-size: 26px;
+}
+
+.group-hook {
+  margin-top: 8px;
+  color: var(--text);
+  font-size: 17px;
+}
+
+.group-head .section-intro {
+  margin-top: 6px;
+  font-size: 16px;
+}
+
+/* Old #research links land on the Articles group. */
+.anchor-alias {
+  display: block;
+  height: 0;
+}
+
+.status-start {
+  color: var(--accent);
+}
+
+.status-start::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
+}
+
+@media (max-width: 1020px) {
+  .start-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 760px) {
+  .start {
+    padding: 32px 0 36px;
+  }
+
+  .start-q {
+    font-size: 16px;
+  }
+
+  .start-card {
+    padding: 14px 14px 16px;
+  }
+
+  .work-group + .work-group {
+    margin-top: 48px;
+  }
+
+  .group-title {
+    font-size: 22px;
+  }
+}
+
+@media (max-width: 340px) {
+  .start-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .start-card::before {
+    transition: none;
+  }
 }

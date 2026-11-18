@@ -30,7 +30,7 @@ export default function HeroSection() {
             <a href="#work" className="btn btn-primary">
               {hero.primaryCta}
             </a>
-            <a href="#research" className="btn btn-secondary">
+            <a href="#start" className="btn btn-secondary">
               {hero.secondaryCta}
             </a>
           </div>

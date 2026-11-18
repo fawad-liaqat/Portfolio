@@ -17,9 +17,8 @@ function DownloadIcon() {
 }
 
 const NAV_ITEMS = [
-  { id: "series", label: "Series" },
+  { id: "start", label: "Start" },
   { id: "work", label: "Work" },
-  { id: "research", label: "Research" },
   { id: "training", label: "Training" },
   { id: "about", label: "About" },
   { id: "connect", label: "Connect" },

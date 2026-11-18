@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 // Keep in step with NAV_ITEMS in components/portfolio/Navbar.tsx.
-const SECTIONS = ['hero', 'series', 'work', 'research', 'training', 'about', 'connect'] as const;
+const SECTIONS = ['hero', 'start', 'work', 'training', 'about', 'connect'] as const;
 export type SectionId = (typeof SECTIONS)[number];
 
 export function useActiveSection(): SectionId {

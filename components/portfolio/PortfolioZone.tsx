@@ -4,11 +4,10 @@ import HeroSection from "./HeroSection";
 import SignalStrip from "./SignalStrip";
 import AboutSection from "./AboutSection";
 import WorkSection from "./WorkSection";
-import ResearchSection from "./ResearchSection";
+import StartGuide from "./StartGuide";
 import CredentialsSection from "./CredentialsSection";
 import ConnectSection from "./ConnectSection";
 import Footer from "./Footer";
-import SeriesSection from "@/components/series/SeriesSection";
 import Enhancements from "./Enhancements";
 
 // Page order. Each section reads its content from a file in data/.
@@ -18,10 +17,10 @@ export default function PortfolioZone() {
       <Navbar cv={cvLink()} />
       <main id="main">
         <HeroSection />
+        <StartGuide />
         <SignalStrip />
-        <SeriesSection />
+        {/* Series, articles and projects, in that order. */}
         <WorkSection />
-        <ResearchSection />
         <CredentialsSection />
         <AboutSection />
         <ConnectSection />

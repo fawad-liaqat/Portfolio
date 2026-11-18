@@ -1,7 +1,7 @@
 import { projects, type Project } from "@/data/projects";
-import { seriesParts, seriesPath } from "@/data/series";
-import { siteConfig } from "@/data/site";
-import { isPublished } from "@/lib/series";
+import { workGroups } from "@/data/guide";
+import SeriesSection from "@/components/series/SeriesSection";
+import ResearchSection from "./ResearchSection";
 
 const STATUS_LABELS: Record<Project["status"], string> = {
   completed: "Completed",
@@ -42,7 +42,7 @@ function ProjectCard({ project }: { project: Project }) {
           <span className="updated">Updated {project.updated}</span>
         )}
       </p>
-      <h3 className="card-title">{project.title}</h3>
+      <h4 className="card-title">{project.title}</h4>
       <p className="card-lead">{lead}</p>
       {keyFigure && (
         <p className="key-figure">
@@ -92,33 +92,43 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
+/**
+ * The Work section: one section with three groups, in this order:
+ * Series (#series), Articles (#articles, also #research) and Projects
+ * (#projects). Each group has a one line hook from data/guide.ts.
+ */
 export default function WorkSection() {
-  // Cards follow the order in data/projects.ts.
-  const ordered = projects;
-  const startPart = seriesParts.find((p) => p.number === siteConfig.startHere.part);
-
   return (
     <section id="work" className="section">
       <div className="container">
         <header className="section-head" data-reveal>
           <p className="eyebrow">Work</p>
-          <h2 className="section-title">Projects</h2>
-          {startPart && isPublished(startPart.number) && (
-            <p className="start-here">
-              {siteConfig.startHere.lead}{" "}
-              <a href={seriesPath(startPart.number)}>
-                Part {startPart.number}, {startPart.title}
-              </a>
-            </p>
-          )}
+          <h2 className="section-title">{workGroups.title}</h2>
+          <nav className="group-jump" aria-label="Parts of Work">
+            <a href="#series">{workGroups.series.label}</a>
+            <a href="#articles">{workGroups.articles.label}</a>
+            <a href="#projects">{workGroups.projects.label}</a>
+          </nav>
         </header>
 
-        <div className="project-grid">
-          {ordered.map((p) => (
-            <ProjectCard key={p.id} project={p} />
-          ))}
-        </div>
+        <SeriesSection />
+        <ResearchSection />
 
+        <div id="projects" className="work-group">
+          <header className="group-head" data-reveal>
+            <h3 className="group-label">
+              <span className="group-index" aria-hidden="true">03</span>
+              {workGroups.projects.label}
+            </h3>
+            <p className="group-hook">{workGroups.projects.hook}</p>
+          </header>
+          {/* Cards follow the order in data/projects.ts. */}
+          <div className="project-grid">
+            {projects.map((p) => (
+              <ProjectCard key={p.id} project={p} />
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
