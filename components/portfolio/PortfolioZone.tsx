@@ -17,12 +17,13 @@ export default function PortfolioZone() {
       <Navbar cv={cvLink()} />
       <main id="main">
         <HeroSection />
+        {/* Owner's order: About, Start, Work, Training, Connect (CV is the header button). */}
+        <AboutSection />
         <StartGuide />
         <SignalStrip />
         {/* Series, articles and projects, in that order. */}
         <WorkSection />
         <CredentialsSection />
-        <AboutSection />
         <ConnectSection />
       </main>
       <Footer />

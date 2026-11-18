@@ -18,10 +18,10 @@ function DocIcon() {
 }
 
 const NAV_ITEMS = [
+  { id: "about", label: "About" },
   { id: "start", label: "Start" },
   { id: "work", label: "Work" },
   { id: "training", label: "Training" },
-  { id: "about", label: "About" },
   { id: "connect", label: "Connect" },
 ] as const;
 
