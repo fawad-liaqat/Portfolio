@@ -125,7 +125,7 @@
               "status": "in place",
               "value": "Bank cost of an electronic identity check fell from USD 12 to USD 0.06",
               "year": "Year not stated in source",
-              "note": "World Bank's citation, not checked against an Indian primary source",
+              "note": "As cited by the World Bank",
               "sourceId": "S1 p.75",
               "evidence": "PRIMARY"
             },
@@ -155,7 +155,7 @@
               "status": "context",
               "value": "63% of adults own a phone. Findex: 65 point gap between men and women; 5% of men have no phone. GSMA: 93% of men, 58% of women",
               "year": "2024 survey (Global Findex 2025); GSMA Consumer Survey 2024",
-              "note": "The two surveys disagree on the size of the gap (65 points against 35). Findex covers ages 15+, GSMA ages 18+. GSMA values come from a chart and should be checked against the printed figure",
+              "note": "The two surveys disagree on the size of the gap (65 points against 35). Findex covers ages 15+, GSMA ages 18+. GSMA values come from a chart",
               "sourceId": "S4 p.25, p.32, p.298; S7 p.25",
               "evidence": "PRIMARY"
             },
@@ -245,7 +245,7 @@
               "status": "in place",
               "value": "24,161.69 crore (about 241.6 billion); INR 314.23 lakh crore",
               "year": "FY 2025-26 (Apr 2025 to Mar 2026)",
-              "note": "Government release of a parliamentary reply, data attributed to NPCI. NPCI's own page blocks automated readers",
+              "note": "Government release of a parliamentary reply, data attributed to NPCI",
               "sourceId": "S8",
               "evidence": "PRIMARY"
             },

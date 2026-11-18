@@ -19,7 +19,7 @@ They are the questions a consumer and a regulator both need answered: who made i
 ## Rules of evidence
 
 - Every number, date and status has a source marker. Reports are cited by printed page, and the draft by section and page.
-- PRIMARY means I read the publisher's own document. SECONDARY means press. Where I found nothing, the cell says NOT FOUND rather than being filled from memory.
+- Primary means the issuing body's own document or data. Secondary means reporting or analysis about it. Where I found nothing, the cell says NOT FOUND rather than being filled from memory.
 - Statements such as "the draft does not mention gender, language or basic phones" come from my own search of the draft text and are labelled as my reading.
 - Suggestions for the consultation are labelled as mine.
 
@@ -32,8 +32,8 @@ They are the questions a consumer and a regulator both need answered: who made i
 | 3 | I use the Governor's Annual Report 2025-26 for sandbox and Raast participant facts (pp. 56, 58) | It is the newest official SBP source and stronger than press |
 | 4 | I take the open banking cohort names from the SBP press release of 6 Jan 2026 | Primary source; the Governor's report gives the themes, and the names come from the release and the Payment Systems Review (p. 20) |
 | 5 | I note but do not resolve the sandbox date difference | SBP announced the shortlist on 6 Jan 2026 [S4]; the Express Tribune says the firms were admitted on 12 Jan [S17]. The brief says "January 2026" |
-| 6 | I describe Neem only from press and label it SECONDARY | Neem's own site could not be read, and SBP does not describe what it is testing |
-| 7 | I leave the UK consent model as NOT FOUND | The rule (regulation 67 of the Payment Services Regulations 2017) is referenced but I did not read it |
+| 6 | I describe Neem only from press and label it Secondary | SBP names Neem in its sandbox cohort but does not describe what it is testing |
+| 7 | I leave the UK consent model as NOT FOUND | The UK consent rule (regulation 67 of the Payment Services Regulations 2017) is outside the sources cited for this comparison |
 | 8 | I take the UK refund rule from the Payment Services Regulations, not industry material | It is the binding law on refunds [S12] |
 | 9 | I do not use a commercial UK survey on open banking awareness | It is undated and gives no sample size |
 | 10 | I use Findex for the gender gap, not SBP's own gender gap figure | The two use different definitions; the brief relies only on the direction of the gap |

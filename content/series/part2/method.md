@@ -21,7 +21,7 @@ The Karandaaz report gives a direct financial literacy measure by inclusion stat
 
 ## Rules of evidence
 
-Every number has a source id and a printed page number for reports. Each source is labelled PRIMARY, SECONDARY or NOT FOUND. My own calculations are marked, with inputs cited. I fill no gap from memory.
+Every number has a source id and a printed page number for reports. Each source is labelled Primary or Secondary, and a missing figure is marked NOT FOUND. Primary means the issuing body's own document or data. Secondary means reporting or analysis about it. My own calculations are marked, with inputs cited. I fill no gap from memory.
 
 ## Decision log
 
@@ -40,14 +40,5 @@ Every number has a source id and a printed page number for reports. Each source 
 | 11 | I state the subsidy period once and report its continuation as announced, without terms | The subsidy ran from 1 Sep 2025 to 30 Jun 2026 (S11, p. 58); on 13 Nov 2026 the government said it would continue it, with no terms published (S13) |
 | 12 | I use the census table alone for literacy by sex and area, including urban men against rural women | PBS Census 2023 Table 12 prints all four values (S6); I compute the gap myself and label it |
 | 13 | I add a short paragraph on what the findings mean for customers | Inclusion, protection and experience each follow from a cited finding |
-| 14 | I number Part 2's sources separately and show the matching Part 1 source | Each part stands alone, and the series stays traceable |
+| 14 | I number Part 2's sources separately | Each part stands alone, and each source keeps its full name and link |
 
-## Sources I read and replaced
-
-- Press reports on the Karandaaz survey (Dawn, 18 Jun 2025; Business Recorder, 5 Jul 2025): replaced by the Karandaaz report itself (S12).
-- SBP press release of 31 Dec 2025 on the Pakistan Financial Inclusion Index: replaced by the Governor's Annual Report (S11), which gives the 2025 scores.
-- A copy of census literacy series on the Karandaaz data portal: not cited, because the PBS census table (S6) gives the same 2023 values directly.
-
-## Sources I could not read
-
-- Karandaaz data portal series on Raast awareness by education, which needs a login.

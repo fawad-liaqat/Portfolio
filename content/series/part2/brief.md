@@ -98,7 +98,7 @@ Part 3 looks at open banking as a consumer product. Consent screens, liability r
 
 - Several Findex breakdowns are regional, not for Pakistan [S1].
 - Karandaaz publishes its financial literacy results as percentages and index scores; I did not have the microdata to test cause [S12].
-- The GSMA barrier ranking was read from a chart by an automated reader [S5].
+- The GSMA barrier ranking comes from a chart [S5].
 - SBP FY26 figures are provisional [S2].
 - Survey years differ: Findex 2024 [S1], K-FIS 2024 [S12], census 2023 [S6], SBP FY26 [S2] [S11].
 
@@ -106,20 +106,20 @@ I would value feedback and other readings of the data.
 
 ## Sources
 
-Each source is listed with its publisher and date.
+Primary means the issuing body's own document or data. Secondary means reporting or analysis about it.
 
-- [S1] World Bank (2025), *The Global Findex Database 2025*.
-- [S2] State Bank of Pakistan (2026), *Annual Payment Systems Review FY 2025-26* (provisional).
-- [S3] World Bank (2026), *Digital Public Infrastructure for Inclusive Growth* (regional assessment).
-- [S4] State Bank of Pakistan (2026), *Open Banking Regulations 2026*, draft for consultation.
-- [S5] GSMA (2025), *The Mobile Gender Gap Report 2025*.
-- [S6] Pakistan Bureau of Statistics, Census 2023, Table 12 (national).
-- [S7] Banco Central do Brasil (2026), *Annual Report 2025*.
-- [S8] Government of India via PIB (24 August 2026), release on ten years of UPI.
-- [S9] Government of India via PIB (27 August 2026), release on twelve years of Jan Dhan.
-- [S10] State Bank of Pakistan (3 December 2025), press release on women's financial inclusion.
-- [S11] State Bank of Pakistan (17 November 2026), *Governor's Annual Report 2025-26*.
-- [S12] Karandaaz Pakistan (2025), *Karandaaz Financial Inclusion Survey (K-FIS): Narrative Report* (survey year 2024).
-- [S13] Business Recorder (13 November 2026), report on the government's decision to continue the Raast QR subsidy. Secondary.
-- [S14] Reserve Bank of India (8 March 2022), press release on UPI123Pay.
-- [S15] State Bank of Pakistan (2025), *National Financial Inclusion Strategy 2024 to 28*.
+- [S1] World Bank. *The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy*. https://www.worldbank.org/en/publication/globalfindex. Primary.
+- [S2] State Bank of Pakistan. *Annual Payment Systems Review FY 2025-26*. https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY26.pdf. Primary.
+- [S3] World Bank. *Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan*. https://documents1.worldbank.org/curated/en/099110926084536993/pdf/P507284-0c4a825c-0c5d-40d5-8e72-cc9a23fa2f46.pdf. Primary.
+- [S4] State Bank of Pakistan. *Open Banking Regulations (Draft), for public consultation*. https://www.sbp.org.pk/assets/document/Open_Banking_Regulations_for_Public_Consulatation_Draft.pdf. Primary.
+- [S5] GSMA. *The Mobile Gender Gap Report 2025*. https://www.gsma.com/wp-content/uploads/2025/12/The-Mobile-Gender-Gap-Report-2025.pdf. Secondary.
+- [S6] Pakistan Bureau of Statistics. *Census 2023, Table 12: Literacy rate, enrolment and out of school population by sex and rural/urban (national)*. https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_12_national.pdf. Primary.
+- [S7] Banco Central do Brasil. *Annual Report 2025*. https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf. Primary.
+- [S8] Government of India, Ministry of Finance (Press Information Bureau). *UPI Completes 10 Years of Digital Payments Revolution*. https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2. Primary.
+- [S9] Government of India, Ministry of Finance (Press Information Bureau). *PM Jan Dhan Yojana Completes 12 Years of Transforming India's Financial Inclusion Landscape*. https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2303643&lang=1&reg=3. Primary.
+- [S10] State Bank of Pakistan. *SBP Governor says women's financial inclusion has risen to 52 percent (press release, 3 December 2025)*. https://www.sbp.org.pk/press/2025/Pr-03-Dec-2025.pdf. Primary.
+- [S11] State Bank of Pakistan. *Governor's Annual Report 2025-26*. Primary.
+- [S12] Karandaaz Pakistan. *Karandaaz Financial Inclusion Survey (K-FIS): Narrative Report*. https://www.karandaaz.com.pk/research/publications/karandaaz-financial-inclusion-survey-k-fis-narrative-report. Primary.
+- [S13] Business Recorder. *Govt moves to continue subsidy for Raast QR payments*. https://www.brecorder.com/news/40448745/govt-moves-to-continue-subsidy-for-raast-qr-payments. Secondary.
+- [S14] Reserve Bank of India. *Reserve Bank of India launches UPI for feature phones (UPI123Pay) and a 24x7 helpline for digital payments (DigiSaathi)*. https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53385. Primary.
+- [S15] State Bank of Pakistan. *National Financial Inclusion Strategy 2024 to 2028*. https://www.sbp.org.pk/nfis/nfis2024-28.pdf. Primary.

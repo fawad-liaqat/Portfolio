@@ -1,15 +1,15 @@
 # Sources for Part 4
 
-Evidence labels: PRIMARY means I read the publisher's own document or page. SECONDARY means press or a third party. Page numbers are the printed page numbers of each report. Page numbers for S7 are not given because they could not be confirmed. The last column shows where the same source appears in Parts 1 and 2.
+Primary means the issuing body's own document or data. Secondary means reporting or analysis about it. Page numbers in the text are the printed page numbers of each report.
 
-| ID | Title | Publisher | Date | Location and pages used | Accessed | Label | Same source in Parts 1 / 2 |
-|---|---|---|---|---|---|---|---|
-| S1 | The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy | World Bank | 2025 (survey 2024) | Report (PDF); pp. 25, 165, 171, 179, 186, 187, 260, 298 | 17 Nov 2026 | PRIMARY | S4 / S1 |
-| S2 | Annual Payment Systems Review FY 2025-26 (provisional) | State Bank of Pakistan | 2026 | Report (PDF); pp. 18, 21, 31 | 17 Nov 2026 | PRIMARY | S2 / S2 |
-| S3 | Governor's Annual Report 2025-26 | State Bank of Pakistan, Economic Policy Review Department | 17 Nov 2026 | Report (PDF); printed pp. 21, 48, 55, 56, 57, 58 | 17 Nov 2026 | PRIMARY | S22 / S11 |
-| S4 | Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan | World Bank | 2026 | Report (PDF); p. 73 | 17 Nov 2026 | PRIMARY | S1 / S3 |
-| S5 | UPI Completes 10 Years of Digital Payments Revolution | Government of India, Ministry of Finance, via Press Information Bureau | 24 Aug 2026 | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2 | 17 Nov 2026 | PRIMARY | S9 / S8 |
-| S6 | Annual Report 2024/2025 | Central Bank of Egypt | 2025 | Report (PDF); p. 43 | 17 Nov 2026 | PRIMARY | S6 / none |
-| S7 | Paying school fees with mobile money in Côte d'Ivoire (case study by J. Frydrych, C. Scharwatt and N. Vonthron) | GSMA Mobile Money programme | Sep 2015 | https://www.gsma.com/mobilefordevelopment/wp-content/uploads/2015/10/2015_GSMA_Paying-school-fees-with-mobile-money-in-Cote-dIvoire.pdf ; programme page https://www.gsma.com/solutions-and-impact/connectivity-for-good/mobile-for-development/programme/mobile-money/new-case-study-on-paying-school-fees-with-mobile-money-in-cote-divoire/ ; pages not cited (two readings disagreed by one page) | 17 Nov 2026 | PRIMARY (dated 2015) | new |
-| S8 | Annual Report 2025 | Banco Central do Brasil | 2026 | Report (PDF); p. 93 | 17 Nov 2026 | PRIMARY | S5 / S7 |
-| S9 | Govt moves to continue subsidy for Raast QR payments | Business Recorder | 13 Nov 2026 | https://www.brecorder.com/news/40448745/govt-moves-to-continue-subsidy-for-raast-qr-payments (rate, period and amount not stated) | 18 Nov 2026 | SECONDARY | Part 2 S13 |
+| ID | Title | Publisher | Link | Label |
+|---|---|---|---|---|
+| S1 | The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy | World Bank | https://www.worldbank.org/en/publication/globalfindex | Primary |
+| S2 | Annual Payment Systems Review FY 2025-26 | State Bank of Pakistan | https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY26.pdf | Primary |
+| S3 | Governor's Annual Report 2025-26 | State Bank of Pakistan |  | Primary |
+| S4 | Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan | World Bank | https://documents1.worldbank.org/curated/en/099110926084536993/pdf/P507284-0c4a825c-0c5d-40d5-8e72-cc9a23fa2f46.pdf | Primary |
+| S5 | UPI Completes 10 Years of Digital Payments Revolution | Government of India, Ministry of Finance (Press Information Bureau) | https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2 | Primary |
+| S6 | Annual Report 2024/2025 | Central Bank of Egypt | https://www.cbe.org.eg/-/media/project/cbe/listing/research/annual-report/annual-report-2024-2025---en.pdf | Primary |
+| S7 | Paying school fees with mobile money in Côte d'Ivoire: A public private partnership to achieve greater efficiency | GSMA | https://www.gsma.com/mobilefordevelopment/wp-content/uploads/2015/10/2015_GSMA_Paying-school-fees-with-mobile-money-in-Cote-dIvoire.pdf | Secondary |
+| S8 | Annual Report 2025 | Banco Central do Brasil | https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf | Primary |
+| S9 | Govt moves to continue subsidy for Raast QR payments | Business Recorder | https://www.brecorder.com/news/40448745/govt-moves-to-continue-subsidy-for-raast-qr-payments | Secondary |

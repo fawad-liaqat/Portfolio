@@ -105,14 +105,14 @@ I would value feedback and other readings of the data.
 
 ## Sources
 
-Each source is listed with its publisher and date.
+Primary means the issuing body's own document or data. Secondary means reporting or analysis about it.
 
-- [S1] World Bank (2025), *The Global Findex Database 2025*.
-- [S2] State Bank of Pakistan (2026), *Annual Payment Systems Review FY 2025-26* (provisional).
-- [S3] State Bank of Pakistan (17 November 2026), *Governor's Annual Report 2025-26*.
-- [S4] World Bank (2026), *Digital Public Infrastructure for Inclusive Growth* (regional assessment).
-- [S5] Government of India via PIB (24 August 2026), release on ten years of UPI.
-- [S6] Central Bank of Egypt (2025), *Annual Report 2024/2025*.
-- [S7] GSMA (September 2015), *Paying school fees with mobile money in Côte d'Ivoire*.
-- [S8] Banco Central do Brasil (2026), *Annual Report 2025*.
-- [S9] Business Recorder (13 November 2026), report on the government's decision to continue the Raast QR subsidy. Secondary.
+- [S1] World Bank. *The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy*. https://www.worldbank.org/en/publication/globalfindex. Primary.
+- [S2] State Bank of Pakistan. *Annual Payment Systems Review FY 2025-26*. https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY26.pdf. Primary.
+- [S3] State Bank of Pakistan. *Governor's Annual Report 2025-26*. Primary.
+- [S4] World Bank. *Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan*. https://documents1.worldbank.org/curated/en/099110926084536993/pdf/P507284-0c4a825c-0c5d-40d5-8e72-cc9a23fa2f46.pdf. Primary.
+- [S5] Government of India, Ministry of Finance (Press Information Bureau). *UPI Completes 10 Years of Digital Payments Revolution*. https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2. Primary.
+- [S6] Central Bank of Egypt. *Annual Report 2024/2025*. https://www.cbe.org.eg/-/media/project/cbe/listing/research/annual-report/annual-report-2024-2025---en.pdf. Primary.
+- [S7] GSMA. *Paying school fees with mobile money in Côte d'Ivoire: A public private partnership to achieve greater efficiency*. https://www.gsma.com/mobilefordevelopment/wp-content/uploads/2015/10/2015_GSMA_Paying-school-fees-with-mobile-money-in-Cote-dIvoire.pdf. Secondary.
+- [S8] Banco Central do Brasil. *Annual Report 2025*. https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf. Primary.
+- [S9] Business Recorder. *Govt moves to continue subsidy for Raast QR payments*. https://www.brecorder.com/news/40448745/govt-moves-to-continue-subsidy-for-raast-qr-payments. Secondary.

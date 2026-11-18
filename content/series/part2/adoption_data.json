@@ -292,7 +292,7 @@
           "evidence_item": "Reading or writing difficulty is the top single barrier to mobile internet for Pakistani men and women",
           "direction": "supports a basic literacy role",
           "source": "S5 Figure 20, pp. 66 to 67",
-          "evidence": "PRIMARY; chart columns to be checked against the printed figure"
+          "evidence": "SECONDARY; read from a chart"
         },
         {
           "evidence_item": "Digital Literacy Index: men 65, women 48; urban 70, rural 51; included 77, excluded 42",
@@ -315,7 +315,7 @@
           "source": "S1 p.171"
         },
         {
-          "evidence_item": "No study read tests whether financial literacy training raises account use in Pakistan",
+          "evidence_item": "No cited study tests whether financial literacy training raises account use in Pakistan",
           "direction": "cause cannot be settled",
           "source": "S12; S15 p.19"
         }

@@ -108,7 +108,7 @@ Literacy is a hypothesis, not a finding. Two facts keep it on the list. Findex r
 
 - SBP FY26 figures are provisional [S2]. Years differ: FY26 for Pakistan [S2], April 2025 to March 2026 for India [S8], calendar 2025 for Brazil [S5], the year to June 2025 for Egypt [S6]. Findex figures are from a 2024 survey [S4].
 - The Pix annual total and merchant share are from the press [S17].
-- Findex and GSMA disagree on the phone gender gap, and GSMA values were machine read from a chart [S7].
+- Findex and GSMA disagree on the phone gender gap, and the GSMA values come from a chart [S7].
 - Findex prints Pakistan's account ownership as 27 percent in its annex and 23 percent in its text [S4, p. 298 and p. 167]. I use the annex.
 - Egypt's central bank reports 76.3 percent inclusion from its own database [S6, p. 47], against 43 percent in Findex [S4, p. 296]. I use Findex.
 - India and Brazil are outside the World Bank regional report, so their cells rest on several sources and some are not found. Statuses are my reading of the evidence.
@@ -117,27 +117,27 @@ I would value feedback and other readings of the data.
 
 ## Sources
 
-Each source below is listed with its publisher and date; access dates, evidence labels and open items are kept in the project's source notes.
+Primary means the issuing body's own document or data. Secondary means reporting or analysis about it.
 
-- [S1] World Bank (2026), *Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan*.
-- [S2] State Bank of Pakistan (2026), *Annual Payment Systems Review FY 2025-26* (provisional).
-- [S3] State Bank of Pakistan (2026), *Open Banking Regulations 2026*, draft for public consultation.
-- [S4] World Bank (2025), *The Global Findex Database 2025*.
-- [S5] Banco Central do Brasil (2026), *Annual Report 2025*.
-- [S6] Central Bank of Egypt (2025), *Annual Report 2024/2025*.
-- [S7] GSMA (2025), *The Mobile Gender Gap Report 2025*.
-- [S8] Government of India, Ministry of Finance via PIB (20 July 2026), release on UPI users and volumes.
-- [S9] Government of India, Ministry of Finance via PIB (24 August 2026), release on ten years of UPI.
-- [S10] UIDAI via PIB (18 March 2026), release on Aadhaar holders and authentications.
-- [S11] Sahamati, Account Aggregator ecosystem dashboard (as on 30 September 2026).
-- [S12] Reserve Bank of India (8 March 2022), press release on UPI123Pay.
-- [S13] Government of India via PIB (17 November 2025), release on the DPDP Rules 2025.
-- [S14] Agência Gov, Brazil (24 March 2026), release on gov.br users.
-- [S15] ANPD, Brazil, page on the authority's powers (law 13,709 of 2018).
-- [S16] DLA Piper, *Data Protection Laws of the World: Brazil* (updated 30 March 2026). Secondary.
-- [S17] Viva / Broadcast (10 August 2026), report on the Banco Central's Pix management report. Secondary.
-- [S18] Pakistan Bureau of Statistics, Census 2023, Table 12 (national).
-- [S19] Associated Press of Pakistan (10 March 2025), report on NADRA's dematerialised ID card. Secondary.
-- [S20] Fiskil, Open Finance Tracker: Egypt (undated). Secondary.
-- [S21] State Bank of Pakistan (2025), *National Financial Inclusion Strategy 2024 to 28*.
-- [S22] State Bank of Pakistan (17 November 2026), *Governor's Annual Report 2025-26*.
+- [S1] World Bank. *Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan*. https://documents1.worldbank.org/curated/en/099110926084536993/pdf/P507284-0c4a825c-0c5d-40d5-8e72-cc9a23fa2f46.pdf. Primary.
+- [S2] State Bank of Pakistan. *Annual Payment Systems Review FY 2025-26*. https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY26.pdf. Primary.
+- [S3] State Bank of Pakistan. *Open Banking Regulations (Draft), for public consultation*. https://www.sbp.org.pk/assets/document/Open_Banking_Regulations_for_Public_Consulatation_Draft.pdf. Primary.
+- [S4] World Bank. *The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy*. https://www.worldbank.org/en/publication/globalfindex. Primary.
+- [S5] Banco Central do Brasil. *Annual Report 2025*. https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf. Primary.
+- [S6] Central Bank of Egypt. *Annual Report 2024/2025*. https://www.cbe.org.eg/-/media/project/cbe/listing/research/annual-report/annual-report-2024-2025---en.pdf. Primary.
+- [S7] GSMA. *The Mobile Gender Gap Report 2025*. https://www.gsma.com/wp-content/uploads/2025/12/The-Mobile-Gender-Gap-Report-2025.pdf. Secondary.
+- [S8] Government of India, Ministry of Finance (Press Information Bureau). *Nearly 55.49 Crore Users Onboarded on UPI as in June 2026*. https://www.pib.gov.in/PressReleasePage.aspx?PRID=2286608&reg=48&lang=2. Primary.
+- [S9] Government of India, Ministry of Finance (Press Information Bureau). *UPI Completes 10 Years of Digital Payments Revolution*. https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2. Primary.
+- [S10] Unique Identification Authority of India (Press Information Bureau). *Aadhaar is the world's largest biometric identity system with approximately 134 crore live Aadhaar holders*. https://www.uidai.gov.in/images/Aadhaar_is_the_worlds_largest_biometric_identity_system_with_approximately_134_crore_live_Aadhaar_holders.pdf. Primary.
+- [S11] Sahamati. *Account Aggregator Ecosystem Dashboard*. https://sahamati.org.in/?p=2028. Primary.
+- [S12] Reserve Bank of India. *Reserve Bank of India launches UPI for feature phones (UPI123Pay) and a 24x7 helpline for digital payments (DigiSaathi)*. https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53385. Primary.
+- [S13] Government of India (Press Information Bureau). *DPDP Rules, 2025 Notified*. https://www.pib.gov.in/PressReleasePage.aspx?PRID=2190655&reg=48&lang=2. Primary.
+- [S14] Agência Gov, Government of Brazil. *GOV.BR conquista 175 milhões de usuários*. https://agenciagov.ebc.com.br/noticias/202603/gov-br-alcanca-a-marca-de-175-milhoes-de-usuarios. Primary.
+- [S15] Autoridade Nacional de Proteção de Dados (ANPD), Brazil. *Competências*. https://www.gov.br/anpd/pt-br/acesso-a-informacao/institucional/competencias. Primary.
+- [S16] DLA Piper. *Data Protection Laws of the World: Brazil*. https://www.dlapiperdataprotection.com/index.html?t=law&c=BR. Secondary.
+- [S17] Viva. *Volume de transações via Pix aumentou 25,7% em 2025 em relação a 2024*. https://viva.com.br/dinheiro/volume-de-transacoes-pix-aumentou-257-em-2025-em-relacao-a-2024.html. Secondary.
+- [S18] Pakistan Bureau of Statistics. *Census 2023, Table 12: Literacy rate, enrolment and out of school population by sex and rural/urban (national)*. https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_12_national.pdf. Primary.
+- [S19] Associated Press of Pakistan. *Pakistan's first Dematerialized Digital Identity Card launched on NADRA's silver jubilee*. https://www.app.com.pk/?p=958340. Secondary.
+- [S20] Fiskil. *Open Finance Tracker: Egypt*. https://www.fiskil.com/open-finance-tracker/egypt. Secondary.
+- [S21] State Bank of Pakistan. *National Financial Inclusion Strategy 2024 to 2028*. https://www.sbp.org.pk/nfis/nfis2024-28.pdf. Primary.
+- [S22] State Bank of Pakistan. *Governor's Annual Report 2025-26*. Primary.

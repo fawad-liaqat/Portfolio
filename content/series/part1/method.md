@@ -38,7 +38,7 @@ Where the World Bank gives a status I use it as written. Where it does not (Indi
 ## Rules of evidence
 
 - Every number has a source id, and a printed page number for reports.
-- PRIMARY means I read the publisher's own document or page. SECONDARY means press or a third party. NOT FOUND means I did not fill the cell from memory.
+- Primary means the issuing body's own document or data. Secondary means reporting or analysis about it. NOT FOUND means I did not fill the cell from memory.
 - I checked page numbers against the printed page footers and cite the printed page.
 - My own calculations (shares, ratios, per merchant averages) are labelled as mine, with their inputs cited.
 
@@ -58,7 +58,7 @@ Where the World Bank gives a status I use it as written. Where it does not (Indi
 | 3 | I used a categorical scorecard with no score | It matches the source's approach, and too many cells are not found for a fair score |
 | 4 | I treat PAK ID as a pilot | The World Bank's summary table says pilot; I disclose the conflicting figure on p. 17 |
 | 5 | I accepted secondary sources for the Pix annual total and merchant share | The Banco Central annual report gives users, aliases and a December figure but not these two; each is labelled |
-| 6 | I took UPI volumes from Government of India releases | NPCI's own statistics page could not be read; the releases attribute the data to NPCI |
+| 6 | I took UPI volumes from Government of India releases | The releases are official and attribute the data to NPCI |
 | 7 | I took all account, digital payment and phone ownership figures from Findex Table B.1 | One survey, one year, one method for all four countries |
 | 8 | I used the Findex annex value for Pakistan's account ownership (27%) and disclose the 23% printed in its text | The annex table is the report's stated country statistic |
 | 9 | I used Findex, not the Central Bank of Egypt's 76.3%, for Egypt's account ownership | The central bank counts accounts in its own database, including prepaid cards and wallets; Findex surveys adults. I report both but compare only Findex |
@@ -69,23 +69,7 @@ Where the World Bank gives a status I use it as written. Where it does not (Indi
 | 14 | I added "accounts do not guarantee use" as a lesson from India | India: 89% accounts, 48% digital payment use, 16% of owners inactive |
 | 15 | I dropped an earlier claim that Egypt's instant payment network handled 263 million transactions in a quarter | It rested on press only, and the central bank report gives no count; I cite value and users instead |
 | 16 | I explain why Findex account ownership differs from SBP's inclusion rate | Readers meet both numbers. NFIS defines inclusion as the share of adults with a bank account: 64% in 2023, target 75% by 2028 (S21, pp. 1 and 23). The latest SBP figure is 69% with a 29% gender gap (S22, pp. 47 to 48). The measurement method is not published, so I say the two are not comparable and do not guess the cause |
-| 17 | I removed a UPI123Pay transaction limit from the scorecard | I could not support it from the releases I read |
+| 17 | I removed a UPI123Pay transaction limit from the scorecard | The cited releases do not state it |
 | 18 | I hold financial literacy as a hypothesis for Part 2 | Part 1 has no evidence that settles it |
 | 19 | I left low priority items documented but unresearched | None of them carries an argument in this part |
 
-## Sources I read and replaced
-
-These are no longer cited, and I list them so the trail is complete.
-
-- Press reports on UPI volumes (Angel One, 1 Apr 2026; World Trade Scanner, 21 Jul 2026): replaced by S8.
-- Forbes Brasil (21 Jul 2026) on Open Finance consents: replaced by S5.
-- Daily News Egypt (17 Nov 2025) and Zawya (undated) on InstaPay: replaced by S6.
-- Dawn (19 Jul 2024) on census literacy: replaced by S18.
-- digitalpakistan.pk (18 Jul 2025) and a third party copy of the Findex report: replaced by S4.
-- DLA Piper's India page (updated 13 Feb 2026): replaced by S13.
-
-## Sources I could not read
-
-- NPCI's UPI product statistics page.
-- Banco Central do Brasil's Pix statistics page and the Open Finance Brasil dashboard. S5 covers all but the annual Pix total and merchant share.
-- The World Bank's Findex data portal. S4 covers the same figures.

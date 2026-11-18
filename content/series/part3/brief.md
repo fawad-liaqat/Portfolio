@@ -10,7 +10,7 @@ Part 1 found that Pakistan's payment rail works but its data sharing layer is st
 
 ## What the draft establishes
 
-The State Bank of Pakistan (SBP) published the draft Open Banking Regulations 2026 for public consultation. It is dated 30 October 2026, though the text itself prints no date and no comment deadline [S1]. It is issued under the Payment Systems and Electronic Fund Transfers Act 2007 [S1, s. 4, p. 5]. In plain terms:
+The State Bank of Pakistan (SBP) published the draft Open Banking Regulations 2026 for public consultation. It is dated 30 October 2026, though the text itself prints no date and no comment deadline [S1]. The draft names the Payment Systems and Electronic Fund Transfers Act 2007 as its legal basis [S1, s. 4, p. 5]. In plain terms:
 
 **Who must open up, and what.** Every bank, microfinance bank and electronic money institution must expose APIs to authorised third party providers [S1, s. 5.1, p. 5]. Only two kinds of data are in scope: account balance and transaction history, for current, saving and other payment accounts, including branchless banking accounts and wallets [S1, s. 2(i), p. 4; s. 5.2, p. 5].
 
@@ -89,9 +89,9 @@ These are my suggestions, not findings. Each is tied to a gap in the draft.
 ## Limits
 
 - The draft may change after consultation; no comment deadline appears in the text [S1].
-- UK consent rules and routing, and Brazil's routing and liability, were not found in the sources read.
+- UK consent rules and routing, and Brazil's routing and liability, are not covered by the sources cited.
 - India's figures count accounts and consents, not people [S15]. UK figures count connections, not unique people [S8].
-- Neem's description is from press; its own site blocked automated reading.
+- Neem's description is from press [S17] [S18].
 - The CGAP data evidence is from 2020, India and Kenya [S16].
 
 ## Next: Part 4
@@ -102,27 +102,27 @@ I would value feedback and other readings of the draft.
 
 ## Sources
 
-Each source is listed with its publisher and date; access dates and evidence labels are kept with the project's full source list.
+Primary means the issuing body's own document or data. Secondary means reporting or analysis about it.
 
-- [S1] State Bank of Pakistan (2026), *Open Banking Regulations 2026*, draft for public consultation.
-- [S2] State Bank of Pakistan (2026), *Governor's Annual Report 2025-26*.
-- [S3] State Bank of Pakistan (2026), *Annual Payment Systems Review FY 2025-26* (provisional).
-- [S4] State Bank of Pakistan (6 January 2026), press release on the first sandbox cohort.
-- [S5] World Bank (2025), *The Global Findex Database 2025*.
-- [S6] World Bank (2026), *Digital Public Infrastructure for Inclusive Growth*, regional assessment.
-- [S7] Banco Central do Brasil (2026), *Annual Report 2025*.
-- [S8] Open Banking Limited (13 January 2026), release on eight years of UK open banking.
-- [S9] Open Banking Limited (21 September 2026), *1 Billion Payments and Counting for UK Open Banking*.
-- [S10] Financial Conduct Authority (August 2025), *FS25/4: Design of the Future Entity for UK Open Banking*.
-- [S11] GOV.UK, Competition and Markets Authority, *Retail Banking Market Investigation Order 2017*.
-- [S12] UK Payment Services Regulations 2017, regulation 76.
-- [S13] Financial Conduct Authority (2025), *Financial Lives 2024 survey: key findings*.
-- [S14] Reserve Bank of India, *Master Direction, NBFC Account Aggregator Directions, 2016* (updated 6 September 2024).
-- [S15] Sahamati, Account Aggregator ecosystem dashboard (as on 30 September 2026).
-- [S16] CGAP (21 April 2020), *Customers Want Data Protection: How Can Open API Providers Deliver?*
-- [S17] The Express Tribune (23 January 2026), report on Neem's funding round. Secondary.
-- [S18] PYMNTS (25 September 2023), report on Neem's payments infrastructure. Secondary.
-- [S19] UK Payment Services Regulations 2017, regulation 75.
-- [S20] UK Consumer Credit Act 1974, section 157.
-- [S21] CGAP (September 2024), *Responsible Digital Finance Ecosystem (RDFE): A Conceptual Framework*, working paper.
-- [S22] Karandaaz Pakistan (2025), *Karandaaz Financial Inclusion Survey (K-FIS) 2024, Narrative Report*.
+- [S1] State Bank of Pakistan. *Open Banking Regulations (Draft), for public consultation*. https://www.sbp.org.pk/assets/document/Open_Banking_Regulations_for_Public_Consulatation_Draft.pdf. Primary.
+- [S2] State Bank of Pakistan. *Governor's Annual Report 2025-26*. Primary.
+- [S3] State Bank of Pakistan. *Annual Payment Systems Review FY 2025-26*. https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY26.pdf. Primary.
+- [S4] State Bank of Pakistan. *SBP announces the shortlisted applicants for the first cohort of its Regulatory Sandbox (press release)*. https://www.sbp.org.pk/press/2026/Pr-06-Jan-2026.pdf. Primary.
+- [S5] World Bank. *The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy*. https://www.worldbank.org/en/publication/globalfindex. Primary.
+- [S6] World Bank. *Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan*. https://documents1.worldbank.org/curated/en/099110926084536993/pdf/P507284-0c4a825c-0c5d-40d5-8e72-cc9a23fa2f46.pdf. Primary.
+- [S7] Banco Central do Brasil. *Annual Report 2025*. https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf. Primary.
+- [S8] Open Banking Limited. *Open Banking Limited marks 8 years of transforming the UK's financial landscape*. https://www.openbanking.org.uk/news/open-banking-limited-marks-8-years-of-transforming-the-uks-financial-landscape/. Primary.
+- [S9] Open Banking Limited. *1 Billion Payments and Counting for UK Open Banking*. https://www.openbanking.org.uk/insights/1-billion-payments-and-counting-for-uk-open-banking/. Primary.
+- [S10] Financial Conduct Authority. *Feedback Statement FS25/4: Design of the Future Entity for UK Open Banking*. https://www.fca.org.uk/publication/feedback/fs25-4.pdf. Primary.
+- [S11] Competition and Markets Authority (GOV.UK). *Retail Banking Market Investigation Order 2017*. https://www.gov.uk/government/publications/retail-banking-market-investigation-order-2017. Primary.
+- [S12] legislation.gov.uk. *The Payment Services Regulations 2017, regulation 76*. https://www.legislation.gov.uk/uksi/2017/752/regulation/76. Primary.
+- [S13] Financial Conduct Authority. *Financial Lives 2024: Key findings from the FCA's Financial Lives May 2024 survey*. https://www.fca.org.uk/publication/financial-lives/financial-lives-survey-2024-key-findings.pdf. Primary.
+- [S14] Reserve Bank of India. *Master Direction: Non-Banking Financial Company, Account Aggregator (Reserve Bank) Directions, 2016*. https://rbi.org.in/Scripts/BS_ViewMasDirections.aspx?id=10598. Primary.
+- [S15] Sahamati. *Account Aggregator Ecosystem Dashboard*. https://sahamati.org.in/?p=2028. Primary.
+- [S16] CGAP. *Customers Want Data Protection: How Can Open API Providers Deliver?*. https://www.cgap.org/blog/customers-want-data-protection-how-can-open-api-providers-deliver. Secondary.
+- [S17] The Express Tribune. *Epic Angels backs Neem in key pre-Series A round*. https://tribune.com.pk/story/2588580/epic-angels-backs-neem-in-key-pre-series-a-round. Secondary.
+- [S18] PYMNTS. *Neem Debuts Embedded Payments Infrastructure for Businesses in Pakistan*. https://www.pymnts.com/news/payment-methods/2023/neem-debuts-embedded-payments-infrastructure-for-businesses-in-pakistan/. Secondary.
+- [S19] legislation.gov.uk. *The Payment Services Regulations 2017, regulation 75*. https://www.legislation.gov.uk/uksi/2017/752/regulation/75. Primary.
+- [S20] legislation.gov.uk. *Consumer Credit Act 1974, section 157*. https://www.legislation.gov.uk/ukpga/1974/39/section/157. Primary.
+- [S21] CGAP. *Responsible Digital Finance Ecosystem (RDFE): A Conceptual Framework*. https://www.cgap.org/research/publication/responsible-digital-finance-ecosystem-rdfe-conceptual-framework. Secondary.
+- [S22] Karandaaz Pakistan. *Karandaaz Financial Inclusion Survey (K-FIS): Narrative Report*. https://www.karandaaz.com.pk/research/publications/karandaaz-financial-inclusion-survey-k-fis-narrative-report. Primary.

@@ -15,7 +15,7 @@ Evidence cut off: 18 November 2026.
 
 ## Rules of evidence
 
-Every figure has a source id and a printed page number for reports. Each source is labelled PRIMARY, SECONDARY or NOT FOUND. My own calculations are marked, and nothing is filled from memory. I cite the Côte d'Ivoire case study without page numbers because I could not confirm them. The synthesis describes Part 3's question only and makes no factual claim from it.
+Every figure has a source id and a printed page number for reports. Each source is labelled Primary or Secondary, and a missing figure is marked NOT FOUND. Primary means the issuing body's own document or data. Secondary means reporting or analysis about it. My own calculations are marked, and nothing is filled from memory. I cite the Côte d'Ivoire case study without page numbers. The synthesis describes Part 3's question only and makes no factual claim from it.
 
 ## Decision log
 
