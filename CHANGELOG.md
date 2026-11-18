@@ -1,5 +1,10 @@
 # Changelog
 
+## Release fix B4: article titles (18 November 2026)
+
+- Three article titles now match the approved titles used on the article
+  pages and the submitted resume.
+
 ## FY25 edition and progress links (18 November 2026)
 
 - Raast tracker card and the behavioural last mile article now link to
