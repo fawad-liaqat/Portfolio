@@ -2,7 +2,7 @@
 
 **Part 1 of 4: an evaluation of Pakistan's digital public infrastructure against India, Brazil and Egypt**
 
-Fawad Liaqat. Evidence as of November 2026. Source markers such as [S2] refer to the source list at the end.
+Evidence as of November 2026. Source markers such as [S2] refer to the source list at the end.
 
 ## The question
 

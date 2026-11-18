@@ -56,11 +56,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-function formatDate(iso?: string) {
+function formatMonth(iso?: string) {
   if (!iso) return "";
   const d = new Date(`${iso}T00:00:00Z`);
-  return d.toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric", timeZone: "UTC" });
+  return d.toLocaleDateString("en-GB", { month: "long", year: "numeric", timeZone: "UTC" });
 }
+
 
 export default async function SeriesPartPage({ params }: Props) {
   const part = loadPart(partNumber((await params).part));
@@ -82,7 +83,7 @@ export default async function SeriesPartPage({ params }: Props) {
             </p>
             <h1 className="series-title">{part.title}</h1>
             {part.meta.finding && <p className="series-finding">{part.meta.finding}</p>}
-            {part.asOf && <p className="source-note">Evidence as of {formatDate(part.asOf)}</p>}
+            {part.asOf && <p className="source-note">Evidence as of {formatMonth(part.asOf)}</p>}
             <nav className="series-toc" aria-label="On this page">
               <a href="#explainer">In plain words</a>
               {part.data && part.meta.data && <a href="#data">{part.meta.data.label}</a>}

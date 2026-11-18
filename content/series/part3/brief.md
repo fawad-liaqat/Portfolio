@@ -2,7 +2,7 @@
 
 **Part 3 of 4: the State Bank's draft Open Banking Regulations read as a consumer product, against the UK, Brazil and India**
 
-Fawad Liaqat. Evidence as of November 2026. Source markers such as [S1] resolve to the Sources section at the end. Section numbers such as s. 7.2 refer to the draft itself [S1].
+Evidence as of November 2026. Source markers such as [S1] resolve to the Sources section at the end. Section numbers such as s. 7.2 refer to the draft itself [S1].
 
 ## Where Parts 1 and 2 leave us
 

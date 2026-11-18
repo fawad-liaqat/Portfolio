@@ -2,7 +2,7 @@
 
 **Part 4 of 4: Pakistan's digital public infrastructure series**
 
-Fawad Liaqat. Evidence as of November 2026. Source markers such as [S1] refer to the source list at the end. The case table behind the charts follows the same source list.
+Evidence as of November 2026. Source markers such as [S1] refer to the source list at the end. The case table behind the charts follows the same source list.
 
 ## The question
 
