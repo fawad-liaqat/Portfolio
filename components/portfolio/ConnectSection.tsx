@@ -25,10 +25,9 @@ export default function ConnectSection() {
           {siteConfig.connect.intro}
         </p>
         <p className="connect-cv" data-reveal>
-          <a className="btn btn-primary" href={cv.href} download={cv.fileName}>
-            Download CV
+          <a className="btn btn-primary" href={cv.page}>
+            View CV
           </a>
-          <span className="cv-meta">{cv.meta}</span>
         </p>
         <ul className="connect-grid">
           {links.map((link) => (

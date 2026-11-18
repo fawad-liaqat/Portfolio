@@ -2258,20 +2258,15 @@ a:hover {
   border-radius: 8px;
 }
 
-.cv-link-header:hover {
+.cv-link-header:hover,
+.cv-link[aria-current="page"] {
   border-color: var(--accent);
+  color: var(--accent);
 }
 
 /* The phone menu copy is shown only inside the open menu. */
 .site-nav .cv-link-menu {
   display: none;
-}
-
-.cv-meta {
-  color: var(--meta);
-  font-family: var(--font-mono);
-  font-size: 13px;
-  font-weight: 400;
 }
 
 .connect-cv {
@@ -2297,7 +2292,7 @@ a:hover {
   white-space: nowrap;
 }
 
-/* Narrow desktop: the header button reads "CV"; its accessible name stays "Download CV". */
+/* Narrow desktop: the header button reads "CV"; its accessible name stays "View CV". */
 @media (max-width: 900px) and (min-width: 761px) {
   .cv-link-header {
     padding: 0 10px;
@@ -2695,5 +2690,124 @@ a:hover {
 @media (prefers-reduced-motion: reduce) {
   .start-card::before {
     transition: none;
+  }
+}
+
+/* 24. CV page ------------------------------------------------------------ */
+
+.cv-page {
+  padding: 48px 0 72px;
+}
+
+.cv-head {
+  max-width: 820px;
+  margin: 0 auto 24px;
+}
+
+.cv-title {
+  margin-top: 8px;
+  font-size: 40px;
+}
+
+.cv-intro {
+  margin-top: 8px;
+  font-size: 17px;
+}
+
+.cv-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.cv-actions-bottom {
+  max-width: 820px;
+  margin: 24px auto 0;
+}
+
+.cv-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cv-download svg {
+  width: 18px;
+  height: 18px;
+}
+
+.cv-figure {
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* The page itself stays white in both themes, like paper on a desk. */
+.cv-sheet {
+  display: block;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid var(--line-strong);
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow:
+    0 0 0 6px var(--accent-soft),
+    0 18px 48px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="light"] .cv-sheet {
+  box-shadow:
+    0 0 0 6px var(--accent-soft),
+    0 12px 32px rgba(15, 27, 45, 0.12);
+}
+
+.cv-sheet img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.cv-zoom-hint {
+  display: none;
+  margin-top: 10px;
+  color: var(--meta);
+  font-size: 14px;
+  text-align: center;
+}
+
+@media (max-width: 760px) {
+  .cv-page {
+    padding: 32px 0 56px;
+  }
+
+  .cv-title {
+    font-size: 32px;
+  }
+
+  .cv-actions .btn {
+    flex: 1 1 auto;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .cv-sheet {
+    box-shadow: 0 0 0 4px var(--accent-soft);
+  }
+
+  .cv-zoom-hint {
+    display: block;
+  }
+}
+
+@media print {
+  .cv-head,
+  .cv-actions,
+  .cv-zoom-hint {
+    display: none;
+  }
+
+  .cv-sheet {
+    border: 0;
+    box-shadow: none;
   }
 }

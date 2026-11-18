@@ -6,9 +6,8 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-inner">
-        <span>
-          &copy; {year} {siteConfig.name}
-        </span>
+        {/* The name is shown once, in the header. */}
+        <span>&copy; {year}</span>
         <span className="footer-links">
           <a href={`mailto:${siteConfig.email}`}>Email</a>
           <a href={siteConfig.social.linkedin} target="_blank" rel="noopener noreferrer">

@@ -8,10 +8,11 @@ import type { CvLink } from "@/lib/cv";
 
 // To add a page section to the menu, add it here and to SECTIONS in
 // hooks/useActiveSection.ts. The id must match the section's id attribute.
-function DownloadIcon() {
+function DocIcon() {
   return (
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" focusable="false">
-      <path d="M12 4v11M7 10l5 5 5-5M5 20h14" />
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z" />
+      <path d="M14 3v5h5M9 13h6M9 17h6" />
     </svg>
   );
 }
@@ -31,11 +32,15 @@ const NAV_ITEMS = [
 export default function Navbar({
   base = "",
   cv,
+  current,
 }: {
   base?: "" | "/";
-  /** Passed in from a server component, which knows the file size. */
+  /** Passed in from a server component. The CV links go to the CV page. */
   cv?: CvLink;
+  /** Set on the CV page so its link is marked as the current page. */
+  current?: "cv";
 }) {
+  const cvCurrent = current === "cv" ? ("page" as const) : undefined;
   const activeSection = useActiveSection();
   const [open, setOpen] = useState(false);
   const buttonRef = useRef<HTMLButtonElement>(null);
@@ -96,19 +101,18 @@ export default function Navbar({
             ))}
           </ul>
           {cv && (
-            <a className="cv-link cv-link-menu" href={cv.href} download={cv.fileName}>
-              <DownloadIcon />
-              Download CV <span className="cv-meta">{cv.meta}</span>
+            <a className="cv-link cv-link-menu" href={cv.page} aria-current={cvCurrent}>
+              <DocIcon />
+              View CV
             </a>
           )}
           <ThemeToggle variant="menu" />
         </nav>
         {/* Desktop copies, after the links so focus order matches what is seen. */}
         {cv && (
-          <a className="cv-link cv-link-header" href={cv.href} download={cv.fileName}>
-            <DownloadIcon />
-            <span className="cv-word">Download</span> CV
-            <span className="visually-hidden"> ({cv.meta})</span>
+          <a className="cv-link cv-link-header" href={cv.page} aria-current={cvCurrent}>
+            <DocIcon />
+            <span className="cv-word">View</span> CV
           </a>
         )}
         <ThemeToggle variant="header" />
