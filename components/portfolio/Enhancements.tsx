@@ -8,13 +8,14 @@ import { useEffect } from "react";
  *
  * What it adds:
  * 1. Scroll reveal for elements marked `data-reveal`.
- * 2. Count up for key figures marked `data-countup` (the final value is
- *    already in the HTML).
+ * 2. (Removed) Count up for key figures. It rewrote text that React had not
+ *    finished hydrating, which made React rebuild the page and drop the
+ *    chosen theme. Figures now show their final value from the start.
  * 3. Escape closes the open disclosure that has focus.
  * 4. A link to #project-... opens that card's details.
  * 5. Stack diagram: select a layer on hover, pause pulses when off screen.
  *
- * Reveal and count up are skipped when the visitor asks for reduced motion.
+ * Reveal is skipped when the visitor asks for reduced motion.
  */
 export default function Enhancements() {
   useEffect(() => {
@@ -47,50 +48,6 @@ export default function Enhancements() {
       cleanups.push(() => {
         io.disconnect();
         root.classList.remove("reveal-on");
-      });
-    }
-
-    // 2. Count up, once, when a figure scrolls into view.
-    if (!reduce && canObserve) {
-      const frames = new Set<number>();
-      const run = (el: HTMLElement) => {
-        const final = el.textContent ?? "";
-        const start = performance.now();
-        const duration = 1100;
-        const tick = (now: number) => {
-          const t = Math.min(1, (now - start) / duration);
-          const eased = 1 - Math.pow(1 - t, 3);
-          el.textContent =
-            t === 1
-              ? final
-              : final.replace(/\d+(\.\d+)?/g, (num) => {
-                  const decimals = num.includes(".") ? num.split(".")[1].length : 0;
-                  return (parseFloat(num) * eased).toFixed(decimals);
-                });
-          if (t < 1) frames.add(requestAnimationFrame(tick));
-        };
-        frames.add(requestAnimationFrame(tick));
-      };
-      const io = new IntersectionObserver(
-        (entries) => {
-          for (const entry of entries) {
-            if (entry.isIntersecting) {
-              io.unobserve(entry.target);
-              run(entry.target as HTMLElement);
-            }
-          }
-        },
-        { threshold: 0.6 },
-      );
-      const finals = new Map<HTMLElement, string>();
-      document.querySelectorAll<HTMLElement>("[data-countup]").forEach((el) => {
-        finals.set(el, el.textContent ?? "");
-        io.observe(el);
-      });
-      cleanups.push(() => {
-        io.disconnect();
-        frames.forEach((id) => cancelAnimationFrame(id));
-        finals.forEach((text, el) => (el.textContent = text));
       });
     }
 
