@@ -529,15 +529,15 @@
             },
             "BR": {
               "status": "in place",
-              "value": "Law 13,709 of 14 Aug 2018 (LGPD); in force since 18 Sep 2020",
+              "value": "Law 13,709 of 14 Aug 2018 (LGPD); in force from 18 Sep 2020, per a law firm summary",
               "year": "2026",
-              "note": "Law number and date from the regulator's page (PRIMARY). Date in force from a law firm summary (S16, SECONDARY)",
+              "note": "Law number and date from the regulator's page. In force date from a law firm summary (S16).",
               "sourceId": "S15; S16",
               "evidence": "PRIMARY"
             },
             "EG": {
               "status": "partial",
-              "value": "Law enacted 2020",
+              "value": "World Bank lists a law (2020)",
               "year": "2026",
               "note": "Regulator not operational, see E2",
               "sourceId": "S1 p.46",
@@ -589,7 +589,7 @@
           "cells": {
             "PK": {
               "status": "in place",
-              "value": "Enacted 2016",
+              "value": "World Bank lists a law (2016)",
               "year": "2026",
               "note": "",
               "sourceId": "S1 p.46",
@@ -613,7 +613,7 @@
             },
             "EG": {
               "status": "in place",
-              "value": "Enacted 2018",
+              "value": "World Bank lists a law (2018)",
               "year": "2026",
               "note": "",
               "sourceId": "S1 p.46",
