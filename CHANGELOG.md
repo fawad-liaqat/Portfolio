@@ -1,5 +1,11 @@
 # Changelog
 
+## Release fix: AwaazOnboard wording (18 November 2026)
+
+- Summary now reads "In a team of four, I led the API architecture." No
+  claims about security design or unit economics. "FAPI_1.0" is also
+  dropped from the unused landing animation data.
+
 ## Release fix RL5: positioning copy (18 November 2026)
 
 - Hero names financial inclusion; About 04 is now "Customer protection and

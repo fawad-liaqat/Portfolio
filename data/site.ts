@@ -92,7 +92,6 @@ export const siteConfig = {
   ],
   particleFragments: [
     "SBP_BPRD_01",
-    "FAPI_1.0",
     "G.729",
     "NADRA_2025",
     "KYC_T2",
