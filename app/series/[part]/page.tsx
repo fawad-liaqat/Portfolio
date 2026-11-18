@@ -33,12 +33,26 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!part) return {};
   const title = `Part ${part.meta.number}: ${part.title} · ${siteConfig.name}`;
   const description = part.meta.finding ?? part.meta.scope;
+  // Share image made by scripts/make-series-og.py.
+  const image = {
+    url: `/og/series-part-${part.meta.number}.png`,
+    width: 1200,
+    height: 630,
+    alt: `Part ${part.meta.number}: ${part.title}`,
+  };
   return {
     title,
     description,
     alternates: { canonical: seriesPath(part.meta.number) },
-    openGraph: { title, description, url: seriesPath(part.meta.number), type: "article" },
-    twitter: { title, description },
+    openGraph: {
+      title,
+      description,
+      url: seriesPath(part.meta.number),
+      type: "article",
+      siteName: siteConfig.name,
+      images: [image],
+    },
+    twitter: { card: "summary_large_image", title, description, images: [image.url] },
   };
 }
 

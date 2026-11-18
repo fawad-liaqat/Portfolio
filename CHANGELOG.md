@@ -1,5 +1,13 @@
 # Changelog
 
+## Release fix: share images for series pages (18 November 2026)
+
+- One 1200x630 image per part in `public/og/series-part-N.png`, in the
+  same style as `og.png`, with the part number, title and finding. Made by
+  `scripts/make-series-og.py`; rerun it when a title or finding changes.
+- Each part page's Open Graph and Twitter tags now use its own image
+  (`summary_large_image`).
+
 ## Release fix: branded 404 page (18 November 2026)
 
 - `app/not-found.tsx` replaces the default Next.js page: site header and
