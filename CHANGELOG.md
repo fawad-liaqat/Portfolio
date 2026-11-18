@@ -1,5 +1,31 @@
 # Changelog
 
+## Release 2: navigation, CV page, sources and themes (18 November 2026)
+
+- One Work section, in this order: Series, Articles, Projects. Anchors
+  `#work`, `#series` and `#research` still land in the right place
+  (`#research` sits on the Articles group); new anchors `#articles` and
+  `#projects`. Each group has a one line hook (`data/guide.ts`).
+- "Where to start" under the hero: four questions, each with where to go
+  (Part 1, the Raast tracker, Part 3, Part 4). Part 1 carries a "Start
+  here" badge. Menu: Start, Work, Training, About, Connect.
+- Removed from the site: Tariff Shock Simulator, CBDC Design Tradeoff
+  Matrix, AI Fraud Detection model, Stablecoin Remittance Cost Comparison,
+  the Tariff Cascades and Tokenized Remittances articles. Their repos stay
+  on GitHub. No archived or earlier work lists remain.
+- The name appears once, in the header (plus page titles and metadata).
+  The footer shows only the year. The hero status line no longer repeats
+  the education line, which stays under Training.
+- New `/cv/` page: the CV as an image first, then Download PDF and a link
+  back. Header, phone menu and contact links go there. No file sizes are
+  shown anywhere. `scripts/make-cv-image.sh` redraws the image.
+- Series sources show only name and publisher, the link, and Primary or
+  Secondary. The table is read by its header names; the accessed field is
+  gone from the data model.
+- Theme: links to fawad-liaqat.github.io get `?theme=light|dark` at click
+  time, and `?theme=` arriving on this site is stored and then removed
+  from the address bar (`lib/theme.ts`). CSP unchanged.
+
 ## Release fix B5: method and decisions on part pages (18 November 2026)
 
 - Each part page has a collapsed "Method and decisions" section, rendered

@@ -40,14 +40,18 @@ Upload `out/` to any CDN or static host.
 .
 ├── app/                    # Next.js App Router
 │   ├── layout.tsx         # Root layout + metadata
-│   └── page.tsx           # Home page
+│   ├── page.tsx           # Home page
+│   ├── cv/page.tsx        # CV page (/cv/): image of the CV, then PDF download
+│   └── series/[part]/     # One page per series part
 ├── components/            # React components
 │   ├── landing/           # Landing zone (ZoneA)
 │   ├── portfolio/         # Portfolio zone (ZoneB)
 │   └── ui/                # Shared primitives
 ├── data/                  # Content as TypeScript
-│   ├── projects.ts        # All project entries
-│   ├── research.ts        # Research papers
+│   ├── guide.ts           # "Where to start" and the Work group hooks
+│   ├── projects.ts        # Projects (third group in Work)
+│   ├── research.ts        # Articles (second group in Work)
+│   ├── series.ts          # Series parts (first group in Work)
 │   ├── signals.ts         # Signal strip metrics
 │   └── site.ts            # Site config
 ├── hooks/                 # Custom React hooks
