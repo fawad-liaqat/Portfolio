@@ -14,14 +14,19 @@ import { allStrings, readData, type DataView } from "@/lib/series-data";
 const ROOT = path.join(process.cwd(), "content", "series");
 const REQUIRED = ["brief.md", "explainer.md", "sources.md"];
 
+/**
+ * One source as shown on a part page: only its name, publisher, link and
+ * evidence label. Dates read, page notes and access dates in sources.md are
+ * for checking and are not shown or kept here.
+ */
 export interface Source {
   id: string; // "S1"
   title: string;
   publisher: string;
-  date: string;
-  location: string;
-  accessed: string;
-  label: string; // PRIMARY, SECONDARY, ...
+  /** The document's own URL, or "" if sources.md gives none. */
+  url: string;
+  /** "Primary" or "Secondary" (other labels are kept as written, in sentence case). */
+  label: string;
 }
 
 export interface LoadedPart {
@@ -114,38 +119,65 @@ function render(md: string, cited: Set<string>, known: Set<string>): string {
   return wrapTables(linkSources(marked.parse(md, { async: false }) as string, cited, known));
 }
 
-/**
- * Some sources were read from files the owner supplied. The page shows their
- * page references and official URL, never the local file name or path.
- * Handles "Local file `name.pdf` (owner supplied); pp. 1, 4" and
- * "Local file supplied by the owner: name.pdf, 30 pages; https://...".
- */
-export function publicLocation(location: string): string {
-  return location
-    .replace(/Local file supplied by the owner:[^;]*;?/gi, "")
-    .replace(/Local file\s*`[^`]*`\s*(\(owner supplied\))?\s*;?/gi, "")
-    // Page offset notes such as "(printed = PDF page minus 18)" are for checking, not readers.
-    .replace(/\s*\((printed( page)?\s*=\s*)?PDF page minus \d+\)/gi, "")
-    .replace(/^[\s;,]+|[\s;,]+$/g, "")
-    .trim();
+const URL_RE = /https?:\/\/[^\s<>()|`]+[^\s<>()|`.,;:]/;
+
+/** First web address in a cell, from a markdown link or a bare URL. */
+function firstUrl(cell: string): string {
+  const md = cell.match(/\]\((https?:\/\/[^)\s]+)\)/);
+  if (md) return md[1];
+  return cell.match(URL_RE)?.[0] ?? "";
 }
 
-/** Reads the `| S1 | Title | Publisher | Date | Location | Accessed | Label |` rows. */
+/** "PRIMARY" becomes "Primary". */
+function sentenceCase(label: string): string {
+  const t = label.replace(/[*_`]/g, "").trim();
+  return t ? t.charAt(0).toUpperCase() + t.slice(1).toLowerCase() : t;
+}
+
+/**
+ * Reads the sources table in sources.md. Columns are found by their header
+ * names, so the table can gain or lose columns (for example the Accessed
+ * column) without breaking the page:
+ *   ID; Title (or Name, Source); Publisher; Label;
+ *   the link comes from a Link or URL column if there is one, otherwise from
+ *   the first web address in any other cell of the row.
+ */
 function parseSources(md: string): { sources: Source[]; rest: string } {
   const sources: Source[] = [];
-  const lines = md.split("\n");
   const keep: string[] = [];
-  for (const line of lines) {
-    const cells = line.trim().startsWith("|")
-      ? line.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim())
-      : null;
-    if (cells && /^S\d+$/.test(cells[0]) && cells.length >= 7) {
-      const [id, title, publisher, date, location, accessed, label] = cells;
-      sources.push({ id, title, publisher, date, location: publicLocation(location), accessed, label });
+  let cols: string[] | null = null;
+  const splitRow = (line: string) =>
+    line.trim().replace(/^\||\|$/g, "").split("|").map((c) => c.trim());
+  const col = (names: string[]) =>
+    cols ? cols.findIndex((c) => names.some((n) => c.startsWith(n))) : -1;
+
+  for (const line of md.split("\n")) {
+    const cells = line.trim().startsWith("|") ? splitRow(line) : null;
+    if (cells && cells[0].toLowerCase() === "id") {
+      cols = cells.map((c) => c.toLowerCase());
+      continue; // header row
+    }
+    if (cells && /^-+$/.test(cells[0].replace(/:/g, ""))) continue; // divider row
+    if (cells && /^S\d+$/.test(cells[0])) {
+      const at = (i: number) => (i >= 0 ? cells[i] ?? "" : "");
+      const iTitle = cols ? col(["title", "name", "source"]) : 1;
+      const iPub = cols ? col(["publisher"]) : 2;
+      const iLabel = cols ? col(["label", "evidence"]) : cells.length - 1;
+      const iLink = cols ? col(["link", "url"]) : -1;
+      const url =
+        firstUrl(at(iLink)) ||
+        cells.map((c, i) => (i === iTitle || i === iPub || i === iLabel ? "" : firstUrl(c))).find(Boolean) ||
+        firstUrl(at(iTitle)) ||
+        "";
+      sources.push({
+        id: cells[0],
+        title: at(iTitle),
+        publisher: at(iPub),
+        url,
+        label: sentenceCase(at(iLabel)),
+      });
       continue;
     }
-    // Drop the table header and divider rows too.
-    if (cells && (cells[0] === "ID" || /^-+$/.test(cells[0].replace(/:/g, "")))) continue;
     keep.push(line);
   }
   return { sources, rest: keep.join("\n") };

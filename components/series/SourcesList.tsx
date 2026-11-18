@@ -1,24 +1,38 @@
 import { inline, type Source } from "@/lib/series";
 
-/** Numbered sources. Each entry has id="source-S1" so citations can link to it. */
+/**
+ * Numbered sources. Each shows only its name and publisher, a link to the
+ * document, and Primary or Secondary. Each entry has id="source-S1" so
+ * citations on the page can link to it.
+ */
 export default function SourcesList({ sources }: { sources: Source[] }) {
   return (
     <ol className="sources-list">
-      {sources.map((s) => (
-        <li key={s.id} id={`source-${s.id}`} className="source-item">
-          <span className="source-id">{s.id}</span>
-          <div>
-            <p className="source-title" dangerouslySetInnerHTML={{ __html: inline(s.title) }} />
-            <p className="source-meta">
-              <span dangerouslySetInnerHTML={{ __html: inline(`${s.publisher}. ${s.date}.`) }} />{" "}
-              <span className={`evidence evidence-${s.label.toLowerCase()}`}>{s.label}</span>
-            </p>
-            <p className="source-loc">
-              <span dangerouslySetInnerHTML={{ __html: inline(s.location) }} /> Accessed {s.accessed}.
-            </p>
-          </div>
-        </li>
-      ))}
+      {sources.map((s) => {
+        // A title written as a markdown link keeps only its text here.
+        const name = s.title.replace(/\[([^\]]+)\]\([^)]*\)/g, "$1");
+        return (
+          <li key={s.id} id={`source-${s.id}`} className="source-item">
+            <span className="source-id">{s.id}</span>
+            <div>
+              <p className="source-title">
+                {s.url ? (
+                  <a href={s.url} target="_blank" rel="noopener noreferrer">
+                    <span dangerouslySetInnerHTML={{ __html: inline(name) }} />
+                    <span className="visually-hidden"> (opens in a new tab)</span>
+                  </a>
+                ) : (
+                  <span dangerouslySetInnerHTML={{ __html: inline(name) }} />
+                )}
+              </p>
+              <p className="source-meta">
+                <span dangerouslySetInnerHTML={{ __html: inline(s.publisher) }} />{" "}
+                <span className={`evidence evidence-${s.label.toLowerCase()}`}>{s.label}</span>
+              </p>
+            </div>
+          </li>
+        );
+      })}
     </ol>
   );
 }

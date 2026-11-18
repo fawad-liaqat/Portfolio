@@ -2115,20 +2115,28 @@ a:hover {
   font-weight: 500;
 }
 
-.source-meta,
-.source-loc {
-  margin-top: 2px;
-  font-size: 14px;
+.source-title a {
+  color: var(--text);
+  text-decoration-color: var(--link-line);
   overflow-wrap: anywhere;
 }
 
-.source-loc {
-  color: var(--meta);
-}
-
-.source-loc code {
+.source-title a::after {
+  content: "\2197";
+  margin-left: 6px;
+  color: var(--accent);
   font-family: var(--font-mono);
   font-size: 13px;
+}
+
+.source-title a:hover {
+  color: var(--accent);
+}
+
+.source-meta {
+  margin-top: 2px;
+  font-size: 14px;
+  overflow-wrap: anywhere;
 }
 
 .evidence-primary {
