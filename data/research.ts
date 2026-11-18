@@ -7,7 +7,6 @@ export interface ResearchPaper {
   description: string;
   status: "published" | "forthcoming" | "draft";
   url?: string;
-  archived?: boolean;
   /** Month the article was last refreshed, e.g. "November 2026". */
   updated?: string;
   /** Secondary links, such as an earlier edition. */
@@ -37,17 +36,6 @@ export const research: ResearchPaper[] = [
     ],
   },
   {
-    id: "tariff-cascades",
-    category: "Payments",
-    title:
-      "Tariff Cascades and Fintech Infrastructure: How Trade Policy Shapes Digital Inclusion Timelines",
-    description:
-      "Archived. Not updated since March 2026. An emerging market analysis tracing cost propagation from semiconductor tariffs to merchant deployment delays. Builds a five-link cost model from tariff announcement through to implied delay in meeting SBP's 70% digital payment adoption target by 2030.",
-    status: "published",
-    archived: true,
-    url: "https://fawad-liaqat.github.io/Research-Articles/articles/tariff-cascades/",
-  },
-  {
     id: "cbdc-low-literacy",
     category: "Digital currency",
     title:
@@ -68,16 +56,5 @@ export const research: ResearchPaper[] = [
     status: "published",
     updated: "November 2026",
     url: "https://fawad-liaqat.github.io/Research-Articles/articles/agentic-ai-compliance/",
-  },
-  {
-    id: "tokenized-remittances",
-    category: "Digital currency",
-    title:
-      "Tokenized Remittances: A Feasibility Framework for Pakistani Diaspora Investment",
-    description:
-      "Could tokenization channel part of Pakistan's US$41.6 billion in FY26 remittances into regulated investment? Maps the foreign exchange rules, the Virtual Assets Act 2026 and the SBP's 2026 VASP circular, and sets out a compliant design and a sandbox path. Updated November 2026.",
-    status: "published",
-    updated: "November 2026",
-    url: "https://fawad-liaqat.github.io/Research-Articles/articles/tokenized-remittances/",
   },
 ];

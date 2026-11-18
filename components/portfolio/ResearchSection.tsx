@@ -1,9 +1,7 @@
 import { research } from "@/data/research";
-import { archiveNote } from "./WorkSection";
 
 export default function ResearchSection() {
-  const current = research.filter((r) => !r.archived);
-  const archived = research.filter((r) => r.archived);
+  const current = research;
 
   return (
     <section id="research" className="section">
@@ -62,25 +60,6 @@ export default function ResearchSection() {
           ))}
         </ul>
 
-        {archived.length > 0 && (
-          <details className="disclosure archive-list">
-            <summary>Earlier writing</summary>
-            <ul className="disclosure-body">
-              {archived.map((paper) => (
-                <li key={paper.id}>
-                  {paper.url ? (
-                    <a href={paper.url} target="_blank" rel="noopener noreferrer">
-                      {paper.title}
-                    </a>
-                  ) : (
-                    paper.title
-                  )}{" "}
-                  <span className="updated">{archiveNote(paper.description)}</span>
-                </li>
-              ))}
-            </ul>
-          </details>
-        )}
       </div>
     </section>
   );

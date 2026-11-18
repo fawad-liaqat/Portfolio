@@ -3,11 +3,6 @@ import { seriesParts, seriesPath } from "@/data/series";
 import { siteConfig } from "@/data/site";
 import { isPublished } from "@/lib/series";
 
-/** The "Archived. Not updated since ..." note at the start of a description, if any. */
-export function archiveNote(text: string): string {
-  return text.match(/^Archived\.[^.]*\./)?.[0] ?? "";
-}
-
 const STATUS_LABELS: Record<Project["status"], string> = {
   completed: "Completed",
   "in-progress": "In progress",
@@ -98,11 +93,9 @@ function ProjectCard({ project }: { project: Project }) {
 }
 
 export default function WorkSection() {
-  const current = projects.filter((p) => !p.archived);
   // Cards follow the order in data/projects.ts.
-  const ordered = current;
+  const ordered = projects;
   const startPart = seriesParts.find((p) => p.number === siteConfig.startHere.part);
-  const archived = projects.filter((p) => p.archived);
 
   return (
     <section id="work" className="section">
@@ -126,26 +119,6 @@ export default function WorkSection() {
           ))}
         </div>
 
-        {archived.length > 0 && (
-          <details className="disclosure archive-list">
-            <summary>Earlier work</summary>
-            <ul className="disclosure-body">
-              {archived.map((p) => (
-                <li key={p.id}>
-                  {p.demoUrl ? (
-                    <a href={p.demoUrl} target="_blank" rel="noopener noreferrer">
-                      {p.title}
-                    </a>
-                  ) : (
-                    p.title
-                  )}
-                  . {p.summary}{" "}
-                  <span className="updated">{archiveNote(p.description[0])}</span>
-                </li>
-              ))}
-            </ul>
-          </details>
-        )}
       </div>
     </section>
   );

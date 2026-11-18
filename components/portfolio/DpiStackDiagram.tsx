@@ -22,7 +22,7 @@ import { isPublished } from "@/lib/series";
  * checked layer in CSS, all panels are shown.
  */
 
-const current = projects.filter((p) => !p.archived);
+const current = projects;
 const rows = stackLayers.map((layer, index) => ({
   ...layer,
   number: index + 1,

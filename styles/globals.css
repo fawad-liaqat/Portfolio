@@ -1147,18 +1147,6 @@ a:hover {
   text-decoration-color: var(--accent);
 }
 
-.archive-list {
-  margin-top: 24px;
-}
-
-.archive-list ul {
-  max-width: var(--prose-width);
-}
-
-.archive-list li {
-  padding: 6px 0;
-}
-
 /* 9. Research ------------------------------------------------------------- */
 
 .research-item {

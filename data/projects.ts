@@ -29,8 +29,6 @@ export interface Project {
   repoUrl?: string;
   /** Short card text. The longer description sits behind "More detail". */
   summary: string;
-  /** Archived items stay in the repo and are listed under "Earlier work". */
-  archived?: boolean;
   /** Pins the project to a layer in the hero diagram (see data/stack.ts). */
   layer?: StackLayerId | "all";
   /** Optional. Shown on the card when present. */
@@ -81,44 +79,6 @@ export const projects: Project[] = [
     featured: true,
   },
   {
-    id: "tariff-simulator",
-    category: "Earlier work",
-    summary:
-      "An interactive model of how tariffs on electronic components could feed into payment hardware costs.",
-    archived: true,
-    title: "Tariff Shock Propagation Simulator",
-    subtitle:
-      "Interactive model tracing how US tariff increases on semiconductors propagate through to fintech hardware costs in Pakistan.",
-    description: [
-      "Archived. Not updated since March 2026. US tariffs on semiconductors rose from 7.5% to 25% between 2022 and 2025. India raised duties on PCBs and POS components to 18%. Pakistan imports nearly all its fintech hardware; every POS terminal, biometric scanner, and QR device arrives through a supply chain now subject to compounding tariff pressure. Users adjust three levers (tariff rate, local assembly percentage, and subsidy offset) and watch a waterfall chart recalculate cost amplification at each stage in real time. Every assumption is surfaced in a collapsible panel. The model is transparent by design.",
-    ],
-    tech: ["React", "Recharts", "US ITC HTS Data", "Cost Modeling"],
-    status: "completed",
-    demoUrl: "https://fawad-liaqat.github.io/tariff-shock-simulator/",
-  },
-  {
-    id: "cbdc-matrix",
-    layer: "payments",
-    category: "Digital currency",
-    summary:
-      "A comparison of Pakistan's planned Digital Rupee with five central bank digital currencies abroad, across architecture, privacy, offline use, onboarding and interoperability.",
-    title: "CBDC Design Tradeoff Matrix",
-    subtitle:
-      "Structured comparison of Pakistan's planned Digital Rupee with five central bank digital currencies abroad.",
-    description: [
-      "The State Bank announced a Digital Rupee pilot in 2025, but its start could not be confirmed as of November 2026. Nigeria's eNaira saw about 98.5% of wallets unused in any given week, and the Bahamas' Sand Dollar has struggled with merchant acceptance. This matrix compares the planned Digital Rupee with five implementations abroad across architecture, privacy design, offline capability, onboarding for inclusion, and interoperability with existing payment rails, with commentary for emerging markets. Sources include BIS papers, central bank publications and the State Bank's FY26 payment systems review; each is listed with its date. Updated November 2026.",
-    ],
-    tech: [
-      "BIS Data",
-      "Atlantic Council",
-      "CBDC Registry",
-      "Comparative Analysis",
-    ],
-    status: "completed",
-    updated: "November 2026",
-    demoUrl: "https://fawad-liaqat.github.io/CBDC-Design-Tradeoff-Matrix/",
-  },
-  {
     id: "voice-feasibility",
     layer: "identity",
     category: "Inclusion",
@@ -157,49 +117,5 @@ export const projects: Project[] = [
     updated: "November 2026",
     demoUrl:
       "https://fawad-liaqat.github.io/Pakistan-Fintech-Regulatory-Timeline/",
-  },
-  {
-    id: "fraud-model",
-    category: "Earlier work",
-    summary:
-      "A cost and benefit model of fraud detection options for electronic money institutions, built on stated assumptions.",
-    archived: true,
-    title: "AI Fraud Detection Cost-Benefit Model",
-    subtitle:
-      "Financial model comparing AI fraud detection implementation cost against fraud losses for Pakistani electronic money institutions.",
-    description: [
-      "Archived. Not updated since March 2026. Pakistan's EMI transaction volume doubled to PKR 471 billion in FY25, with 5.8 million e-wallet users. As volume scales, fraud exposure scales with it. This model compares three scenarios: baseline manual review (30% detection rate), an automated rule engine (55 to 65%), and machine learning detection (80 to 92%). It outputs a break even analysis showing the exact monthly transaction volume at which ML fraud detection becomes cost-positive. Implementation costs use published AWS and GCP pricing. Fraud data specific to Pakistani EMIs is not public, a gap the model documents rather than ignores.",
-    ],
-    tech: [
-      "Excel",
-      "SBP FY25 EMI Data",
-      "ACFE 2024 Report",
-      "Financial Modeling",
-    ],
-    status: "completed",
-    demoUrl:
-      "https://fawad-liaqat.github.io/AI-Fraud-Detection-Cost-Benefit-Dashboard/",
-  },
-  {
-    id: "stablecoin-remittance",
-    layer: "payments",
-    category: "Digital currency",
-    summary:
-      "What it costs to send USD 500 to Pakistan through banks, money transfer operators, mobile wallets and stablecoin channels, across five corridors. Stablecoin prices are a dated snapshot.",
-    title: "Stablecoin Remittance Cost Comparison",
-    subtitle:
-      "Remittance costs across banks, MTOs, mobile wallets and stablecoin channels for Pakistan's top five inbound corridors.",
-    description: [
-      "Pakistan received a record US$41.6 billion in workers' remittances in FY26. In June 2026 the largest sources were Saudi Arabia, the UAE, the UK and the US. This analysis puts stablecoin channels alongside banks, money transfer operators and mobile wallets, corridor by corridor, and compares the total cost of sending $500: explicit fees, FX spread and the time value of settlement. Prices are a snapshot dated 30 March 2026; the legal context (Virtual Assets Act 2026, the State Bank's April 2026 circular on licensed providers) was updated in November 2026.",
-    ],
-    tech: [
-      "World Bank RPW Data",
-      "Binance P2P",
-      "SBP FX Manual",
-    ],
-    status: "completed",
-    updated: "November 2026",
-    demoUrl:
-      "https://fawad-liaqat.github.io/Stablecoin-Remittance-Cost-Comparison/",
   },
 ];
