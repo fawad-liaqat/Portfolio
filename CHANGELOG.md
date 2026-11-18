@@ -1,5 +1,15 @@
 # Changelog
 
+## Release fix RL5: positioning copy (18 November 2026)
+
+- Hero names financial inclusion; About 04 is now "Customer protection and
+  experience". Each of the three phrases appears once on the home page.
+- Contact lists product roles in open banking and embedded finance and
+  short term technical assistance.
+- The Raast tracker is now the first card in Work (cards follow the order
+  in `data/projects.ts`), with a "Start here" pointer to Part 3 for readers
+  who come for open banking (`siteConfig.startHere`).
+
 ## Release fix: share images for series pages (18 November 2026)
 
 - One 1200x630 image per part in `public/og/series-part-N.png`, in the

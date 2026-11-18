@@ -43,23 +43,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    id: "awaaz-onboard",
-    layer: "identity",
-    category: "Inclusion",
-    title: "AwaazOnboard",
-    subtitle: "Voice as a second authentication factor for basic phone users",
-    summary:
-      "A four person project I led on architecture and unit economics. It explores voice as a supporting identity check for people who bank through basic phones on 2G networks.",
-    description: [
-      "AwaazOnboard explores voice as a second authentication factor for people who bank through basic phones on 2G networks. The aim is that identity checks tied to NADRA records, and payments on rails like Raast, can reach users who have no smartphone or mobile data.",
-      "The hard part is the network. Narrowband voice codecs remove much of the audio detail that speaker verification models rely on. The work therefore focuses on enrollment in controlled settings and on models that tolerate compressed audio.",
-      "The design treats voice as a supporting factor alongside existing biometric verification, in line with how the project reads State Bank of Pakistan requirements. The project is in progress, and accuracy figures will be published once testing is complete.",
-    ],
-    tech: ["Speaker verification", "ECAPA-TDNN", "FastAPI", "2G voice channels"],
-    status: "in-progress",
-    featured: true,
-  },
-  {
     id: "raast-tracker",
     layer: "payments",
     category: "Payments",
@@ -79,6 +62,23 @@ export const projects: Project[] = [
       { label: "FY25 edition", url: "https://fawad-liaqat.github.io/raast-tracker/?edition=fy25" },
       { label: "Progress FY25 to FY26", url: "https://fawad-liaqat.github.io/raast-tracker/#progress" },
     ],
+  },
+  {
+    id: "awaaz-onboard",
+    layer: "identity",
+    category: "Inclusion",
+    title: "AwaazOnboard",
+    subtitle: "Voice as a second authentication factor for basic phone users",
+    summary:
+      "A four person project I led on architecture and unit economics. It explores voice as a supporting identity check for people who bank through basic phones on 2G networks.",
+    description: [
+      "AwaazOnboard explores voice as a second authentication factor for people who bank through basic phones on 2G networks. The aim is that identity checks tied to NADRA records, and payments on rails like Raast, can reach users who have no smartphone or mobile data.",
+      "The hard part is the network. Narrowband voice codecs remove much of the audio detail that speaker verification models rely on. The work therefore focuses on enrollment in controlled settings and on models that tolerate compressed audio.",
+      "The design treats voice as a supporting factor alongside existing biometric verification, in line with how the project reads State Bank of Pakistan requirements. The project is in progress, and accuracy figures will be published once testing is complete.",
+    ],
+    tech: ["Speaker verification", "ECAPA-TDNN", "FastAPI", "2G voice channels"],
+    status: "in-progress",
+    featured: true,
   },
   {
     id: "tariff-simulator",

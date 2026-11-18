@@ -14,14 +14,19 @@ export const siteConfig = {
   hero: {
     label: "Overview",
     headline: "Pakistan built the rails. Adoption is the hard part.",
-    sub: "I study why Pakistan's digital public infrastructure is used less than it could be, what would bring in the people it leaves out, safely and easily, and I explain it in plain language.",
+    sub: "I study why Pakistan's digital public infrastructure is used less than it could be, what financial inclusion would take for the people it leaves out, and I explain it in plain language.",
     status: "BS Financial Technology, FAST NUCES Islamabad. Graduating January 2027.",
     primaryCta: "See the work",
     secondaryCta: "Read the research",
   },
+  /** Pointer at the top of Work for readers who come for open banking. */
+  startHere: {
+    lead: "New to open banking? Start here:",
+    part: 3,
+  },
   connect: {
     intro:
-      "Open to conversations about digital payments, public infrastructure and policy, and to roles in strategy, research and programme delivery. I welcome feedback and other views on anything published here.",
+      "Open to conversations about digital payments, public infrastructure and policy, and to roles in strategy, research and programme delivery, product roles in open banking and embedded finance, and short term technical assistance. I welcome feedback and other views on anything published here.",
   },
   about: {
     intro:
@@ -44,8 +49,8 @@ export const siteConfig = {
         desc: "India's UPI, Brazil's Pix and other cases are useful only when read against Pakistan's own demographics and institutions.",
       },
       {
-        title: "Protection and ease of use",
-        desc: "People use what is safe, affordable and easy to understand. I look at consent, recourse when something goes wrong, and whether a product makes sense to someone new to digital money.",
+        title: "Customer protection and experience",
+        desc: "People use what is safe, affordable and easy to understand. That means clear consent, recourse when something goes wrong, and a customer experience that makes sense to someone new to digital money.",
       },
     ],
   },

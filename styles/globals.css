@@ -1114,6 +1114,17 @@ a:hover {
   font-family: var(--font-mono);
 }
 
+/* "Start here" pointer under the Projects heading. */
+.start-here {
+  margin-top: 12px;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.start-here a {
+  font-weight: 500;
+}
+
 /* Secondary links on a card, such as an earlier edition. */
 .extra-links {
   display: flex;
