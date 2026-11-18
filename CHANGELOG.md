@@ -27,6 +27,8 @@
   from the address bar (`lib/theme.ts`). CSP unchanged.
 - Series re-synced after the release 2 source pass (`bash
   scripts/sync-series.sh /home/claude/work`); all files byte identical.
+  Synced again after the follow up source pass (Governor's report link,
+  new SBP addresses, "Evidence as of November 2026" bylines).
 
 ## Release fix B5: method and decisions on part pages (18 November 2026)
 

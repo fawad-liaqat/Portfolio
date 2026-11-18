@@ -24,5 +24,5 @@ Primary means the issuing body's own document or data. Secondary means reporting
 | S18 | Census 2023, Table 12: Literacy rate, enrolment and out of school population by sex and rural/urban (national) | Pakistan Bureau of Statistics | https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_12_national.pdf | Primary |
 | S19 | Pakistan's first Dematerialized Digital Identity Card launched on NADRA's silver jubilee | Associated Press of Pakistan | https://www.app.com.pk/?p=958340 | Secondary |
 | S20 | Open Finance Tracker: Egypt | Fiskil | https://www.fiskil.com/open-finance-tracker/egypt | Secondary |
-| S21 | National Financial Inclusion Strategy 2024 to 2028 | State Bank of Pakistan | https://www.sbp.org.pk/nfis/nfis2024-28.pdf | Primary |
-| S22 | Governor's Annual Report 2025-26 | State Bank of Pakistan |  | Primary |
+| S21 | National Financial Inclusion Strategy 2024 to 2028 | State Bank of Pakistan | https://archive.sbp.org.pk/nfis/nfis2024-28.pdf | Primary |
+| S22 | Governor's Annual Report 2025-26 | State Bank of Pakistan | https://www.sbp.org.pk/assets/document/publications/Gov-AR_FY26.pdf | Primary |

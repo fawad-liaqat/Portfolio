@@ -2,7 +2,7 @@
 
 **Part 2 of 4: Pakistan's digital public infrastructure series**
 
-Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S1] refer to the source list at the end. The tables behind the charts follow the same source list.
+Fawad Liaqat. Evidence as of November 2026. Source markers such as [S1] refer to the source list at the end. The tables behind the charts follow the same source list.
 
 ## The question
 
@@ -117,9 +117,9 @@ Primary means the issuing body's own document or data. Secondary means reporting
 - [S7] Banco Central do Brasil. *Annual Report 2025*. https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf. Primary.
 - [S8] Government of India, Ministry of Finance (Press Information Bureau). *UPI Completes 10 Years of Digital Payments Revolution*. https://www.pib.gov.in/PressReleasePage.aspx?PRID=2302657&reg=48&lang=2. Primary.
 - [S9] Government of India, Ministry of Finance (Press Information Bureau). *PM Jan Dhan Yojana Completes 12 Years of Transforming India's Financial Inclusion Landscape*. https://www.pib.gov.in/PressReleseDetailm.aspx?PRID=2303643&lang=1&reg=3. Primary.
-- [S10] State Bank of Pakistan. *SBP Governor says women's financial inclusion has risen to 52 percent (press release, 3 December 2025)*. https://www.sbp.org.pk/press/2025/Pr-03-Dec-2025.pdf. Primary.
-- [S11] State Bank of Pakistan. *Governor's Annual Report 2025-26*. Primary.
+- [S10] State Bank of Pakistan. *SBP Governor says women's financial inclusion has risen to 52 percent (press release, 3 December 2025)*. https://archive.sbp.org.pk/press/2025/Pr-03-Dec-2025.pdf. Primary.
+- [S11] State Bank of Pakistan. *Governor's Annual Report 2025-26*. https://www.sbp.org.pk/assets/document/publications/Gov-AR_FY26.pdf. Primary.
 - [S12] Karandaaz Pakistan. *Karandaaz Financial Inclusion Survey (K-FIS): Narrative Report*. https://www.karandaaz.com.pk/research/publications/karandaaz-financial-inclusion-survey-k-fis-narrative-report. Primary.
 - [S13] Business Recorder. *Govt moves to continue subsidy for Raast QR payments*. https://www.brecorder.com/news/40448745/govt-moves-to-continue-subsidy-for-raast-qr-payments. Secondary.
 - [S14] Reserve Bank of India. *Reserve Bank of India launches UPI for feature phones (UPI123Pay) and a 24x7 helpline for digital payments (DigiSaathi)*. https://rbi.org.in/Scripts/BS_PressReleaseDisplay.aspx?prid=53385. Primary.
-- [S15] State Bank of Pakistan. *National Financial Inclusion Strategy 2024 to 2028*. https://www.sbp.org.pk/nfis/nfis2024-28.pdf. Primary.
+- [S15] State Bank of Pakistan. *National Financial Inclusion Strategy 2024 to 2028*. https://archive.sbp.org.pk/nfis/nfis2024-28.pdf. Primary.

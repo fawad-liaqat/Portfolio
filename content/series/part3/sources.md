@@ -5,9 +5,9 @@ Primary means the issuing body's own document or data. Secondary means reporting
 | ID | Title | Publisher | Link | Label |
 |---|---|---|---|---|
 | S1 | Open Banking Regulations (Draft), for public consultation | State Bank of Pakistan | https://www.sbp.org.pk/assets/document/Open_Banking_Regulations_for_Public_Consulatation_Draft.pdf | Primary |
-| S2 | Governor's Annual Report 2025-26 | State Bank of Pakistan |  | Primary |
+| S2 | Governor's Annual Report 2025-26 | State Bank of Pakistan | https://www.sbp.org.pk/assets/document/publications/Gov-AR_FY26.pdf | Primary |
 | S3 | Annual Payment Systems Review FY 2025-26 | State Bank of Pakistan | https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY26.pdf | Primary |
-| S4 | SBP announces the shortlisted applicants for the first cohort of its Regulatory Sandbox (press release) | State Bank of Pakistan | https://www.sbp.org.pk/press/2026/Pr-06-Jan-2026.pdf | Primary |
+| S4 | SBP announces the shortlisted applicants for the first cohort of its Regulatory Sandbox (press release) | State Bank of Pakistan | https://archive.sbp.org.pk/press/2026/Pr-06-Jan-2026.pdf | Primary |
 | S5 | The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy | World Bank | https://www.worldbank.org/en/publication/globalfindex | Primary |
 | S6 | Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan | World Bank | https://documents1.worldbank.org/curated/en/099110926084536993/pdf/P507284-0c4a825c-0c5d-40d5-8e72-cc9a23fa2f46.pdf | Primary |
 | S7 | Annual Report 2025 | Banco Central do Brasil | https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf | Primary |

@@ -2,7 +2,7 @@
 
 **Part 3 of 4: the State Bank's draft Open Banking Regulations read as a consumer product, against the UK, Brazil and India**
 
-Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S1] resolve to the Sources section at the end. Section numbers such as s. 7.2 refer to the draft itself [S1].
+Fawad Liaqat. Evidence as of November 2026. Source markers such as [S1] resolve to the Sources section at the end. Section numbers such as s. 7.2 refer to the draft itself [S1].
 
 ## Where Parts 1 and 2 leave us
 
@@ -105,9 +105,9 @@ I would value feedback and other readings of the draft.
 Primary means the issuing body's own document or data. Secondary means reporting or analysis about it.
 
 - [S1] State Bank of Pakistan. *Open Banking Regulations (Draft), for public consultation*. https://www.sbp.org.pk/assets/document/Open_Banking_Regulations_for_Public_Consulatation_Draft.pdf. Primary.
-- [S2] State Bank of Pakistan. *Governor's Annual Report 2025-26*. Primary.
+- [S2] State Bank of Pakistan. *Governor's Annual Report 2025-26*. https://www.sbp.org.pk/assets/document/publications/Gov-AR_FY26.pdf. Primary.
 - [S3] State Bank of Pakistan. *Annual Payment Systems Review FY 2025-26*. https://www.sbp.org.pk/assets/document/publications/Annual-Payment-Systems-Review-FY26.pdf. Primary.
-- [S4] State Bank of Pakistan. *SBP announces the shortlisted applicants for the first cohort of its Regulatory Sandbox (press release)*. https://www.sbp.org.pk/press/2026/Pr-06-Jan-2026.pdf. Primary.
+- [S4] State Bank of Pakistan. *SBP announces the shortlisted applicants for the first cohort of its Regulatory Sandbox (press release)*. https://archive.sbp.org.pk/press/2026/Pr-06-Jan-2026.pdf. Primary.
 - [S5] World Bank. *The Global Findex Database 2025: Connectivity and Financial Inclusion in the Digital Economy*. https://www.worldbank.org/en/publication/globalfindex. Primary.
 - [S6] World Bank. *Digital Public Infrastructure for Inclusive Growth: A Regional Assessment for the Middle East, North Africa, Afghanistan, and Pakistan*. https://documents1.worldbank.org/curated/en/099110926084536993/pdf/P507284-0c4a825c-0c5d-40d5-8e72-cc9a23fa2f46.pdf. Primary.
 - [S7] Banco Central do Brasil. *Annual Report 2025*. https://bcb.gov.br/content/publications/Annual_Report_docs/AR-2025.pdf. Primary.

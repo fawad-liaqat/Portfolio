@@ -2,7 +2,7 @@
 
 **Part 1 of 4: an evaluation of Pakistan's digital public infrastructure against India, Brazil and Egypt**
 
-Fawad Liaqat. Evidence as of 17 November 2026. Source markers such as [S2] refer to the source list at the end.
+Fawad Liaqat. Evidence as of November 2026. Source markers such as [S2] refer to the source list at the end.
 
 ## The question
 
@@ -139,5 +139,5 @@ Primary means the issuing body's own document or data. Secondary means reporting
 - [S18] Pakistan Bureau of Statistics. *Census 2023, Table 12: Literacy rate, enrolment and out of school population by sex and rural/urban (national)*. https://www.pbs.gov.pk/sites/default/files/population/2023/tables/table_12_national.pdf. Primary.
 - [S19] Associated Press of Pakistan. *Pakistan's first Dematerialized Digital Identity Card launched on NADRA's silver jubilee*. https://www.app.com.pk/?p=958340. Secondary.
 - [S20] Fiskil. *Open Finance Tracker: Egypt*. https://www.fiskil.com/open-finance-tracker/egypt. Secondary.
-- [S21] State Bank of Pakistan. *National Financial Inclusion Strategy 2024 to 2028*. https://www.sbp.org.pk/nfis/nfis2024-28.pdf. Primary.
-- [S22] State Bank of Pakistan. *Governor's Annual Report 2025-26*. Primary.
+- [S21] State Bank of Pakistan. *National Financial Inclusion Strategy 2024 to 2028*. https://archive.sbp.org.pk/nfis/nfis2024-28.pdf. Primary.
+- [S22] State Bank of Pakistan. *Governor's Annual Report 2025-26*. https://www.sbp.org.pk/assets/document/publications/Gov-AR_FY26.pdf. Primary.
