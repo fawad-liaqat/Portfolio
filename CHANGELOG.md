@@ -1,5 +1,13 @@
 # Changelog
 
+## Release fix B5: method and decisions on part pages (18 November 2026)
+
+- Each part page has a collapsed "Method and decisions" section, rendered
+  from the part's `method.md` (reader ready versions from the research
+  agents). Source ids in it link to the page's Sources list.
+- `scripts/sync-series.sh` now copies `method.md` too. All four parts
+  re-synced; every file matches the research folders byte for byte.
+
 ## Release fix: AwaazOnboard wording (18 November 2026)
 
 - Summary now reads "In a team of four, I led the API architecture." No

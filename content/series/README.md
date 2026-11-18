@@ -17,8 +17,10 @@ Optional:
   `casebook.json`). Its name and shape are declared for each part in
   `data/series.ts`; `lib/series-data.ts` turns each shape into a table.
 
-Working files such as `method.md` and `gaps.md` stay with the research and
-are not copied here.
+- `method.md` the method and decision log, shown collapsed as "Method and
+  decisions".
+
+`gaps.md` stays with the research and is not copied here.
 
 Until a part has the three required files, the series section shows it as an
 "In progress" card. The short finding and the card text for each part are in

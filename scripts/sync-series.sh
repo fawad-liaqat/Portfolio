@@ -12,8 +12,8 @@
 # explainer.md, sources.md, method.md and gaps.md must all exist. Parts that
 # are not complete are skipped and stay "In progress" on the site.
 #
-# Copied: brief.md, explainer.md, sources.md and every .json data file.
-# method.md and gaps.md stay with the research. Files already in the target
+# Copied: brief.md, explainer.md, sources.md, method.md and every .json data
+# file. gaps.md stays with the research. Files already in the target
 # folder are overwritten; nothing else is deleted. Commit the result with git
 # so earlier versions stay in history. Rerunning is safe: it gives the same
 # result for the same input.
@@ -28,7 +28,7 @@ sync_part() {
     fi
   done
   mkdir -p "$dest"
-  cp "$src/brief.md" "$src/explainer.md" "$src/sources.md" "$dest/"
+  cp "$src/brief.md" "$src/explainer.md" "$src/sources.md" "$src/method.md" "$dest/"
   shopt -s nullglob
   for j in "$src"/*.json; do cp "$j" "$dest/"; done
   shopt -u nullglob

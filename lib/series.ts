@@ -35,6 +35,8 @@ export interface LoadedPart {
   data: DataView | null;
   /** Date the evidence runs to, from the data file (YYYY-MM-DD). */
   asOf?: string;
+  /** Method and decision log, rendered from method.md, if present. */
+  methodHtml: string;
   /** Every source id cited anywhere on the page, for checks. */
   citedIds: string[];
 }
@@ -169,6 +171,9 @@ export function loadPart(n: number): LoadedPart | null {
   const [, explainerBody] = splitTitle(read(n, "explainer.md")!);
   const explainerHtml = render(explainerBody, cited, known);
 
+  const methodMd = read(n, "method.md");
+  const methodHtml = methodMd ? render(splitTitle(methodMd)[1], cited, known) : "";
+
   const [, notesBody] = splitTitle(rest);
   const sourceNotesHtml = render(notesBody.trim(), cited, known);
 
@@ -190,6 +195,7 @@ export function loadPart(n: number): LoadedPart | null {
     briefHtml,
     sources,
     sourceNotesHtml,
+    methodHtml,
     data,
     asOf,
     citedIds: [...cited],

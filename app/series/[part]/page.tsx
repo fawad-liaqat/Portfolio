@@ -87,6 +87,7 @@ export default async function SeriesPartPage({ params }: Props) {
               <a href="#explainer">In plain words</a>
               {part.data && part.meta.data && <a href="#data">{part.meta.data.label}</a>}
               <a href="#brief">Full brief</a>
+              {part.methodHtml && <a href="#method">Method</a>}
               <a href="#sources">Sources</a>
             </nav>
           </div>
@@ -120,6 +121,21 @@ export default async function SeriesPartPage({ params }: Props) {
             </details>
           </div>
         </section>
+
+        {part.methodHtml && (
+          <section id="method" className="section series-block">
+            <div className="container">
+              <h2 className="section-title">Method and decisions</h2>
+              <details className="disclosure brief-disclosure">
+                <summary>Read the method and decision log</summary>
+                <div
+                  className="disclosure-body prose md"
+                  dangerouslySetInnerHTML={{ __html: part.methodHtml }}
+                />
+              </details>
+            </div>
+          </section>
+        )}
 
         <section id="sources" className="section series-block">
           <div className="container">
