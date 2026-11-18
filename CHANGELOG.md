@@ -25,6 +25,8 @@
 - Theme: links to fawad-liaqat.github.io get `?theme=light|dark` at click
   time, and `?theme=` arriving on this site is stored and then removed
   from the address bar (`lib/theme.ts`). CSP unchanged.
+- Series re-synced after the release 2 source pass (`bash
+  scripts/sync-series.sh /home/claude/work`); all files byte identical.
 
 ## Release fix B5: method and decisions on part pages (18 November 2026)
 
